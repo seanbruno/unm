@@ -1,0 +1,17 @@
+23 Jan 2023
+- Setup of Vivado and linux
+-- Get to the point where linux boots up and runs off an SD card
+-- Setup Socket/C style server/client
+-- Network Requirements
+--- Authentication (prove you are who you say you are)
+--- Confidentiality(encryption)
+--- Integrity (the message was unaltered) 
+--- Non-Repudiation(You cannot deny you read the message, via public private key)
+
+http://ece-research.unm.edu/jimp/HOST/slides/PUF1.pdf
+-- PUF Physical Unclonable Functions (PUFs)
+--- Process Variation leads to ability to identify analog behavior differences to generate a fingerprint
+--- Measuring summation delays across circuits in nanoseconds
+-- Provisioning
+-- Enrollment
+-- Regeneration
