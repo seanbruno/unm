@@ -1,0 +1,51 @@
+-- 24 Jan 2023
+-- Choose a paper that applies to network economics
+--- game theory, contract theory, network graphs, 
+--- each person does 7-8 minutes summary per paper and preso
+
+-- elastic vs ineslastic
+-- wireless (close high bandwidth)
+-- cellular (longer range)
+
+-- lecture:
+-- distance based path loss, slow log-normal shadowing, multi-path propagation
+-- rx signal profile
+--- radio wave progation - power density diminished gradually
+--- noise awgn (white Gaussian noise)
+--- power profile tx 
+
+-- path loss
+--- higher freq w/smaller wavelen yeilds smaller gain
+---- higher freq used in smaller distance
+---- gain is unit less
+
+-- shadowing
+--- reflections, diffraction, scattering
+--- large obstical causing non-line of sight communications
+--- log-normal shadowing
+
+-- multi-path
+--- signals bounce and diffract causing multiple reception events
+--- timing of signals may lead to symbol interferrence
+
+-- Wireless Multiple Access Technicque
+--- FDMA, OFDMA, TDMA, CDMA, CSMA
+---- FDMA, TDMA, CDMA allocates a resource
+---- CSMA types, collision avoidance and resource allocation is on the handset/user
+
+-- Wireless Networks
+--- 802.11
+
+-- Wireless Ad-hoc Network
+--- ad-hoc needs to be able to deal with broken nodes and nodes that aren't there
+
+-- Wireless Ssensor Network
+--- No central access of base station
+--- does use a sync node
+
+-- Wireless Mesh Network
+--- Everyone talks to everyone all the time
+--- No central node
+
+-- Cognitive Radio Network
+--- 

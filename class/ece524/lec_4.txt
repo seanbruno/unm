@@ -1,0 +1,44 @@
+-- 26 Jan 2023
+
+--- Radio Resource Managerment
+---- system to control reources maximize efficiency, minimize jitter, minimize interferences
+---- centralized vs decentralized  management
+---- utilize the lmiited radio specturm, frequency, interference
+---- Power Control
+----- most power is managed at the handset
+----- CDMA differentiates users based on unique codes, power control was a huge problem with multiple units
+----- prolong battery life of end devices
+----- cell networks based on FDMA tech 
+---- Channel Allocation
+----- Chop of Freq into parts is either centralized(towers/base stations) or distributed(handesets)
+----- Fixed channel allocation is easiest but wastes unused resources if not enough users
+------ Easiest to allocate and its always available
+----- Dynamic Channel Allocation requires more overhead to let more or less bandwidth be allocated
+------ Orthognal Frequency Dynamic Multiple Access lets subchannels be managed and then moved around
+------ Get the channel gain formula and commit it to memory
+----- Admission Control Management
+------ Moving users to different cell towers based on utilization 
+------ Algos for these mechanism are much more advanced and they are pushed down to the clients to decide
+------ Service and service class determines QoS (elastic vs inelastic)
+------ Real time vs non-realtime
+
+-- Supply/Demand
+--- Market Demand Functions
+---- Demand for Product: Function of Price of the Product
+----- Price goes down, demand goes up
+----- Cap based pricing in the Cellular Market 
+---- Demand for product can be affected/disrupted by new tech
+--- Market Supply Functions
+---- Supply of Product:  Function of Price and ability to physically produce
+----- Cost of raw material impacts end cost and can lower supply
+--- Market Equilibrium Price
+---- Intersection of supply/demand and consumer/supplier costs
+--- Market Basket & Indifference Curve
+---- Multiple products can be on the same indifference curve because they have the same utility
+---- You can get higher utility if the customer budget is higher
+--- Consumer Consumption Problem
+---- Consumer wants more "Utility" for budget
+---- Producer wants more money for "Utility"
+---- Derivitive of the indifference curve will capture the 
+-- Oligopoloy/Monopoloy Scenario
+-- distributed contracts game theory

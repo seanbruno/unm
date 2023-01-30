@@ -1,0 +1,10 @@
+25 Jan 2023
+-- Lab tests are useful to take, not required
+--- Supplementary Reading -- chapter 1
+--- Supplementary Reading -- ML assisted debugging of PUFS
+--- Supplementary Papers are good reading for backgrounds
+---- Try and see if there's any papers that are good for ECE524
+--- REad up on Cryptography standards to use in class
+
+-- 
+

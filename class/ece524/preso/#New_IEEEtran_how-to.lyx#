@@ -1,0 +1,7557 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+\usepackage{amsfonts}\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage{balance}
+\end_preamble
+\options lettersize,journal
+\use_default_options false
+\begin_modules
+subequations
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+How to Use the IEEEtran \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+Templates
+\end_layout
+
+\begin_layout Author
+IEEE Publication Technology Department 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Manuscript created October, 2020; This work was developed by the IEEE Publicatio
+n Technology Department.
+ This work is distributed under the \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+Project Public License (LPPL) ( http://www.latex-project.org/ ) version 1.3.
+ A copy of the LPPL, version 1.3, is included in the base \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+documentation of all distributions of \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+released 2003/12/01 or later.
+ The opinions expressed here are entirely that of the author.
+ No warranty is expressed or implied.
+ User assumes all risk.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Page headings
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Journal of \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+Class Files,
+\begin_inset space ~
+\end_inset
+
+Vol.
+\begin_inset space ~
+\end_inset
+
+18, No.
+\begin_inset space ~
+\end_inset
+
+9, September
+\begin_inset space ~
+\end_inset
+
+2020
+\end_layout
+
+\end_inset
+
+How to Use the IEEEtran \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+Templates
+\end_layout
+
+\begin_layout Abstract
+This document describes the most common article elements and how to use
+ the IEEEtran class with \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+to produce files that are suitable for submission to the Institute of Electrical
+ and Electronics Engineers (IEEE).
+ IEEEtran can produce conference, journal and technical note (correspondence)
+ papers with a suitable choice of class options.
+ 
+\end_layout
+
+\begin_layout Keywords
+Class, IEEEtran, \SpecialChar LaTeX
+, paper, style, template, typesetting.
+ 
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Paragraph Start
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+W
+\end_layout
+
+\end_inset
+
+elcome
+\end_layout
+
+\end_inset
+
+ to the updated and simplified documentation to using the IEEEtran \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+class file.
+ The IEEE has examined hundreds of author submissions using this package
+ to help formulate this easy to follow guide.
+ We will cover the most commonly used elements of a journal article.
+ For less common elements we will refer back to the 
+\begin_inset Quotes eld
+\end_inset
+
+IEEEtran_HOWTO.pdf
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This document applies to version 1.8b of IEEEtran.
+\end_layout
+
+\begin_layout Standard
+The IEEEtran template package contains the following example files: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{list}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_comsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{list}
+\end_layout
+
+\end_inset
+
+ These are 
+\begin_inset Quotes eld
+\end_inset
+
+bare bones
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ templates to quickly understand the document structure.
+\end_layout
+
+\begin_layout Standard
+It is assumed that the reader has a basic working knowledge of \SpecialChar LaTeX
+.
+ Those who are new to \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+are encouraged to read Tobias Oetiker's 
+\begin_inset Quotes eld
+\end_inset
+
+The Not So Short Introduction to \SpecialChar LaTeX
+
+\begin_inset Quotes erd
+\end_inset
+
+, available at: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://tug.ctan.org/info/lshort/english/lshort.pdf
+\end_layout
+
+\end_inset
+
+ which provides an overview of working with \SpecialChar LaTeX
+.
+\end_layout
+
+\begin_layout Section
+The Design, Intent and 
+\begin_inset Newline newline
+\end_inset
+
+ Limitations of the Templates
+\end_layout
+
+\begin_layout Standard
+\noindent
+The templates are intended to 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+approximate the final look and page length of the articles/papers
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+ Therefore, 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+they are NOT intended to be the final produced work that is displayed in
+ print or on IEEEXplore
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+®
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+ They will help to give the authors an approximation of the number of pages
+ that will be in the final version.
+ The structure of the \SpecialChar LaTeX
+files, as designed, enable easy conversion to XML
+ for the composition systems used by the IEEE's outsource vendors.
+ The XML files are used to produce the final print/IEEEXplore
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+®
+\end_layout
+
+\end_inset
+
+ pdf and then converted to HTML for IEEEXplore
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+®
+\end_layout
+
+\end_inset
+
+.
+ Have you looked at your article/paper in the HTML version?
+\end_layout
+
+\begin_layout Section
+\SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+Distributions: Where to Get Them
+\end_layout
+
+\begin_layout Standard
+\noindent
+IEEE recommends using the distribution from the \SpecialChar TeX
+User Group at 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.tug.org
+\end_layout
+
+\end_inset
+
+.
+ You can join TUG and obtain a DVD distribution or download for free from
+ the links provided on their website: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.tug.org/texlive/
+\end_layout
+
+\end_inset
+
+.
+ The DVD includes distributions for Windows, Mac OS X and Linux operating
+ systems.
+\end_layout
+
+\begin_layout Section
+Where to get the IEEEtran Templates
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEE Template Selector
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ will always have the most up-to-date versions of the \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+and MSWord templates.
+ Please see: 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://template-selector.ieee.org/
+\end_layout
+
+\end_inset
+
+ and follow the steps to find the correct template for your intended publication.
+ Many publications use the IEEETran LaTeX templates, however, some publications
+ have their own special templates.
+ Many of these are based on IEEEtran, but may have special instructions
+ that vary slightly from those in this document.
+\end_layout
+
+\begin_layout Section
+Where to get \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+help - user groups
+\end_layout
+
+\begin_layout Standard
+\noindent
+The following on-line groups are very helpful to beginning and experienced
+ \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+users.
+ A search through their archives can provide many answers to common questions.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{list}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.latex-community.org/
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://tex.stackexchange.com/
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{list}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Document Class Options in IEEEtran
+\end_layout
+
+\begin_layout Standard
+\noindent
+At the beginning of your \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+file you will need to establish what type of publication style you intend
+ to use.
+ The following list shows appropriate documentclass options for each of
+ the types covered by IEEEtran.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{list}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Regular Journal Article
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+documentclass[journal]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEtran
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conference Paper
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+documentclass[conference]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEtran
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Computer Society Journal Article
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+documentclass[10pt,journal,compsoc]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEtran
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Computer Society Conference Paper
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+documentclass[conference,compsoc]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEtran
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Communications Society Journal Article
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+documentclass[journal,comsoc]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEtran
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Brief, Correspondence or Technote
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+documentclass[9pt,technote]
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEtran
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{list}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are other options available for each of these when submitting for
+ peer review or other special requirements.
+ IEEE recommends to compose your article in the base 2-column format to
+ make sure all your equations, tables and graphics will fit the final 2-column
+ format.
+ Please refer to the document 
+\begin_inset Quotes eld
+\end_inset
+
+IEEEtran_HOWTO.pdf
+\begin_inset Quotes erd
+\end_inset
+
+ for more information on settings for peer review submission if required
+ by your EIC.
+\end_layout
+
+\begin_layout Section
+How to Create Common Front Matter
+\end_layout
+
+\begin_layout Standard
+\noindent
+The following sections describe general coding for these common elements.
+ Computer Society publications and Conferences may have their own special
+ variations and will be noted below.
+ 
+\end_layout
+
+\begin_layout Subsection
+Paper Title
+\end_layout
+
+\begin_layout Standard
+\noindent
+The title of your paper is coded as:
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+title{The Title of Your Paper}
+\end_layout
+
+\begin_layout Standard
+\noindent
+Please try to avoid the use of math or chemical formulas in your title if
+ possible.
+\end_layout
+
+\begin_layout Subsection
+Author Names and Affiliations
+\end_layout
+
+\begin_layout Standard
+\noindent
+The author section should be coded as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+author{Masahito Hayashi 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+IEEEmembership{Fellow, IEEE}, Masaki Owari
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+thanks{M.
+ Hayashi is with Graduate School 
+\end_layout
+
+\begin_layout Verbatim
+of Mathematics, Nagoya University, Nagoya, 
+\end_layout
+
+\begin_layout Verbatim
+Japan}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+thanks{M.
+ Owari is with the Faculty of 
+\end_layout
+
+\begin_layout Verbatim
+Informatics, Shizuoka University, 
+\end_layout
+
+\begin_layout Verbatim
+Hamamatsu, Shizuoka, Japan.}
+\end_layout
+
+\begin_layout Verbatim
+}
+\end_layout
+
+\begin_layout Standard
+Be sure to use the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+IEEEmembership command to identify IEEE membership status.
+ Please see the 
+\begin_inset Quotes eld
+\end_inset
+
+IEEEtran_HOWTO.pdf
+\begin_inset Quotes erd
+\end_inset
+
+ for specific information on coding authors for Conferences and Computer
+ Society publications.
+ Note that the closing curly brace for the author group comes at the end
+ of the thanks group.
+ This will prevent you from creating a blank first page.
+\end_layout
+
+\begin_layout Subsection
+Running Heads
+\end_layout
+
+\begin_layout Standard
+\noindent
+The running heads are declared by using the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+markboth
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ command.
+ There are two arguments to this command: the first contains the journal
+ name information and the second contains the author names and paper title.
+ 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+markboth{Journal of Quantum Electronics, 
+\end_layout
+
+\begin_layout Verbatim
+Vol.
+ 1, No.
+ 1, January 2021}
+\end_layout
+
+\begin_layout Verbatim
+{Author1, Author2, 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+MakeLowercase{
+\backslash
+textit{(et al.)}: 
+\end_layout
+
+\begin_layout Verbatim
+Paper Title}
+\end_layout
+
+\begin_layout Subsection
+Copyright Line
+\end_layout
+
+\begin_layout Standard
+\noindent
+For Transactions and Journals papers, this is not necessary to use at the
+ submission stage of your paper.
+ The IEEE production process will add the appropriate copyright line.
+ If you are writing a conference paper, please see the 
+\begin_inset Quotes eld
+\end_inset
+
+IEEEtran_HOWTO.pdf
+\begin_inset Quotes erd
+\end_inset
+
+ for specific information on how to code 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Publication ID Marks
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Abstracts
+\end_layout
+
+\begin_layout Standard
+\noindent
+The abstract is the first element of a paper after the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+maketitle
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ macro is invoked.
+ The coding is simply: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{abstract}
+\end_layout
+
+\begin_layout Verbatim
+Text of your abstract.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{abstract}
+\end_layout
+
+\begin_layout Standard
+Please try to avoid mathematical and chemical formulas in the abstract.
+\end_layout
+
+\begin_layout Subsection
+Index Terms
+\end_layout
+
+\begin_layout Standard
+\noindent
+The index terms are used to help other researchers discover your paper.
+ Each society may have it's own keyword set.
+ Contact the EIC of your intended publication for this list.
+ 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{IEEEkeywords}
+\end_layout
+
+\begin_layout Verbatim
+Broad band networks, quality of service
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{IEEEkeywords}
+\end_layout
+
+\begin_layout Section
+How to Create Common Body Elements
+\end_layout
+
+\begin_layout Standard
+\noindent
+The following sections describe common body text elements and how to code
+ them.
+\end_layout
+
+\begin_layout Subsection
+Initial Drop Cap Letter
+\end_layout
+
+\begin_layout Standard
+\noindent
+The first text paragraph uses a 
+\begin_inset Quotes eld
+\end_inset
+
+drop cap
+\begin_inset Quotes erd
+\end_inset
+
+ followed by the first word in ALL CAPS.
+ This is accomplished by using the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+IEEEPARstart
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ command as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+IEEEPARstart{T}{his} is the first paragraph 
+\end_layout
+
+\begin_layout Verbatim
+of your paper.
+ .
+ .
+\end_layout
+
+\begin_layout Subsection
+Sections and Subsections
+\end_layout
+
+\begin_layout Standard
+\noindent
+Section headings use standard \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+commands: 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+section
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+, 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+subsection
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ and 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+subsubsection
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+.
+ Numbering is handled automatically for you and varies according to type
+ of publication.
+ It is common to not indent the first paragraph following a section head
+ by using 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+noindent
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+section{Section Head}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+noindent The text of your paragraph .
+ .
+ .
+\end_layout
+
+\begin_layout Subsection
+Citations to the Bibliography
+\end_layout
+
+\begin_layout Standard
+\noindent
+The coding for the citations are made with the \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+cite
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ command.
+ This will produce individual bracketed reference numbers in the IEEE style.
+ At the top of your \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+file you should include: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{cite}
+\end_layout
+
+\begin_layout Standard
+For a single citation code as follows: 
+\end_layout
+
+\begin_layout Verbatim
+see 
+\backslash
+cite{ams}
+\end_layout
+
+\begin_layout Standard
+This will display as: see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ams"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For multiple citations code as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+cite{ams,oxford,lacomp}
+\end_layout
+
+\begin_layout Standard
+This will display as 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ams,oxford,lacomp"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Figures
+\end_layout
+
+\begin_layout Standard
+\noindent
+Figures are coded with the standard \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+commands as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{figure}[!t]
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+centering
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+includegraphics[width=2.5in]{fig1}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+caption{This is the caption for one fig.}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+label{fig1}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{figure}
+\end_layout
+
+\begin_layout Standard
+The [!t] argument enables floats to the top of the page to follow IEEE style.
+ Make sure you include: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{graphicx}
+\end_layout
+
+\begin_layout Standard
+\noindent
+at the top of your \SpecialChar LaTeX
+file with the other package declarations.
+\end_layout
+
+\begin_layout Standard
+To cross-reference your figures in the text use the following code example:
+ 
+\end_layout
+
+\begin_layout Verbatim
+See figure 
+\backslash
+ref{fig1} ...
+\end_layout
+
+\begin_layout Standard
+This will produce:
+\begin_inset Newline newline
+\end_inset
+
+ See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ .
+ .
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !t
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename fig1.png
+	width 2.5in
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+This is the caption for one fig.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Tables
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tables should be coded with the standard \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+coding.
+ The following example shows a simple table.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{table}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+caption{Filter design equations  ...}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+label{tab1}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{tabular}{| c | c | c |}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Verbatim
+Order & Arbitrary coefficients & 
+\end_layout
+
+\begin_layout Verbatim
+coefficients
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+of filter & $e_m$ &   $b_{ij}$ 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Verbatim
+1& $b_{ij}=
+\backslash
+hat{e}.
+\backslash
+hat{
+\backslash
+beta_{ij}}$, 
+\end_layout
+
+\begin_layout Verbatim
+& $b_{00}=0$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Verbatim
+2&$
+\backslash
+beta_{22}=(~1,-1,-1,~~1,~~1,~~1)$ &
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+hline
+\end_layout
+
+\begin_layout Verbatim
+3& $b_{ij}=
+\backslash
+hat{e}.
+\backslash
+hat{
+\backslash
+beta_{ij}}$, 
+\end_layout
+
+\begin_layout Verbatim
+& $b_{00}=0$,
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+hline 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{table}
+\end_layout
+
+\begin_layout Standard
+To reference the table in the text, code as follows: 
+\end_layout
+
+\begin_layout Verbatim
+Table~
+\backslash
+ref{tab1} lists the closed-form...
+\end_layout
+
+\begin_layout Standard
+to produce:
+\end_layout
+
+\begin_layout Standard
+Table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ lists the closed-form .
+ .
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%moved here for pagination purposes
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A Simple Table Example.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab1"
+
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Order 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arbitrary coefficients 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+coefficients
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+of filter 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e_{m}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{ij}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{ij}=\hat{e}.\hat{\beta_{ij}}$
+\end_inset
+
+, 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{00}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta_{22}=(~1,-1,-1,~~1,~~1,~~1)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{ij}=\hat{e}.\hat{\beta_{ij}}$
+\end_inset
+
+, 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{00}=0$
+\end_inset
+
+,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lists
+\end_layout
+
+\begin_layout Standard
+\noindent
+In this section, we will consider three types of lists: simple unnumbered,
+ numbered and bulleted.
+ There have been numerous options added to IEEEtran to enhance the creation
+ of lists.
+ If your lists are more complex than those shown below, please refer to
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+IEEEtran_HOWTO.pdf
+\begin_inset Quotes erd
+\end_inset
+
+ for additional options.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+A plain unnumbered list
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{list}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_comsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{list}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{list}{}{}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_conf.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl
+\backslash
+_compsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_conf
+\backslash
+_compsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl
+\backslash
+_comsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{list}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+A simple numbered list
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_comsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_conf.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl
+\backslash
+_compsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_conf
+\backslash
+_compsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl
+\backslash
+_comsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{enumerate}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+A simple bulleted list
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_conf_compsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bare_jrnl_comsoc.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as:
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{itemize}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_conf.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl
+\backslash
+_compsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_conf
+\backslash
+_compsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+item{bare
+\backslash
+_jrnl
+\backslash
+_comsoc.tex}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{itemize}
+\end_layout
+
+\begin_layout Subsection
+Other Elements
+\end_layout
+
+\begin_layout Standard
+\noindent
+For other less common elements such as Algorithms, Theorems and Proofs,
+ and Floating Structures such as page-wide tables, figures or equations,
+ please refer to the 
+\begin_inset Quotes eld
+\end_inset
+
+IEEEtran_HOWTO.pdf
+\begin_inset Quotes erd
+\end_inset
+
+ section on 
+\begin_inset Quotes eld
+\end_inset
+
+Double Column Floats.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+How to Create Common Back Matter Elements
+\end_layout
+
+\begin_layout Standard
+\noindent
+The following sections demonstrate common back matter elements such as Acknowled
+gments, Bibliographies, Appendicies and Author Biographies.
+\end_layout
+
+\begin_layout Subsection
+Acknowledgments
+\end_layout
+
+\begin_layout Standard
+\noindent
+This should be a simple paragraph before the bibliography to thank those
+ individuals and institutions who have supported your work on this article.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+section{Acknowledgments}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+noindent Text describing those who 
+\end_layout
+
+\begin_layout Verbatim
+supported your paper.
+\end_layout
+
+\begin_layout Subsection
+Bibliographies
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+References Simplified:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ A simple way of composing references is to use the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+bibitem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ macro to define the beginning of a reference as in the following examples:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+[6] H.
+ Sira-Ramirez.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On the sliding mode control of nonlinear systems,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+Systems & Control Letters
+\shape default
+, vol.
+ 19, pp.
+ 303–312, 1992.
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+bibitem{Sira3}
+\end_layout
+
+\begin_layout Verbatim
+H.
+ Sira-Ramirez.
+ ``On the sliding mode 
+\end_layout
+
+\begin_layout Verbatim
+control of nonlinear systems,'' 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+textit{Systems 
+\backslash
+& Control Letters}, 
+\end_layout
+
+\begin_layout Verbatim
+vol.
+ 19, pp.
+ 303--312, 1992.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[7] A.
+ Levant.
+\begin_inset Quotes eld
+\end_inset
+
+Exact differentiation of signals with unbounded higher derivatives,
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\shape italic
+Proceedings of the 45th IEEE Conference on Decision and Control
+\shape default
+, San Diego, California, USA, pp.
+ 5585–5590, 2006.
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+bibitem{Levant}
+\end_layout
+
+\begin_layout Verbatim
+A.
+ Levant.
+ ``Exact differentiation of 
+\end_layout
+
+\begin_layout Verbatim
+signals with unbounded higher 
+\end_layout
+
+\begin_layout Verbatim
+derivatives,''  in 
+\backslash
+textit{Proceedings 
+\end_layout
+
+\begin_layout Verbatim
+of the 45th IEEE Conference on 
+\end_layout
+
+\begin_layout Verbatim
+Decision and Control}, San Diego, 
+\end_layout
+
+\begin_layout Verbatim
+California, USA, pp.
+ 5585--5590, 2006.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[8] M.
+ Fliess, C.
+ Join, and H.
+ Sira-Ramirez.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Non-linear estimation is easy,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+International Journal of Modelling, Identification and Control
+\shape default
+, vol.
+ 4, no.
+ 1, pp.
+ 12–27, 2008.
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+bibitem{Cedric}
+\end_layout
+
+\begin_layout Verbatim
+M.
+ Fliess, C.
+ Join, and H.
+ Sira-Ramirez.
+ 
+\end_layout
+
+\begin_layout Verbatim
+``Non-linear estimation is easy,'' 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+textit{International Journal of Modelling, 
+\end_layout
+
+\begin_layout Verbatim
+Identification and Control}, vol.
+ 4, 
+\end_layout
+
+\begin_layout Verbatim
+no.
+ 1, pp.
+ 12--27, 2008.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[9] R.
+ Ortega, A.
+ Astolfi, G.
+ Bastin, and H.
+ Rodriguez.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Stabilization of food-chain systems using a port-controlled Hamiltonian
+ description,
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\shape italic
+Proceedings of the American Control Conference
+\shape default
+, Chicago, Illinois, USA, pp.
+ 2245–2249, 2000.
+\end_layout
+
+\begin_layout Standard
+\noindent
+coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+bibitem{Ortega}
+\end_layout
+
+\begin_layout Verbatim
+R.
+ Ortega, A.
+ Astolfi, G.
+ Bastin, and H.
+ 
+\end_layout
+
+\begin_layout Verbatim
+Rodriguez.
+ ``Stabilization of food-chain 
+\end_layout
+
+\begin_layout Verbatim
+systems using a port-controlled Hamiltonian 
+\end_layout
+
+\begin_layout Verbatim
+description,'' in 
+\backslash
+textit{Proceedings of the 
+\end_layout
+
+\begin_layout Verbatim
+American Control Conference}, Chicago, 
+\end_layout
+
+\begin_layout Verbatim
+Illinois, USA, pp.
+ 2245--2249, 2000.
+\end_layout
+
+\begin_layout Subsection
+Accented Characters in References
+\end_layout
+
+\begin_layout Standard
+\noindent
+When using accented characters in references, please use the standard LaTeX
+ coding for accents.
+ 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Do not use math coding for character accents
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+ For example: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+'e, 
+\backslash
+"o, 
+\backslash
+`a, 
+\backslash
+~e 
+\end_layout
+
+\begin_layout Standard
+will produce: é, ö, à, ẽ
+\end_layout
+
+\begin_layout Subsection
+Use of BibTeX
+\end_layout
+
+\begin_layout Standard
+\noindent
+If you wish to use BibTeX, please see the documentation that accompanies
+ the IEEEtran Bibliography package.
+\end_layout
+
+\begin_layout Subsection
+Biographies and Author Photos
+\end_layout
+
+\begin_layout Standard
+\noindent
+Authors may have options to include their photo or not.
+ Photos should be a bit-map graphic (.tif or .jpg) and sized to fit in the
+ space allowed.
+ Please see the coding samples below: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{IEEEbiographynophoto}{Jane Doe}
+\end_layout
+
+\begin_layout Verbatim
+Biography text here without a photo.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{IEEEbiographynophoto}
+\end_layout
+
+\begin_layout Standard
+or a biography with a photo
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{IEEEbiography}[{
+\backslash
+includegraphics
+\end_layout
+
+\begin_layout Verbatim
+[width=1in,height=1.25in,clip,
+\end_layout
+
+\begin_layout Verbatim
+keepaspectratio]{fig1.png}}]
+\end_layout
+
+\begin_layout Verbatim
+{IEEE Publications Technology Team} 
+\end_layout
+
+\begin_layout Verbatim
+In this paragraph you can place 
+\end_layout
+
+\begin_layout Verbatim
+your educational, professional background 
+\end_layout
+
+\begin_layout Verbatim
+and research and other interests.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{IEEEbiography}
+\end_layout
+
+\begin_layout Standard
+Please see the end of this document to see the output of these coding examples.
+\end_layout
+
+\begin_layout Section
+Mathematical Typography 
+\begin_inset Newline newline
+\end_inset
+
+ and Why It Matters
+\end_layout
+
+\begin_layout Standard
+\noindent
+Typographical conventions for mathematical formulas have been developed
+ to 
+\series bold
+provide uniformity and clarity of presentation across mathematical texts
+\series default
+.
+ This enables the readers of those texts to both understand the author's
+ ideas and to grasp new concepts quickly.
+ While software such as \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+and MathType
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+®
+\end_layout
+
+\end_inset
+
+ can produce aesthetically pleasing math when used properly, it is also
+ very easy to misuse the software, potentially resulting in incorrect math
+ display.
+\end_layout
+
+\begin_layout Standard
+IEEE aims to provide authors with the proper guidance on mathematical typesettin
+g style and assist them in writing the best possible article.
+\end_layout
+
+\begin_layout Standard
+As such, IEEE has assembled a set of examples of good and bad mathematical
+ typesetting.
+ You will see how various issues are dealt with.
+ The following publications have been referenced in preparing this material:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{list}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\emph on
+Mathematics into Type
+\emph default
+, published by the American Mathematical Society
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\emph on
+The Printing of Mathematics
+\emph default
+, published by Oxford University Press
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\emph on
+The \SpecialChar LaTeX
+Companion
+\emph default
+, by F.
+ Mittelbach and M.
+ Goossens
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\emph on
+More Math into LaTeX
+\emph default
+, by G.
+ Grätzer
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+AMS-StyleGuide-online.pdf, published by the American Mathematical Society
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{list}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Further examples can be seen at 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Math-Type
+setting-Guide.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Display Equations
+\end_layout
+
+\begin_layout Standard
+\noindent
+A simple display equation example shown below uses the 
+\begin_inset Quotes eld
+\end_inset
+
+equation
+\begin_inset Quotes erd
+\end_inset
+
+ environment.
+ To number the equations, use the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+label
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ macro to create an identifier for the equation.
+ LaTeX will automatically number the equation for you.
+ 
+\begin_inset Formula 
+\begin{equation}
+x=\sum_{i=0}^{n}2{i}Q.\label{deqn_ex1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+is coded as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+label{deqn_ex1}
+\end_layout
+
+\begin_layout Verbatim
+x = 
+\backslash
+sum_{i=0}^{n} 2{i} Q.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+To reference this equation in the text use the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ref
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ macro.
+ Please see (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "deqn_ex1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+ is coded as follows: 
+\end_layout
+
+\begin_layout Verbatim
+Please see (
+\backslash
+ref{deqn_ex1})
+\end_layout
+
+\begin_layout Subsection
+Equation Numbering
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Consecutive Numbering:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ Equations within an article are numbered consecutively from the beginning
+ of the article to the end, i.e., (1), (2), (3), (4), (5), etc.
+ Do not use roman numerals or section numbers for equation numbering.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Appendix Equations:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ The continuation of consecutively numbered equations is best in the Appendix,
+ but numbering as (A1), (A2), etc., is permissible.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hyphens and Periods
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+: Hyphens and periods should not be used in equation numbers, i.e., use (1a)
+ rather than (1-a) and (2a) rather than (2.a) for sub-equations.
+ This should be consistent throughout the article.
+\end_layout
+
+\begin_layout Subsection
+Multi-line equations and alignment
+\end_layout
+
+\begin_layout Standard
+\noindent
+Here we show several examples of multi-line equations and proper alignments.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A single equation that must break over multiple lines due to length with
+ no specific alignment.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{multline}
+\text{The first line of this example}\\
+\text{The second line of this example}\\
+\text{The third line of this example}
+\end{multline}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{multline}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+text{The first line of this example}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+text{The second line of this example}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+text{The third line of this example}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{multline}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A single equation with multiple lines aligned at the = signs
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{align}
+a & =c+d\\
+b & =e+f
+\end{align}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{align}
+\end_layout
+
+\begin_layout Verbatim
+a &= c+d 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+b &= e+f
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{align}
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+align
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ environment can align on multiple points as shown in the following example:
+ 
+\begin_inset Formula 
+\begin{align}
+x & =y & X & =Y & a & =bc\\
+x' & =y' & X' & =Y' & a' & =bz
+\end{align}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{align}
+\end_layout
+
+\begin_layout Verbatim
+x &= y & X & =Y & a &=bc
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+x' &= y' & X' &=Y' &a' &=bz
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{align}
+\end_layout
+
+\begin_layout Subsection
+Subnumbering
+\end_layout
+
+\begin_layout Standard
+\noindent
+The amsmath package provides a 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+subequations
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ environment to facilitate subnumbering.
+ An example:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Subequations
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "eq:2"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align}
+f & =g\label{eq:2A}\\
+f' & =g'\label{eq:2B}\\
+\mathcal{L}f & =\mathcal{L}g\label{eq:2c}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:2}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{align}
+\end_layout
+
+\begin_layout Verbatim
+f&=g 
+\backslash
+label{eq:2A}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+f' &=g' 
+\backslash
+label{eq:2B}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+mathcal{L}f &= 
+\backslash
+mathcal{L}g 
+\backslash
+label{eq:2c}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{align}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{subequations}
+\end_layout
+
+\begin_layout Verbatim
+
+\end_layout
+
+\begin_layout Subsection
+Matrices
+\end_layout
+
+\begin_layout Standard
+\noindent
+There are several useful matrix environments that can save you some keystrokes.
+ See the example coding below and the output.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A simple matrix:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{matrix}0 & 1\\
+1 & 0
+\end{matrix}
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{matrix}  0 &  1 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+1 &  0 
+\backslash
+end{matrix}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A matrix with parenthesis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{pmatrix}0 & -i\\
+i & 0
+\end{pmatrix}
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{pmatrix} 0 & -i 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+ i &  0 
+\backslash
+end{pmatrix}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A matrix with square brackets
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{bmatrix}0 & -1\\
+1 & 0
+\end{bmatrix}
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{bmatrix} 0 & -1 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+1 &  0 
+\backslash
+end{bmatrix}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A matrix with curly braces
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{Bmatrix}1 & 0\\
+0 & -1
+\end{Bmatrix}
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{Bmatrix} 1 &  0 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+0 & -1 
+\backslash
+end{Bmatrix}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A matrix with single verticals
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{vmatrix} a &  b 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+c &  d 
+\backslash
+end{vmatrix}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+A matrix with double verticals
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+\begin{Vmatrix}i & 0\\
+0 & -i
+\end{Vmatrix}
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{Vmatrix} i &  0 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+0 & -i 
+\backslash
+end{Vmatrix}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Subsection
+Arrays
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+array
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ environment allows you some options for matrix-like equations.
+ You will have to manually key the fences, but you'll have options for alignment
+ of the columns and for setting horizontal and vertical rules.
+ The argument to 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+array
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ controls alignment and placement of vertical rules.
+\end_layout
+
+\begin_layout Standard
+A simple array 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{cccc}
+a+b+c & uv & x-y & 27\\
+a+b & u+v & z & 134
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+left(
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{array}{cccc}
+\end_layout
+
+\begin_layout Verbatim
+a+b+c & uv & x-y & 27
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+a+b & u+v & z & 134
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{array} 
+\backslash
+right)
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+A slight variation on this to better align the numbers in the last column
+ 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{cccr}
+a+b+c & uv & x-y & 27\\
+a+b & u+v & z & 134
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+left(
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{array}{cccr}
+\end_layout
+
+\begin_layout Verbatim
+a+b+c & uv & x-y & 27
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+a+b & u+v & z & 134
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{array} 
+\backslash
+right)
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+An array with vertical and horizontal rules 
+\begin_inset Formula 
+\begin{equation}
+\left(\begin{array}{c|c|c|r}
+a+b+c & uv & x-y & 27\\
+\hline a+b & u+v & z & 134
+\end{array}\right)
+\end{equation}
+
+\end_inset
+
+is coded as: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+left(
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{array}{c|c|c|r}
+\end_layout
+
+\begin_layout Verbatim
+a+b+c & uv & x-y & 27
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Verbatim
+a+b & u+v & z & 134
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{array} 
+\backslash
+right)
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+Note the argument now has the pipe 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\vert$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ included to indicate the placement of the vertical rules.
+\end_layout
+
+\begin_layout Subsection
+Cases Structures
+\end_layout
+
+\begin_layout Standard
+\noindent
+Many times we find cases coded using the wrong environment, i.e., 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+array
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+.
+ Using the 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+cases
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ environment will save keystrokes (from not having to type the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+left
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+lbrace
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+) and automatically provide the correct column alignment.
+ 
+\begin_inset Formula 
+\[
+{z_{m}(t)}=\begin{cases}
+1, & {\text{if}}\ {\beta}_{m}(t)\\
+{0,} & {\text{otherwise.}}
+\end{cases}
+\]
+
+\end_inset
+
+is coded as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation*}
+\end_layout
+
+\begin_layout Verbatim
+{z_m(t)} = 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Verbatim
+1,&{
+\backslash
+text{if}}
+\backslash
+ {
+\backslash
+beta }_m(t),
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Verbatim
+{0,}&{
+\backslash
+text{otherwise.}} 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{cases}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation*}
+\end_layout
+
+\begin_layout Standard
+\noindent
+Note that the 
+\begin_inset Quotes eld
+\end_inset
+
+&
+\begin_inset Quotes erd
+\end_inset
+
+ is used to mark the tabular alignment.
+ This is important to get proper column alignment.
+ Do not use 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+quad
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ or other fixed spaces to try and align the columns.
+ Also, note the use of the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+text
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ macro for text elements such as 
+\begin_inset Quotes eld
+\end_inset
+
+if
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+otherwise
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Function Formatting in Equations
+\end_layout
+
+\begin_layout Standard
+In many cases there is an easy way to properly format most common functions.
+ Use of the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+ in front of the function name will in most cases, provide the correct formattin
+g.
+ When this does not work, the following example provides a solution using
+ the 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+text
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ macro.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d_{R}^{KM}=\underset{d_{l}^{KM}}{}{\text{arg min}}\{d_{1}^{KM},\ldots,d_{6}^{KM}\}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+is coded as follows: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation*} 
+\end_layout
+
+\begin_layout Verbatim
+ d_{R}^{KM} = 
+\backslash
+underset {d_{l}^{KM}} 
+\end_layout
+
+\begin_layout Verbatim
+ {
+\backslash
+text{arg min}} 
+\backslash
+{ d_{1}^{KM},
+\end_layout
+
+\begin_layout Verbatim
+ 
+\backslash
+ldots,d_{6}^{KM}
+\backslash
+}.
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation*}
+\end_layout
+
+\begin_layout Subsection
+ Text Acronyms inside equations
+\end_layout
+
+\begin_layout Standard
+\noindent
+This example shows where the acronym 
+\begin_inset Quotes eld
+\end_inset
+
+MSE
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ is coded using 
+\begin_inset Formula $\backslash$
+\end_inset
+
+
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+text{}
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ to match how it appears in the text.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{MSE}=\frac{1}{n}\sum_{i=1}^{n}(Y_{i}-\hat{Y_{i}})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation*}
+\end_layout
+
+\begin_layout Verbatim
+ 
+\backslash
+text{MSE} = 
+\backslash
+frac {1}{n}
+\backslash
+sum _{i=1}^{n}
+\end_layout
+
+\begin_layout Verbatim
+(Y_{i} - 
+\backslash
+hat {Y_{i}})^{2}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+end{equation*}
+\end_layout
+
+\begin_layout Subsection
+Obsolete Coding
+\end_layout
+
+\begin_layout Standard
+\noindent
+Avoid the use of outdated environments, such as 
+\family typewriter
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+eqnarray
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\family default
+ and $$ math delimiters, for display equations.
+ The $$ display math delimiters are left over from PlainTeX and should not
+ be used in \SpecialChar LaTeX
+, ever.
+ Poor vertical spacing will result.
+ 
+\end_layout
+
+\begin_layout Subsection
+Use Appropriate Delimiters for Display Equations
+\end_layout
+
+\begin_layout Standard
+\noindent
+Some improper mathematical coding advice has been given in various YouTube
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+TM
+\end_layout
+
+\end_inset
+
+ videos on how to write scholarly articles, so please follow these good
+ examples:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+single-line unnumbered display equations
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+, please use the following delimiters: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+[ .
+ .
+ .
+ 
+\backslash
+] or 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation*} .
+ .
+ .
+ 
+\backslash
+end{equation*}
+\end_layout
+
+\begin_layout Standard
+Note that the * in the environment name turns off equation numbering.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+multiline unnumbered display equations
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ that have alignment requirements, please use the following delimiters:
+ 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{align*} .
+ .
+ .
+ 
+\backslash
+end{align*}
+\end_layout
+
+\begin_layout Standard
+For 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+single-line numbered display equations
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+, please use the following delimiters: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{equation} .
+ .
+ .
+ 
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+For 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+multiline numbered display equations
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+, please use the following delimiters: 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+begin{align} .
+ .
+ .
+ 
+\backslash
+end{align}
+\end_layout
+
+\begin_layout Section
+LaTeX Package Suggestions
+\end_layout
+
+\begin_layout Standard
+\noindent
+Immediately after your documenttype declaration at the top of your \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+file is the place where you should declare any packages that are being used.
+ The following packages were used in the production of this document.
+ 
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{amsmath,amsfonts}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{algorithmic}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{array}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage[caption=false,font=normalsize,
+\end_layout
+
+\begin_layout Verbatim
+   labelfont=sf,textfont=sf]{subfig}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+u00sepackage{textcomp}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{stfloats}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{url}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{verbatim}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{graphicx}
+\end_layout
+
+\begin_layout Verbatim
+
+\backslash
+usepackage{balance}
+\end_layout
+
+\begin_layout Section
+Additional Advice
+\end_layout
+
+\begin_layout Standard
+Please use 
+\begin_inset Quotes eld
+\end_inset
+
+soft
+\begin_inset Quotes erd
+\end_inset
+
+ (e.g., 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+eqref{Eq}|
+\end_layout
+
+\end_inset
+
+) or 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|(
+\backslash
+ref{Eq})|
+\end_layout
+
+\end_inset
+
+ cross references instead of 
+\begin_inset Quotes eld
+\end_inset
+
+hard
+\begin_inset Quotes erd
+\end_inset
+
+ references (e.g., 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|(1)|
+\end_layout
+
+\end_inset
+
+).
+ That will make it possible to combine sections, add equations, or change
+ the order of figures or citations without having to go through the file
+ line by line.
+\end_layout
+
+\begin_layout Standard
+Please note that the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|{subequations}|
+\end_layout
+
+\end_inset
+
+ environment in 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+\SpecialChar LaTeX
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ will increment the main equation counter even when there are no equation
+ numbers displayed.
+ If you forget that, you might write an article in which the equation numbers
+ skip from (17) to (20), causing the copy editors to wonder if you've discovered
+ a new method of counting.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+BibTeX
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ does not work by magic.
+ It doesn't get the bibliographic data from thin air but from .bib files.
+ If you use 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+BibTeX
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ to produce a bibliography you must send the .bib files.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+\SpecialChar LaTeX
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ can't read your mind.
+ If you assign the same label to a subsubsection and a table, you might
+ find that Table I has been cross referenced as Table IV-B3.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+\SpecialChar LaTeX
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ does not have precognitive abilities.
+ If you put a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+label|
+\end_layout
+
+\end_inset
+
+ command before the command that updates the counter it's supposed to be
+ using, the label will pick up the last counter to be cross referenced instead.
+ In particular, a 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+label|
+\end_layout
+
+\end_inset
+
+ command should not go before the caption of a figure or a table.
+\end_layout
+
+\begin_layout Standard
+Please do not use 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+nonumber|
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|
+\backslash
+notag|
+\end_layout
+
+\end_inset
+
+ inside the 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|{array}|
+\end_layout
+
+\end_inset
+
+ environment.
+ It will not stop equation numbers inside 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+verb|{array}|
+\end_layout
+
+\end_inset
+
+ (there won't be any anyway) and it might stop a wanted equation number
+ in the surrounding equation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+balance
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+A Final Checklist
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Make sure that your equations are numbered sequentially and there are no
+ equation numbers missing or duplicated.
+ Avoid hyphens and periods in your equation numbering.
+ Stay with IEEE style, i.e., (1), (2), (3) or for sub-equations (1a), (1b).
+ For equations in the appendix (A1), (A2), etc.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Are your equations properly formatted? Text, functions, alignment points
+ in cases and arrays, etc.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Make sure all graphics are included.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Make sure your references are included either in your main LaTeX file or
+ a separate .bib file if calling the external file.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ams"
+literal "false"
+
+\end_inset
+
+ 
+\shape italic
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mathematics into Type
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\shape default
+, American Mathematical Society.
+ Online available:
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "oxford"
+literal "false"
+
+\end_inset
+
+ T.W.
+ Chaundy, P.R.
+ Barrett and C.
+ Batey, 
+\shape italic
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The Printing of Mathematics
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\shape default
+, Oxford University Press.
+ London, 1954.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "lacomp"
+literal "false"
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The \SpecialChar LaTeX
+Companion
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\shape default
+, by F.
+ Mittelbach and M.
+ Goossens
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "mmt"
+literal "false"
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+More Math into LaTeX
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\shape default
+, by G.
+ Grätzer
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "amstyle"
+literal "false"
+
+\end_inset
+
+
+\shape italic
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+AMS-StyleGuide-online.pdf,
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\shape default
+ published by the American Mathematical Society
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Sira3"
+literal "false"
+
+\end_inset
+
+ H.
+ Sira-Ramirez.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On the sliding mode control of nonlinear systems,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+Systems & Control Letters
+\shape default
+, vol.
+ 19, pp.
+ 303–312, 1992.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Levant"
+literal "false"
+
+\end_inset
+
+ A.
+ Levant.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Exact differentiation of signals with unbounded higher derivatives,
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\shape italic
+Proceedings of the 45th IEEE Conference on Decision and Control
+\shape default
+, San Diego, California, USA, pp.
+ 5585–5590, 2006.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Cedric"
+literal "false"
+
+\end_inset
+
+ M.
+ Fliess, C.
+ Join, and H.
+ Sira-Ramirez.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Non-linear estimation is easy,
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\shape italic
+International Journal of Modelling, Identification and Control
+\shape default
+, vol.
+ 4, no.
+ 1, pp.
+ 12–27, 2008.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Ortega"
+literal "false"
+
+\end_inset
+
+ R.
+ Ortega, A.
+ Astolfi, G.
+ Bastin, and H.
+ Rodriguez.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Stabilization of food-chain systems using a port-controlled Hamiltonian
+ description,
+\begin_inset Quotes erd
+\end_inset
+
+ in 
+\shape italic
+Proceedings of the American Control Conference
+\shape default
+, Chicago, Illinois, USA, pp.
+ 2245–2249, 2000.
+\end_layout
+
+\begin_layout Biography without photo
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Jane Doe
+\end_layout
+
+\end_inset
+
+Biography text here without a photo.
+ 
+\end_layout
+
+\begin_layout Biography
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename fig1.png
+	width 1in
+	height 1.25in
+	keepAspectRatio
+	clip
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+IEEE Publications Technology Team
+\end_layout
+
+\end_inset
+
+In this paragraph you can place your educational, professional background
+ and research and other interests.
+\end_layout
+
+\end_body
+\end_document
