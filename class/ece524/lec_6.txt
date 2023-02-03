@@ -1,0 +1,48 @@
+02 Feb 2023
+-- 1st and 2nd order conditions for convex function
+--- Derivative/gradietn of fucntion 
+
+--- 2nd order function
+---- strictly concave > 0
+--- Operations Perserving Convexity of Functions
+---- non-negative weighter sums --> convext
+---- composition with an offine mapping
+---- point-wise maximum
+--- Covex Optimization
+---- Mathematical Optimaztion Problems
+
+--- Unconsgtrined convex Optimation
+---- feasible point is globa iff iterative methods always return 0 diff from previous
+--- Two widely used methods for gradient-based
+---- Gradient based
+---- Newtons' method
+
+--- Constrained Convex Optimization
+---- feasible point x is global minimizer iff 
+
+--- Langrangian Duality
+---- optimzation problem can be coverted
+---- yeilds a lower bound to original problme
+---- if original problem is convex & 
+--- estimates how far off you could be
+
+--- Dual fucntion
+---- minimum value of the langrangian over x
+---- dual fucntion is always concave
+---- tuning langrange multiplier
+
+--- Langrange Dual Problem
+---- minimize dual problem solution
+---- duality gap will show how distance between objective function and dual fucntion
+---- strong duality
+
+--- Complementary Slackness
+---- strong duality KKT conditions
+
+--- KKT Optimality Conditions
+
+--- Perturbing Parameter
+---- Langrange multipleirs:  prices (for example)
+---- min f(x) -- subject to something changing 
+
+--- 

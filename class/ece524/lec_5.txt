@@ -1,0 +1,33 @@
+31 Jan 2023
+
+-- Consumer Demand Function
+--- Measurements of the most desireable features for the least energy
+--- Allows a method to merge different bundle features into a single function or balance
+
+--- Demand and Price
+---- price elasticity is synonym for consume price sensitivity.
+---- negative price changes will cause significant changes to sensitivyt
+--- Price Elasticity
+---- is captured by negative demand curve
+--- if the price elasticity is tending to 0 then you buying everything and aren't sensative to cost
+
+--- Total Production Cost
+---- explict cost (network equipment, salary of people)
+----- building, generators
+---- opportunity cost (not utilizing a resource, bandwidth, spectrum)
+-----
+---- long term point view of costs
+----- cost of phd candidates over the research time
+---- short term point view of costs
+----- immiediate spend of resources (losing a student immediately at the beginning of research)
+---- marginal cost captures change to cost of production
+
+--- Competitive Firms
+---- price taking firm trying to make all the money
+---- profit is less costs and fixed costs
+
+--- Outline 
+---- Social optimal pricing: a service provider chooses prices to maximize the social welfare
+---- optimaztion problems, convex or not
+---- 
+

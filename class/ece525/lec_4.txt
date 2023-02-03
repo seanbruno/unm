@@ -1,0 +1,14 @@
+01 Feb 2023
+-- Crypto 1
+--- hash is one way, can have collisions and dups
+--- encrypt is two way, can't collide
+
+--- symmetric encryption scheme
+---- hides the message and provides data inegrity (no modifications)
+---- 
+
+--- Assymetric encryption scheme
+---- public key exchange first, then message transmisision/verification/reception
+---- MAC allows a tagged message to be verified and pinned to a user
+---- 
+
