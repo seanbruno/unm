@@ -1,0 +1,22 @@
+15 Feb 2023
+-- Polyalphabetic Substitution
+-- Transposition Ciphers
+-- Product Ciphers
+--- Claude Shannon 1949
+--- How important the secret should determine how much labor spent on the process
+--- key/cipher algo should be simply
+--- implemenation should be simple
+--- Size & storage of C should be restricted and not grossly larger
+--- Propagation of errors should be limited
+--- Confusion and Diffusion
+---- Interceptor cannot predice what will hapen to C when she changes 1 char in P
+---- Encryptor with good confusion hides relationship between message + key and cipher text (C)
+--- Diffusion (avalanch effect)
+---- Avalanche effect (1 bit changes %50 of output bits)
+--- Stream and Block cipher (types)
+---- Stream Cipher:  continuous stream of cipher bits, no chunked cipher blocks
+---- Block Cipher:  encapsulated cipher block (block of message is a block of cipher)
+--- AES 128 message text bits
+---- cipher text 128 bits out
+---- Electonic Code Book (ECB Mode)
+

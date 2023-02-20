@@ -1,0 +1,22 @@
+06 Feb 2023
+-- One Time Pads
+--- primitives
+---- Strong math properties
+---- 
+--- protocols
+----
+--- NONCE -- Number Only Used Once
+---- https://en.wikipedia.org/wiki/Cryptographic_nonce
+--- PRNG vs TRNG
+---- Seedeed reproducable algo (PRNG).  Easier to get high output.
+---- Truly random process.  Very hard to get high output.
+--- Auth Key Exchange
+---- "key shard" from each individual on the secure session used to generate the session key
+---- ephemeral keys vs long-lived key
+--- 
+
+--- Substitution Ciphers
+---- replace each character with some other character/number/symbol depending on algo
+---- Correlation 
+--- Trasposition Ciphers
+---- 

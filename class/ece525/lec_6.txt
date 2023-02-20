@@ -1,0 +1,7 @@
+13 feb 2023
+-- LAB assignedment #2
+--- PUF Timing and implemenation view from vivado.
+--- Heat delay timing is variable.  Make sure that temp is caclucated in.
+--- Provisioning mode will extract bitsrings
+--- 4 bitstring files for zybo -- program in vivado
+---- 
