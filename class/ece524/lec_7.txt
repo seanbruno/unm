@@ -1,0 +1,17 @@
+07Feb2023
+-- Shadown Price
+--- Interpretation in terms of economics:
+---- investments on n different resources: x
+----- -p^2(x) will demonstrate profit
+---- When n is close to 0, max profit, when it moves away from 0, max cost
+--- The dual prblem may have less dimension or simpler constraints that the original(primal)
+--- The Dual func may not be differentiable (non continuous/discrete)
+-- How yto solve a Dual Problem
+--- subgradient method
+---- given a convex fucntion 
+----- a subgradient d of the dual func g() at a dual feasible pnt satisfies 
+-- Resource alloc for Wireless Video Streaming
+--- The voice caller performance (SINR) can be used for perturbing parameter in solving optimization
+--- Solution Framework
+---- avg resource allocation:  constrained network opimation problem, which explotins the multiuser content diversity to efficiently utilize the network resoruces.
+---- video source adaptation: each video slows down/speeds up by solving a localized op
