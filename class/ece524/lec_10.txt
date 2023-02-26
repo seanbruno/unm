@@ -1,0 +1,8 @@
+21 Feb 2023
+-- Adverse Selection Problem
+--- Feedback loop of agents work provides recalculation of principal's contracts
+-- Moral Hazard Problem
+--- Feedback loop of work outcome changes final payment to agent
+--- no starting contracts
+-- 
+
