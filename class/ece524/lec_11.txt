@@ -1,0 +1,7 @@
+02 Mar 2023
+-- Ad-Hoc
+--- type could be channel gain
+--- effort is transmission/relay and latency
+--- reward is prioritization/trust score
+-- 
+
