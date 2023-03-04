@@ -1,0 +1,46 @@
+Tradgegy of the Commons
+-- Common pool of resources but shared in a way that most get zero resources
+Why Network Economics?
+-- provide intro to micro-econ 
+-- how pricing mechanisms influence the modern wireless industry
+-- basic wireless comm tech and micro econ
+-- social optimal pricing, monotpoly pricing, price differentiation, oligopoly pricing, network externalities
+-- intro to convex optimation/game theory
+Wireless Utopia
+-- Ulimited spectyrum
+-- wireless speed == hardline speed
+-- heterogenious tech coxist together without interference
+-- wireless users are reasonable
+-- wireless providers maximize social welfare over profit
+-- all of this is unrealistic
+Wireless Reality
+-- specturum is very limited and crowded
+-- Comm speed is not as fast as hadline speed
+-- heterogeneous networks interfere with each other and conflict
+-- users interfere with earch other
+-- growth of wireless use is huge
+-- wireless providers maximize profit over social welfare
+How will we address the wireless reality
+-- advance of weireless tech
+-- econ innovations
+-- policy reforms
+-- ecnomics can help to improve
+--- the overally perf of the wireless net
+--- the satisfaction levels for both users and service providers
+Regulating the Spectrum
+-- key reason for sutdying wireless network econ is to resolve tension between supply of wireless resouces and demand
+-- radio spectrum is limited
+-- wireless spectrum is tightly regulated/controlled everywhere
+-- The traditional way of regulating the spectrum is static. Assign frequencies to a location/provider.
+-- all spectrum licenses belong to govt identities and commercial entities
+-- frequency allocation map of every country or region is public
+-- new wireless tech and service are rapidly emerging
+-- every new wireless commercial service competes for licenses 
+Dynamic Spectrum Management
+-- enable ulicensed wireless users to share spectrum 
+-- many bands are not efficiently used
+-- FCC is opening up TV spectrum as lond as users' communications are protected
+-- Microsoft has built a test install in Redmond
+-- Problems related to Dynamic Spectrum Management
+--- regulators must provide enough incentive for licensees to share their bandwidth
+--- business services must adapt to new model for spectrum managment
