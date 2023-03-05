@@ -9,9 +9,11 @@
 
 -- lecture:
 -- distance based path loss, slow log-normal shadowing, multi-path propagation
+-- large-scale propagartion (distance, log-normal shadowing)
+-- small-scale propagation ( fast multi-path fading)
 -- rx signal profile
 --- radio wave progation - power density diminished gradually
---- noise awgn (white Gaussian noise)
+--- noise awgn (additive white Gaussian noise)
 --- power profile tx 
 
 -- path loss
@@ -22,7 +24,8 @@
 -- shadowing
 --- reflections, diffraction, scattering
 --- large obstical causing non-line of sight communications
---- log-normal shadowing
+--- PathLoss = Normalized PathLoss + zero mean Gaussian rando number = 20log(d) - 20log(frequency) + 10log(Antenna gain/loss/characterized data specific to equipment)
+--- log-normal shadowing captures the impact of reflection/diffraction/scattering interference for calculations
 
 -- multi-path
 --- signals bounce and diffract causing multiple reception events
@@ -31,21 +34,60 @@
 -- Wireless Multiple Access Technicque
 --- FDMA, OFDMA, TDMA, CDMA, CSMA
 ---- FDMA, TDMA, CDMA allocates a resource
+---- FDMA -- chop up frequency bands and give them to the users
+----- allows multiple user access via xmission on different frequencies
+---- OFDMA -- partial overlap of frequencies to allow better utilization of bandwidth
+----- each user can xmit on multiple channel (sub-carriers)
+---- TDMA -- each user gets a time slot to xmit
+---- CDMA -- each user encodes signal with a specific user code.
 ---- CSMA types, collision avoidance and resource allocation is on the handset/user
+----- ALOHA random access -- if collisiion occurs, backoff for random interval and try again
+----- CSMA users check for other signals before transmission (listen before talk)
 
 -- Wireless Networks
+--- 802.11 - wireless lan
+--- bluetooth (wireless personal area network)
+--- wimax
+--- wan (cellular)
+--- wireless RAN
+
+-- Wireless Cellular Networks
+--- large geographic area covered by radio, deviced into regular regions called "cells".
+--- each cell is associated with a fixed location tx/rx base station.  
+--- users can move between cells via handoff and mobility management
+--- neighboring cells are operated at different freq bands to avoid interference
+--- multiple cells will use the same freq band as long as the cells are far enough apart to avoid interference
+--- most cell systems are 3gpp 
+
+-- Wireless LAN Network
+--- small area, high speed radio
+--- AP vs AdHoc 
+---- AP has central node for access to  all network resources
+---- AdHoc allows users to xmit/rx to each other without utilizing central node
 --- 802.11
 
 -- Wireless Ad-hoc Network
 --- ad-hoc needs to be able to deal with broken nodes and nodes that aren't there
+--- 802.11 based
+--- no infra to start with, nodes self-assemble network
+--- limited range, might need multi-hop support to talk with all nodes in a network
+--- every node is a router
+--- first responders, battlefield applications for quick setup and tear down
 
 -- Wireless Ssensor Network
 --- No central access of base station
---- does use a sync node
+--- uses a sync node for data/control of data collection nodes
+--- nodes can fail at any time and there is no fixed topology
 
 -- Wireless Mesh Network
 --- Everyone talks to everyone all the time
 --- No central node
+--- mesh clients vs mesh routers
+--- type of AdHoc network where any node could be a router to the larger network
+--- mesh networks grow as more nodes are added, unlimited resources can be added
 
 -- Cognitive Radio Network
---- 
+--- Enables access to unlicensed frequencies when such access does not generate harmful interference
+--- senses available spectrum and frequencies via SDR techniques
+--- can use a geolocation database to know where spectrum is actively used by licensees to avoid interferences.
+
