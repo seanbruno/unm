@@ -1,0 +1,65 @@
+Wireless Tech and Users' Needs
+-- wi-fi good speed, limited range
+-- cell network wider range, lower speeds
+-- 4g cell higher peak, but realistically lower user throughput
+-- smartphone/tablets are hungrier for bandwidth and servicfes
+-- streaming vide is very hard to get smooth playback
+--- stresses the cellular network
+-- at&t in the us have heavy congenstion in large cities
+-- at&t iphone rollout sucked because of huge demand
+-- tech is not enough to fix supply/demand problems
+-- economics use helps guide decisions to work in a market
+Econmics and Wireless Technologies
+-- Econ of wireless network are very different from other industries due to uniqueness of tech and apps
+-- Econ stronlgy coupled with the wireless tech
+--- wi-fi tech can profide hig data rate in a short distance
+--- cell tech provides much better coverage with a much lower data rate
+--- econ models for wi-fi vs wireless are very different
+--- Commercial wi-fi providers charge users based on connection time 
+--- Cellular provider charge users for actual data usage
+Wireless applications
+-- QoS req
+-- resource user/implicaitno on the network
+-- price sensitivity
+-- video stream needs high data rate and low delayr.  This is expensive
+-- http/ftp fiel xfer doesn't have any latency, but needs reliable delivery with low error rate.
+Deregulation of Telecom MArkets
+-- dereg of telecom made the one public/private monopoloy break up 
+-- multiple players in each market
+-- wireless provider profit maximizes with tech and pricing to compete with alternatives and competitors
+-- industry dereg makes more choice
+-- user can compare and change provider/plan liberally
+-- user can chose different providers for different services
+-- service provider may no longer have complete control of subscribers.
+Wireless Network Econ vs Internet Econ 
+-- characterization of reources in wireless networks is harder than hardline networks
+-- wireless specturm is measured in Hz.
+-- network resources corresponding to each Hz of spectrum isn't easy to characterize
+--- wireless data rate is stochastic over time due to shadowing, fading mobility
+--- wireless rersources are spatially heterogenous, same spectrum used by same users who may be far apart
+--- wireless data rates are affected by mutual interferences from each user
+-- wireless users may have different attributes, utility function, energy constraints, efficientcy, channel condition
+-- users' perf is high coupled to mutual interference
+-- The interactions(noise floors, power & interference) depend on the wireless tech
+--- random access protocols (aloha) couple users via their channel access probabilities (collisions)
+--- CDMA via mutual inteference 
+--- spectrum overlay in cognitive radio networks 
+Introlduction to wireless comm and network technologies
+-- radio Propagations charactereists
+--- Transmission of point to point
+---- straight and direct (LOS)
+---- reflection, refraction, diffraction, absorption, polarization and scattering loss paths
+--- LOS propagation
+---- sattelite to ground station, tv, fm/am radio
+---- inverse square law power propagation and reception
+--- Reflection
+---- wave hits a boundary of a dissimlar media, causeing all or part of the wave to change direction back to the origin
+---- attenuatin of the wave is a factor of freq, angle of incidence of the boundary and the nature of the wave medium 
+---- its what happens inside a building (wi-fi)
+--- Diffraction
+---- partial bending of wave around a corner or edge causing loss of power in wave form
+---- its what happens outdoors (cellular)
+--- Scattering
+---- radio waves breaking apart into multiple directions hitting an irregular surface
+---- very reduced power level
+
