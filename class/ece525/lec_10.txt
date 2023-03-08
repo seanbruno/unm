@@ -1,0 +1,24 @@
+ 06 Mar 2023
+- Puf Constructions
+-- uniqueness, randomness, reproducability
+-- chips, bits, samples
+-- Hardware Reliability 10^-6 errors
+--- 10^-9 for Xilinx
+-- PUF can protect against bit flips as there is no NVRAM
+-- Requires Helper Data to characterize the PUF and eliminate randomness
+--- Enrollment is only ever done once (generate helper data)
+--- Regeneration is done under different conditions
+-- Instra-chip hamming distance is a metric that measures the resiliance of the PUF to changes in environment
+--- HD will always use the same challenge in a PUF
+--- HD is a measurement of XOR between entrollment and regeneration under a condition (environment)
+-- PUF stats metrics for reliability
+--- Enrollment typically done at 25C with normal supply voltage
+--- Regeneration done at all combinations from 0 to 85F, -5% to +5% voltage
+--- generate set of 10 bitstrings
+--- generate a mean 
+--- generate standard deviation
+-- PUF Stats metrics for randomness
+--- Randomness is hard to measure
+--- Entropy - avg entropy (11110000 == 1)
+--- MinEntropy - worst case entropy, preferred meaturements
+--- 

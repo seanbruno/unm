@@ -1,0 +1,9 @@
+27 Feb 2023
+-- https://github.com/jfplusq/HOST2023/tree/main/DATABASE
+--- PUFS 1
+---- confidentiality, data integrity, authentication, non-repudiation
+---- Secure Key Generation
+---- Secure Key Storage
+---- Secure Execution
+
+

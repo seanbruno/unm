@@ -1,0 +1,23 @@
+01 MAR 2023
+- PUFS 1 - continued
+-- PUF Construction
+--- Exploits the imperfections/defects of circutis and ICs in fabrication
+--- Read MAES txt
+--- Reliability, randomness, uniqueness
+---- Puf Class
+---- Puf Instance
+---- Puf Evaluation
+--- Puf Construction II
+---- uniqueness, randomness, reliability
+--- Puf Stats metric for Reliability
+---- every use of PUF will be slightly different
+---- almost every PUF needs helper data to mark unreliable bits or assist in cleanup of bitstream
+--- Puf Stats Metrics for Relaiblity
+---- provisioning vs enrollment vs regeneration
+---- provisioning 
+----- generate the helper data
+---- enrollment
+----- first time secret generate = helper data + PUF
+---- regeneration
+----- generate response = helper data + secret message
+
