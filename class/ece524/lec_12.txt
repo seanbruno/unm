@@ -1,0 +1,13 @@
+07 Mar 2023
+-- Satisfaction EQ -- goto approximately 45 minutes into the class
+--- games can have multiple, single or no EQ
+---- strict constraints will tend to restrict solutions
+-- Effcicient Satsifscation EQ (ESE)
+--- solution for the individual that satisfies each individual cost
+-- Optimal Efficient Satisfaction Eq (OESE)
+--- best ESE that pointwise minimum cost
+-- Optimal Satisfaction Eq (OSE)
+--- best SE pointwise/pairwise 
+-- Common Pool Resource Games (CPR)
+--- each player in the system has an initial endowment that is contributed to the common pool of work
+--- Tragedy of the Commons
