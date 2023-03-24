@@ -1,0 +1,23 @@
+20 Mar 2023
+- PUF Statiscal Metrics for Randomness
+-- Freq Test
+--- Count number of '1' in a bitstring and measures how close it is to 50% of the string
+-- Block Freq test
+--- 
+-- runs Test
+--- look at total runs, measure speed of change between 1 and 0
+-- Longest Run Time
+--- look at longest run
+-- Rank Test
+--- look at linear indendance between fixed length substrings
+-- Fourier Transform Test
+--- look at freq spectrum of the bitstring and test for periodic features or any repeats close to each other
+-- Non-Overlapping and Overlapping Template Test
+--- check some amount of the bitsring for a repeat of a pre determined bit string to ensure the same amount of occurences
+-- Universal Test
+-- linear complexit test
+-- serial/approximate entropy test
+-- cumulative sums test
+-- random excursion test
+-- 
+

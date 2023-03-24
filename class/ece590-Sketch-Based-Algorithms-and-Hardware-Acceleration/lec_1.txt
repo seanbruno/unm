@@ -1,0 +1,42 @@
+24 Mar 2023
+- VLSI Lab
+-- paralell processing of image at the sensor level
+--- simultaneous processing of image data at huge processing parallelism
+--- generate histogram from image data extremely quickly and ignores storage data/frame buffer
+- Streaming and workign on large amounts of data
+-- Large peak power during operation
+-- bound by memory use and bandwidth to memory
+- Streaming algorythms
+-- only look at incoming data bits once
+-- no storage of streaming data
+-- only stores resultant solutions on bits streams
+- Sketches
+-- Space-efficient probabilistic data structure
+-- Estimate peperites of data stream with statistically guarunteed error bounds
+-- sublinear memory requirements
+-- Fined grained parallelism can be explotited byt he hardware
+-- used in Frequency estimate, cardinality, similariey, heavy change or occurance, quantile estimation
+- counting ektches
+-- generate counters that are assigned by a hash function to quickly map elements to a counter/bucket
+- cardinatlity skettches
+-- estimate cardinality via harmonic mean functions
+- Ex 1 Empirical entropy estimation
+-- characerize dataset, detect anomolies, campare dataset
+-- estimate using top-K flows
+-- accelerator architecture
+--- Countmin-CU to estimate freq mi
+--- 16k 8 counters
+--- hyperloglog to estimage cardinality
+---- 8k 4-bit buckets 
+--- priority queu to select and store top-K freq
+- Ex 2 Genomic similarity
+-- compare genome via Jaccard similarity
+-- each genome is a set of overlapping strings
+-- Algorithym: gehome processing
+--- (amazon FPGA)
+--- Uses HLL sketches to compute cardinatliy
+--- accelarator mem bus can xfer data from genomes in parallel
+--- because of memory and input constraints, bus is 64 bits wide (8 inputs to 8 sketches 8 bits at a time)
+--- calculation of merged data is not stored, just used for part of the accelerator
+- Conclusions and Future work
+-- 

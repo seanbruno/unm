@@ -1,0 +1,14 @@
+21 March 2023
+-- Game theoretic Framework for Bandwidth Allocation Framework
+--- BW alloc
+--- Elastic Traffic
+--- Game Theory 
+--- NAsh Bargaining Solution
+-- Intro
+--- 
+
+
+-- User Penalty ??
+-- What is being recursed?
+-- Tracking performance from network management packets?
+
