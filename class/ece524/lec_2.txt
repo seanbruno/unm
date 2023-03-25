@@ -44,7 +44,7 @@ Wireless Network Econ vs Internet Econ
 --- random access protocols (aloha) couple users via their channel access probabilities (collisions)
 --- CDMA via mutual inteference 
 --- spectrum overlay in cognitive radio networks 
-Introlduction to wireless comm and network technologies
+Introduction to wireless comm and network technologies
 -- radio Propagations charactereists
 --- Transmission of point to point
 ---- straight and direct (LOS)

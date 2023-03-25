@@ -20,16 +20,18 @@
 --- higher freq w/smaller wavelen yeilds smaller gain
 ---- higher freq used in smaller distance
 ---- gain is unit less
+---- channel gain is affected by what frequency you choose for what distance your communication path
 
 -- shadowing
---- reflections, diffraction, scattering
+--- reflections, diffraction, scattering -> Shadowing or Shadow Fading
 --- large obstical causing non-line of sight communications
 --- PathLoss = Normalized PathLoss + zero mean Gaussian rando number = 20log(d) - 20log(frequency) + 10log(Antenna gain/loss/characterized data specific to equipment)
---- log-normal shadowing captures the impact of reflection/diffraction/scattering interference for calculations
+--- log-normal shadowing captures the impact of reflection/diffraction/scattering interference for calculations via a random variable.
 
 -- multi-path
 --- signals bounce and diffract causing multiple reception events
---- timing of signals may lead to symbol interferrence
+---- Extra copies can interfere if they arrive out of phase or enhance if in phase
+--- timing of signals may lead to inter-symbol interferrence
 
 -- Wireless Multiple Access Technicque
 --- FDMA, OFDMA, TDMA, CDMA, CSMA
