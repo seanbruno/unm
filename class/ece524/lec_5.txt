@@ -4,12 +4,13 @@
 --- Measurements of the most desireable features for the least energy
 --- Allows a method to merge different bundle features into a single function or balance
 
---- Demand and Price
----- price elasticity is synonym for consume price sensitivity.
----- negative price changes will cause significant changes to sensitivyt
---- Price Elasticity
----- is captured by negative demand curve
---- if the price elasticity is tending to 0 then you buying everything and aren't sensative to cost
+-- Demand and Price
+--- price elasticity is synonym for consumer price sensitivity.
+--- negative price changes will cause significant changes to sensitivity
+
+-- Price Elasticity
+-- is captured by negative demand curve
+-- if the price elasticity is tending to 0 then you buying everything and aren't sensitive to cost
 
 --- Total Production Cost
 ---- explict cost (network equipment, salary of people)
