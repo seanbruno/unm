@@ -1,0 +1,11 @@
+Basis for Proposed Research
+Describe the observations/discoveries/achievements (by yourself or others) make you believe that your approach will be successful.
+
+We hypothosize that the research from reference 1 can be made to show immediate results from its simplicity and advances in modern computational resources.  The required additional bidding/auction cycles in the proposed algorythmic changes are achievable with negligible increases to the load and time requirments to the aunctioneer in this model.
+
+In real networks, it will be shown that the losses incurred due to user connectivty issues are minimized.  The multi-round nature of the auction can recover users that may have missed out on a previous round of the auction.  This will have a measurable increase to the number of successful bids during the auction as compared to a single round bid in a standard auction format.
+
+The errors communicating with end users can also be immediately used to track the type and quality of the user during future auctions.  This allows the network to maintain a much more accurate description of each bidder and more accurately award payments to maximize profits for the providers.  The awards and payouts will be directly compared to standard auctions in similar networks to show the expected accuracy gains and efficiencies in payouts.
+
+
+

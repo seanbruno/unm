@@ -1,0 +1,18 @@
+\section{Research Plan}
+\subsection{What methods will be used and why are these most appropriate?}
+Initial testing of scenarios will be done internally at the University.  Development of the testing scenarios will require construction of a bid submission agent that will host the auction.  This server will exist on a single machine running the PMMRA example defined in the pseudo code of the paper.  Job submission agents will be developed to submit jobs to the auctioneer server.  These jobs, for initial testing will be requests for some number of digits of PI from some arbitrary positions in the matissa.  User agents that wish to submit themselves for the auction rounds, will submit their bids to the auctioneer.  Results of the auction will proceed via the PMMRA algorithm.  Jobs results will be sent from user agents to the job submission agents which will measure the latency of the job results and issue the payment in the form of arbitrary currency.  To mimic errors and latency during the auction, some amount of errors will be induced via a centralized router in this synthetic test.
+
+Once the initial testing phase is complete, the experimental setup for our scenario will be built out across multiple virtual machine providers (Azure Cloud, Amazon EC2 and Google Compute).  In order to ensure the most thorough testing environment, multiple test instances will be spun up in multiple geographic regious to ensure that some amount of network latency will be randomly injected into the testing scenarious during the auction process.  The auctioneer will still be hosted at the University.  The same criteria will be used to measure the success of the PMMRA.
+
+\subsection{Specific activites (brief descriptions)}
+Resource Providers will be utilzing the algorythm in reference 2 in order to generate the arbitrary digits of PI and an arbitary location in the matissa.  This provides an easily portable work function that can easily be verified for accuracy if needed.  This should be written in C and utilize standard libraries available for all systems.
+
+Job Submissions Agents will be written in a similar fashion to the RP.  Additional code will be written to provide an evaluation and feedback on the RP used in each auction result after the work is submitted and returned from the winning RP instances.
+
+The auctioneer will be responsible for implementing the PMMRA from the paper in reference 1 and will be the holder of the payment for the jobs.  Most of the code for this project will be developed for this server application.   The auctioneer will need to be written to
+
+
+\subsection{Breakthroughs needed/expected in order to achieve the objectives}
+:
+
+\subsection{Why are you or your team/facility the best or uniquely qualified to pursue the proposed research?}

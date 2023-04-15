@@ -1,0 +1,5 @@
+11 Apr 
+-- ISAC 
+-- Information Theory Tradeoff
+--- why is fully unified waveform design really any different from a carrier with multiple PSK/FM/AM modulations on it?
+--- SIC-type Successive Interference Cancellation

@@ -1,0 +1,15 @@
+11 Apr 2023
+-- Dynamic Pricing for Resource-Quota Sharing in Multi-Access Edge Computing
+--- Multi-Access Edge Computing -- Resource Allocation Management
+---- Varied needs cause waste
+---- Allwing users to sell unutilized portions of their plan
+--- Owner & Renter Roles
+--- Socially optimal 
+---- Distributed REntal Pricing - Social Welfare (DRP-SW) Algo
+--- Convergence and Optimality of DRP-SW
+--- PRofit Maximizing Dynamic Pricing Mechanism
+---- DRP-P
+----- Missing Social Welfare comparison to Profit Maximizing
+---- When designing a decision making model (two models are defined here)
+----- does the paper discuss real-time excution of the model
+----- 
