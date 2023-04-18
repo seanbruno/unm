@@ -1,0 +1,20 @@
+06 Apr 2023
+-- UAV VECN Deployment Trajectory and Hovering Optimization
+--- Internet of Vehicles
+---- UAV hub for comms as they can LOS from better positions
+---- Pathing is hard
+---- Pre-planning algorithm
+----Deployment timing and traffic model
+----- UAC VECN system
+------ Command and Control station is also chargin station
+------ What are they using for predictive taffic modeling
+------ Did authors address different varieties of "data cleaning"
+----Fligth trajectory 
+----- Why road pathing and not free flight networking
+----- UAV FT-GA
+----- Genetic/Fitness style algorithm
+----Hovering optimizat in the mission area
+----- Minimize comms to UAV and ground station
+----- UAV Hovering Algo 
+----- Designed on OpenAI treasure hunter
+----- 

@@ -1,0 +1,42 @@
+27 Mar 2023
+- NIST test suite for Randomness
+-- Nist finalAnalysisReport using HELP ASIG
+- Weak PUF vs Strong PUF
+-- Strong means that you can give it to someone for a long time and it still possible to generate a response that an advesary can't know.
+-- PUF has a large challenge space
+-- can't build a model of the PUF
+-- Anything else is WEAK.
+- PUF Usage Scenarios
+-- Identification
+--- Unique Serial number (Intel Loftstrum)
+--- Weak PUF
+-- Authentication
+--- needs a strong PUF
+--- needs a non-repeatable challenge/response each time.
+--- PUF input/output are exposed.  Leads to model-building via acessible endpoints/data.
+--- PUF auth can eliminate NVM for key stores
+--- can provide large number of CRP
+--- tamper-evident if they are messed with
+--- can be made to never reveal secret even by vendor/manufacturer
+--- stronger form of CRP
+-- Encryption
+--- Can generate a symmetric key algo
+--- random NONCE for specific pub/priv key pair for asym encryption
+--- Can be a weak PUF as key is not revealed
+--- inaccessable PUF is model-building impossible without access to the power system to record data during operation.
+--- tolerance to bit flip errors is 0
+-- PUF Implementation
+--- Delay-Based PUF
+---- Delay along matched patchs
+---- Ring Oscillator fewuencies
+---- Glitches along paths
+---- Delays along glitch free path
+--- Bi-stable PUF
+---- SRAM
+---- Butterfuly, Buskeepers
+---- FlipFlopss and LAtches
+--- Mixed-Signal PUF
+---- Transistor threshold voltage/transconductance
+---- Dynamic/leakage current
+---- REsistance/Capacitance
+--- Arbiter PUF

@@ -1,0 +1,8 @@
+06 Apr
+-- Deep Reinforment Learning based Recruitment Schemes for Massive Data Collections in 6G iot nets
+--- Long distance data collection problems
+--- costs, flight path, battery/power
+--- Basic DRL
+---- focus on data collection
+---- Genetic algorithm again
+---- 

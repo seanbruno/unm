@@ -1,0 +1,12 @@
+04 Apr 2023
+-- Common Pool of Resources
+--- Exhaustion leads to Tragedy of the Commons
+-- standard CPR game
+--- Rubenstein Stahle game
+--- will converge "eventually" after some arbitrary time
+-- Prospect Theory
+--- reference dependance: each player values the significance of loss/gain differently
+--- Loss aversion: Kahneman/Taversky, losses impact more than the equivalent gain
+--- Diminishing Sensitivty: losses causes risk seeking more often, gains causes conservatism
+--- Probability Weighting:  people underestimate risk in common events and overestimate risk in rare events
+--  
