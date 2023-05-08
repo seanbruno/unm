@@ -1,0 +1,189 @@
+Sean Bruno - sbruno1@unm.edu
+28 March 2023 -- ECE 524 Spring Term -- MidTerm Exam
+
+1. (9 %) Consider a cloud computing environment that can provide VMs (virtual machines) and serverless
+computing functionalities to the end-users. Each computing functionality comes with a corresponding
+unit cost. Based on the end-user’s budget availability, will there be a unique combination of computing
+services (i.e., a combination of VMs and serverless computing functionalities) that satisfy its computing
+needs? If yes, please explain. If not, please explain. Provide the appropriate network economics
+terminology in your answer. (Note: Consider that the end-user’s budget can support the purchase of
+multiple product units).
+
+--------------------------------------------------------------------------------------------------------
+In most cases, end-user computing requirements are varied and have a mix of time constraints and data
+sizes.  When an end-user considers the computing functionality provided by a service, how quickly they
+need results from their provider and how much data they wish to have processed will cause them to
+optimize their choices governing which type or style of compute they purchase.
+
+Users who are not time sensitive but are very cost sensitive, will choose the cheaper, serverless option
+to maximize their utility from the provider at the cost of slower time to generate a result.  These
+users are not going to take advantage of the higher priced, full VM solutions.  Billing departments, 
+non-live stream video conversion and large scale genomic analysis do not have a real-time component
+needing high speed turn around.  Therefore they can use a much lower cost service.
+
+Users who are very time sensitive will normally need to use services that require higher costs to meet
+their scheduling criteria.  These users need to minimize their latency during computation to quickly
+return results which providers will charge a much higher cost per unit of CPU.  Full VM providers who
+service these requests will have a much higher, dedicated infrastructure to garauntee the latency
+requirements from customers whose budgets and workloads demand it.  Live streaming providers who convert
+video to multiple codecs in real-time, high-frequency trading analytics engines and voice over IP calling
+tend to need low latency providers in order to meet their service level constraints.  These providers
+will normally charge a much higher cost to service these types of customers.
+
+--------------------------------------------------------------------------------------------------------
+2. (9 %) If a frequency band is used in one cell, it cannot be reused in any other cell within a wireless
+cellular communication environment. True or False and Why?
+--------------------------------------------------------------------------------------------------------
+
+False: A wireless cell most definitely can use a frequency band that is in use by another cell in multiple types
+of wireless communication environment.
+
+Depending on the technique used, frequency bands can be reused in mutiple cells if they are separated by 
+large distances such that they don't interfere with each other.  The distance between the cell coverage
+can be managed such that individual customers, while using the same frequency bands, won't be able to
+interfere with each other.
+
+The same frequency bands are used in CDMA networks where each user is assigned their own modulation 
+psuedocode such that the interference of the same frequency is somewhat additive.
+
+It is even possible and desireable to allow the same frequencies to be used across multiple cells in FDMA
+networks if the relative use (user population) is low enough that the same bands can be used to service
+the area.
+
+Finally, in a network with a random style access protocol (ALOHA), the backoff due to frequency collision
+is built into the network.  This would allow the network to utilize the same frequency bands across the
+cell network.
+--------------------------------------------------------------------------------------------------------
+3. (9 %) Consider a power company within a smart grid system. The energy production cost is fixed.
+Yes/No and Why?
+--------------------------------------------------------------------------------------------------------
+
+False:  The cost of energy in a smart grid system is NOT fixed.
+
+Typical smart grid systems have multiple inputs that allow the grid controllers to purchase power at a
+variable, market rate depending on consumption and generation.  In a modern smart grid, end users become
+power resellers and affect market prices for that power.
+
+During a sunny day, power production via end user electro voltaics become plentiful and cheap.  End user
+demand for power is handled via self-generation.  End users will then offload excess power generation to
+the grid at whatever market price the power company is paying, causing a downward pressure on the price
+per unit of power and making other sources with higher cost become less profitable.
+--------------------------------------------------------------------------------------------------------
+4. (9 %) Consider a convex maximization problem. What are the necessary conditions in order for the
+problem to have a unique global maximum point?
+
+--------------------------------------------------------------------------------------------------------
+Out of time on this one.  :-)
+
+--------------------------------------------------------------------------------------------------------
+5. (9 %) What are the two main contract-theoretic models that exist? What is the main characteristic of
+each one of those (and at the same time the one that differentiates them)? If you were developing and
+owning an online social platform to support crowdsourcing (collect data from the crowd/users), which
+model would you choose to reward the users that provide information, e.g., photos, text, video, and why?
+--------------------------------------------------------------------------------------------------------
+We studied two contract theory models, namely Adverse Selection and Moral Hazard style solutions.
+
+In Adverse Selection, the principal who needs some work done, has determined via statistical and behavioral
+data collection, what types of agents exist to service this work.  Those types can vary, but typically
+cover the reliability of the agent and what cost the agent will charge for that work.  The principal can
+then use that knowledge to minimize its cost and maximize its utility by designing a contract list that
+the agents can select from.  Upon completion of the work, the agent is rewarded with its payout.
+
+In Moral Hazard, the principal really has no idea what types of hidden actions that agents will take
+to accomplish its work, so it starts with a down payment to the agents accepting their task.  The
+principal attempts to evaulate the performance of the work through the interference of a noisy signal
+in the network, but adjusts its payout on completion of the work to mirror the performance of the agent.
+
+If I were to generate a crowdsourcing service/platform, I would most likely chose the Moral Hazard style
+as users in the network will most likely be very transient in the social platform.  Gathering behaviorial
+data will be unlikely as you will only be able to measure a small number of transactions to generate
+a type to assign to the user.  It is much more cost efficient for the provider in this style of unreliable
+agents to moderate their final payout.
+--------------------------------------------------------------------------------------------------------
+6. (9 %) Consider an adhoc relay-assisted wireless communication system. Following a contract-theoretic
+modeling approach, who is the employer and the employee at each communication hop? Which contract-
+theoretic model can jointly capture the phenomenon of information transmission and relay functionality?
+What can be the effort and what can be the reward in this model?
+--------------------------------------------------------------------------------------------------------
+In an Ad-Hoc network, each node when attempting to transmit to a destination is assuming the role of an 
+employer asking its neighboring nodes withing range to act as an employee and do some amount of work.
+
+This network model is most easily be modeled using a combination of adverse selection and moral hazard.
+Each node will be able to track the performance of its neighboring nodes, and keep their types in a list
+so that they are able to generate a menu of contracts for them.  In addition, since the battery life
+is a hidden data element, the action of actually transmitting can be thought of as a hidden action in this
+scenario, so you can begin your transaction by rewarding a down payment to the nodes.  When the transmitted
+data is acknowledged at the far end, you can reward nodes who participated with a performance evaulation 
+and use that data to update the neighboring node types.
+
+As a reward in this network, the employer node can accept more packets and relay them for its well behaved
+neighbors.
+--------------------------------------------------------------------------------------------------------
+
+7. (9 %) How spectrum allocation is performed nowadays by FCC? Is it true that a wireless provider with
+high budget availability and limited wireless infrastructure and/or services will be always allocated the
+largest portion of the spectrum? Yes/No and Why?
+--------------------------------------------------------------------------------------------------------
+The FCC will dsitribute spectrum via auctions open to the public.  Normally, the bidding process looks 
+at the bidder's ability to utilize the spectrum being offered.  Part of the process of acquiring the
+rights to utilize spectrum, requires presentation of the bidder's infrastructure and current utilization
+of already allocated frequencies.  If it can be shown that a bidder is not in a position to take advantage
+of the spectrum, the FCC will choose a different bidder to win the auction grant.
+
+Competition and maintaining a competitive environment is also a consideration during the auction process.
+The FCC will try and distribute auctions grants evenly so as to not prefer one provider over another, nor
+give any one provider an advantage in a market based on the spectrum granted.
+--------------------------------------------------------------------------------------------------------
+
+8. (10 %) What is the main difference between a game in satisfaction form and a normal form game?
+--------------------------------------------------------------------------------------------------------
+A game in satisfaction form calculates sets of results/strategies for the players based on allowing the
+players' utility functions to meet a minimum threshold.  A normal form game does not allow for this 
+kind of solution, nor does it mandate that one even exist.
+
+A satisfaction form game ensures that a solution allows for all players to accomplish a minimum of results
+for their given set of strategies.  It is not required that all players in a normal form game receive
+any payout regardless of the strategy.
+
+--------------------------------------------------------------------------------------------------------
+9. (9 %) Consider a public safety scenario after an earthquake, where the citizens of a city try to communicate
+over the wireless cellular network to reach out to their families and check if everyone is ok. What network
+economics phenomenon will be observed and why?
+--------------------------------------------------------------------------------------------------------
+If a very large percentage of users of a wireless network attempt to utilize the same network resources
+at the same time, they can overwhelm the limited network resources availble to them in a phenmonmenon known
+as the Tragedy of the Commons.  Networks are normally scaled to a peak usage value that is calculated
+from the population of users of that network.  It is not an infinite network pool, and can only support
+so many users before it runs out of power, frequency or data bandwidth for users.  In an emergency situation,
+it is quite trivial for a network that isn't scaled for a disaster to be overwhelmed by a peak value
+never before seen on a network, leading to the common pool of resources being denided to the majority
+of users.
+--------------------------------------------------------------------------------------------------------
+
+10. (9 %) Consider a cellular communications environment with 5 users within the cell. We formulate the
+optimization problem of maximizing the sum uplink transmission data rate (social welfare function),
+under the constraints that the transmission power of each user should not exceed its battery availability.
+The goal of the optimization problem is to determine the uplink transmission power of each user. How
+many free variables do you have and which are those? How many Lagrange multipliers do you have and
+why?
+--------------------------------------------------------------------------------------------------------
+In this scenario you have 5 users each with their own variables, yeilding 5 multipliers.
+
+--------------------------------------------------------------------------------------------------------
+
+11. (9 %) The WiFi providers and the cellular providers use the same economic models to charge the users.
+True or False and Why?
+--------------------------------------------------------------------------------------------------------
+False.  These two network providers have very different usage patterns, based on the data rates used, 
+distance the radios need to transmit and the coverage area provided by each network type.
+
+WiFi providers are normally able to charge their end users via an access time charge.  If a user wants
+an hour of access, they pay a fee for that hour regardless of the data they consume.  These much higher
+data rates are very useful for airport or hotel access who service users at a short range.
+
+Cellular network providers are normally able to charge their end users via a data amount charge.  If a 
+users wants to download one gigabyte of data, they can buy that much data regardless of how much time it
+takes to download that data.  Normally, these users require their data access to be much more mobile so
+providers have chosed the price per data downloaded model to offset the much larger infrastructure 
+required to service this network.
+--------------------------------------------------------------------------------------------------------
