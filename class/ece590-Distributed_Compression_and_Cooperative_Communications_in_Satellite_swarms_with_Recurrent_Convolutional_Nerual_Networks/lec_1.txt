@@ -1,0 +1,18 @@
+31 Mar 2023
+- Dr. Sudharman K . Jayaweera
+-- ML Flavors: supervised, un-supervised, reinforcement learning
+--- FeedForward NEural Networks
+---- connection/neurons always forward output in one direction
+--- Back propagation algorigthm
+---- gradient descent utilzing derivitive to push results backwards
+--- Recurrent Neural Network
+---- FFN doesn't know what happened in the past, no storage
+---- RNN will know about last event when processing current event
+--- Long Short-term Memory
+---- learns temporal relations but not spatial correlations
+---- an RNN that can learn long-term dependencies.
+--- Convolutional LSTM
+--- Remote Sensing with LEO Satellites
+---- DL based nonlinear predictive coding
+---- compression based on ML to xfer less data
+---- 

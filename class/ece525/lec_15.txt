@@ -1,0 +1,9 @@
+03 Apr 2023
+-- Picture of code flow for lab6
+-- Enrollment/chlng for LLK and helper data
+-- LLK never stored for long periods of time, always regenerate after use
+--- challenge/helper data can be stored
+-- Regeneration --> LLK output
+--- input challenge/helper data
+-- KEK -- Key Encryption Key
+

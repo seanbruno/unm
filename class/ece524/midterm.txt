@@ -1,0 +1,24 @@
+30 March 2023
+-- Incetive Mechanism and Resouce Allocation for EdgeFog Networks Drive by MutliDimesional Game Theory
+--- Increase Populatiry of Edge Computing
+---- Adoption of a multi dimensional soltuion
+-- Introduce Edge-fog model system
+-- System Model
+--- users, edge and fog server
+-- Multi Dim Contract Base incentive design
+--- capture user types across mutlipel dimensions
+--- Ability to forward tasks categorizes the users
+---- size, vs intesity, sensitivity
+--- Uses characterization to generate contract bundles
+-- IR vs IC
+--- contract type will influence reward and utility
+---- chose the right contact bundle, get the most reward
+--- generate a virtual user type to characterize the user better
+---- allows a slope variable to define the users unwillingness to participate
+--- How does the system measure willingness(s) or characterize it?
+-- Stackleberg game commences
+--- edge server performs as a leader
+---- given input tx power, how many bytes should be sent
+--- Follower optimization based on number bytes on input
+--- Garauntees one Nash EQ 
+--- 

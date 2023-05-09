@@ -1,0 +1,10 @@
+13 Apr 2023
+-- oligopoloy
+--- Cornout
+---- determines qty for max profit
+---- 
+--- Betrand
+---- determines price for max profit`
+--- Hotelling
+---- determines how competition and pricing should behave to maximize pricing
+-- dictate price

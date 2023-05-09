@@ -40,3 +40,7 @@
 ---- Dynamic/leakage current
 ---- REsistance/Capacitance
 --- Arbiter PUF
+---- each challenge bit can be tested to flip output
+---- only 4 switch segments to generate entropy at each bit, but only 2 paths
+---- output controlled by fastest path to latch output to 1/0
+---- 
