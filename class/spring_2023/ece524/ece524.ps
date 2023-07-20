@@ -1,0 +1,2240 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 18 36 594 756
+%%Title: Enscript Output
+%%Creator: GNU Enscript 1.6.5.90
+%%CreationDate: Tue May  9 14:27:14 2023
+%%Orientation: Landscape
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6.5 90
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6.5 90
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 6 6 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-simple 1.6.5 90
+
+/do_header {	% print default simple header
+  gsave
+    d_header_x d_header_y HFpt_h 3 div add translate
+
+    HF setfont
+    user_header_p {
+      5 0 moveto user_header_left_str show
+
+      d_header_w user_header_center_str stringwidth pop sub 2 div
+      0 moveto user_header_center_str show
+
+      d_header_w user_header_right_str stringwidth pop sub 5 sub
+      0 moveto user_header_right_str show
+    } {
+      5 0 moveto fname show
+      45 0 rmoveto fmodstr show
+      45 0 rmoveto pagenumstr show
+    } ifelse
+
+  grestore
+} def
+%%EndResource
+/d_page_w 720 def
+/d_page_h 576 def
+/d_header_x 0 def
+/d_header_y 561 def
+/d_header_w 720 def
+/d_header_h 15 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 720 def
+/d_footer_h 0 def
+/d_output_w 720 def
+/d_output_h 561 def
+/cols 2 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+90 rotate
+36 -594 translate
+/pagenum 1 def
+/fname (final_notes.txt) def
+/fdir (.) def
+/ftail (final_notes.txt) def
+% User defined strings:
+/fmodstr (Tue May 09 14:26:23 2023) def
+/pagenumstr (1) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 552 M
+(ece524_paper_section_3.txt) s
+5 545 M
+(Basis for Proposed Research) s
+5 538 M
+(Describe the observations/discoveries/achievements \(by yourself or others\) make you believe that ) s
+5 531 M
+(your approach will be successful.) s
+5 517 M
+(We hypothosize that the research from reference 1 can be made to show immediate results from its ) s
+5 510 M
+(simplicity and advances in modern computational resources.  The required additional bidding/aucti) s
+5 503 M
+(on cycles in the proposed algorythmic changes are achievable with negligible increases to the loa) s
+5 496 M
+(d and time requirments to the aunctioneer in this model.) s
+5 482 M
+(In real networks, it will be shown that the losses incurred due to user connectivty issues are mi) s
+5 475 M
+(nimized.  The multi-round nature of the auction can recover users that may have missed out on a p) s
+5 468 M
+(revious round of the auction.  This will have a measurable increase to the number of successful b) s
+5 461 M
+(ids during the auction as compared to a single round bid in a standard auction format.) s
+5 447 M
+(The errors communicating with end users can also be immediately used to track the type and qualit) s
+5 440 M
+(y of the user during future auctions.  This allows the network to maintain a much more accurate d) s
+5 433 M
+(escription of each bidder and more accurately award payments to maximize profits for the provider) s
+5 426 M
+(s.  The awards and payouts will be directly compared to standard auctions in similar networks to ) s
+5 419 M
+(show the expected accuracy gains and efficiencies in payouts.) s
+5 391 M
+(ece524_paper_section_4.txt) s
+5 384 M
+(\\section{Research Plan}) s
+5 377 M
+(\\subsection{What methods will be used and why are these most appropriate?}) s
+5 370 M
+(Initial testing of scenarios will be done internally at the University.  Development of the testi) s
+5 363 M
+(ng scenarios will require construction of a bid submission agent that will host the auction.  Thi) s
+5 356 M
+(s server will exist on a single machine running the PMMRA example defined in the pseudo code of t) s
+5 349 M
+(he paper.  Job submission agents will be developed to submit jobs to the auctioneer server.  Thes) s
+5 342 M
+(e jobs, for initial testing will be requests for some number of digits of PI from some arbitrary ) s
+5 335 M
+(positions in the matissa.  User agents that wish to submit themselves for the auction rounds, wil) s
+5 328 M
+(l submit their bids to the auctioneer.  Results of the auction will proceed via the PMMRA algorit) s
+5 321 M
+(hm.  Jobs results will be sent from user agents to the job submission agents which will measure t) s
+5 314 M
+(he latency of the job results and issue the payment in the form of arbitrary currency.  To mimic ) s
+5 307 M
+(errors and latency during the auction, some amount of errors will be induced via a centralized ro) s
+5 300 M
+(uter in this synthetic test.) s
+5 286 M
+(Once the initial testing phase is complete, the experimental setup for our scenario will be built) s
+5 279 M
+( out across multiple virtual machine providers \(Azure Cloud, Amazon EC2 and Google Compute\).  In ) s
+5 272 M
+(order to ensure the most thorough testing environment, multiple test instances will be spun up in) s
+5 265 M
+( multiple geographic regious to ensure that some amount of network latency will be randomly injec) s
+5 258 M
+(ted into the testing scenarious during the auction process.  The auctioneer will still be hosted ) s
+5 251 M
+(at the University.  The same criteria will be used to measure the success of the PMMRA.) s
+5 237 M
+(\\subsection{Specific activites \(brief descriptions\)}) s
+5 230 M
+(Resource Providers will be utilzing the algorythm in reference 2 in order to generate the arbitra) s
+5 223 M
+(ry digits of PI and an arbitary location in the matissa.  This provides an easily portable work f) s
+5 216 M
+(unction that can easily be verified for accuracy if needed.  This should be written in C and util) s
+5 209 M
+(ize standard libraries available for all systems.) s
+5 195 M
+(Job Submissions Agents will be written in a similar fashion to the RP.  Additional code will be w) s
+5 188 M
+(ritten to provide an evaluation and feedback on the RP used in each auction result after the work) s
+5 181 M
+( is submitted and returned from the winning RP instances.) s
+5 167 M
+(The auctioneer will be responsible for implementing the PMMRA from the paper in reference 1 and w) s
+5 160 M
+(ill be the holder of the payment for the jobs.  Most of the code for this project will be develop) s
+5 153 M
+(ed for this server application.   The auctioneer will need to be written to) s
+5 132 M
+(\\subsection{Breakthroughs needed/expected in order to achieve the objectives}) s
+5 125 M
+(:) s
+5 111 M
+(\\subsection{Why are you or your team/facility the best or uniquely qualified to pursue the propos) s
+5 104 M
+(ed research?}) s
+5 97 M
+(ece524_paper_section_8.txt) s
+5 90 M
+(11 Apr 2023) s
+5 83 M
+(-- Dynamic Pricing for Resource-Quota Sharing in Multi-Access Edge Computing) s
+5 76 M
+(--- Multi-Access Edge Computing -- Resource Allocation Management) s
+5 69 M
+(---- Varied needs cause waste) s
+5 62 M
+(---- Allwing users to sell unutilized portions of their plan) s
+5 55 M
+(--- Owner & Renter Roles) s
+5 48 M
+(--- Socially optimal ) s
+5 41 M
+(---- Distributed REntal Pricing - Social Welfare \(DRP-SW\) Algo) s
+5 34 M
+(--- Convergence and Optimality of DRP-SW) s
+5 27 M
+(--- PRofit Maximizing Dynamic Pricing Mechanism) s
+5 20 M
+(---- DRP-P) s
+5 13 M
+(----- Missing Social Welfare comparison to Profit Maximizing) s
+5 6 M
+(---- When designing a decision making model \(two models are defined here\)) s
+365 552 M
+(----- does the paper discuss real-time excution of the model) s
+365 545 M
+(----- ) s
+365 538 M
+(ece524_paper_section_9.txt) s
+365 531 M
+(11 Apr ) s
+365 524 M
+(-- ISAC ) s
+365 517 M
+(-- Information Theory Tradeoff) s
+365 510 M
+(--- why is fully unified waveform design really any different from a carrier with multiple PSK/FM) s
+365 503 M
+(/AM modulations on it?) s
+365 496 M
+(--- SIC-type Successive Interference Cancellation) s
+365 489 M
+(group1.txt) s
+365 482 M
+(21 March 2023) s
+365 475 M
+(-- Game theoretic Framework for Bandwidth Allocation Framework) s
+365 468 M
+(--- BW alloc) s
+365 461 M
+(--- Elastic Traffic) s
+365 454 M
+(--- Game Theory ) s
+365 447 M
+(--- NAsh Bargaining Solution) s
+365 440 M
+(-- Intro) s
+365 433 M
+(--- ) s
+365 412 M
+(-- User Penalty ??) s
+365 405 M
+(-- What is being recursed?) s
+365 398 M
+(-- Tracking performance from network management packets?) s
+365 384 M
+(group2.txt) s
+365 377 M
+(21 March 2023) s
+365 370 M
+(-- A game theory Based strategic approach using MANET) s
+365 363 M
+(--- Mobile ad-hoc network) s
+365 356 M
+(--- ) s
+365 349 M
+(group4.txt) s
+365 342 M
+(06 Apr 2023) s
+365 335 M
+(-- UAV VECN Deployment Trajectory and Hovering Optimization) s
+365 328 M
+(--- Internet of Vehicles) s
+365 321 M
+(---- UAV hub for comms as they can LOS from better positions) s
+365 314 M
+(---- Pathing is hard) s
+365 307 M
+(---- Pre-planning algorithm) s
+365 300 M
+(----Deployment timing and traffic model) s
+365 293 M
+(----- UAC VECN system) s
+365 286 M
+(------ Command and Control station is also chargin station) s
+365 279 M
+(------ What are they using for predictive taffic modeling) s
+365 272 M
+(------ Did authors address different varieties of "data cleaning") s
+365 265 M
+(----Fligth trajectory ) s
+365 258 M
+(----- Why road pathing and not free flight networking) s
+365 251 M
+(----- UAV FT-GA) s
+365 244 M
+(----- Genetic/Fitness style algorithm) s
+365 237 M
+(----Hovering optimizat in the mission area) s
+365 230 M
+(----- Minimize comms to UAV and ground station) s
+365 223 M
+(----- UAV Hovering Algo ) s
+365 216 M
+(----- Designed on OpenAI treasure hunter) s
+365 209 M
+(----- ) s
+365 202 M
+(group5.txt) s
+365 195 M
+(04 Apr 2023) s
+365 188 M
+(-- Common Pool of Resources) s
+365 181 M
+(--- Exhaustion leads to Tragedy of the Commons) s
+365 174 M
+(-- standard CPR game) s
+365 167 M
+(--- Rubenstein Stahle game) s
+365 160 M
+(--- will converge "eventually" after some arbitrary time) s
+365 153 M
+(-- Prospect Theory) s
+365 146 M
+(--- reference dependance: each player values the significance of loss/gain differently) s
+365 139 M
+(--- Loss aversion: Kahneman/Taversky, losses impact more than the equivalent gain) s
+365 132 M
+(--- Diminishing Sensitivty: losses causes risk seeking more often, gains causes conservatism) s
+365 125 M
+(--- Probability Weighting:  people underestimate risk in common events and overestimate risk in r) s
+365 118 M
+(are events) s
+365 111 M
+(--  ) s
+365 104 M
+(group6.txt) s
+365 97 M
+(06 Apr) s
+365 90 M
+(-- Deep Reinforment Learning based Recruitment Schemes for Massive Data Collections in 6G iot net) s
+365 83 M
+(s) s
+365 76 M
+(--- Long distance data collection problems) s
+365 69 M
+(--- costs, flight path, battery/power) s
+365 62 M
+(--- Basic DRL) s
+365 55 M
+(---- focus on data collection) s
+365 48 M
+(---- Genetic algorithm again) s
+365 41 M
+(---- ) s
+365 34 M
+(group7.txt) s
+365 27 M
+(-- DRBF ) s
+365 20 M
+(--- BAA \(bottleneck aware allocation\)) s
+365 13 M
+(---- ) s
+365 6 M
+(--- DRF \(Dominant Resource Fairness\)) s
+_R
+S
+%%Page: (2) 2
+%%BeginPageSetup
+_S
+90 rotate
+36 -594 translate
+/pagenum 2 def
+/fname (final_notes.txt) def
+/fdir (.) def
+/ftail (final_notes.txt) def
+% User defined strings:
+/fmodstr (Tue May 09 14:26:23 2023) def
+/pagenumstr (2) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 552 M
+(-- ) s
+5 545 M
+(lec_10.txt) s
+5 538 M
+(21 Feb 2023) s
+5 531 M
+(-- Adverse Selection Problem) s
+5 524 M
+(--- Feedback loop of agents work provides recalculation of principal's contracts) s
+5 517 M
+(-- Moral Hazard Problem) s
+5 510 M
+(--- Feedback loop of work outcome changes final payment to agent) s
+5 503 M
+(--- no starting contracts) s
+5 496 M
+(-- ) s
+5 482 M
+(lec_11.txt) s
+5 475 M
+(02 Mar 2023) s
+5 468 M
+(-- Ad-Hoc) s
+5 461 M
+(--- type could be channel gain) s
+5 454 M
+(--- effort is transmission/relay and latency) s
+5 447 M
+(--- reward is prioritization/trust score) s
+5 440 M
+(-- ) s
+5 426 M
+(lec_12.txt) s
+5 419 M
+(07 Mar 2023) s
+5 412 M
+(-- Satisfaction EQ -- goto approximately 45 minutes into the class) s
+5 405 M
+(--- games can have multiple, single or no EQ) s
+5 398 M
+(---- strict constraints will tend to restrict solutions) s
+5 391 M
+(-- Effcicient Satsifscation EQ \(ESE\)) s
+5 384 M
+(--- solution for the individual that satisfies each individual cost) s
+5 377 M
+(-- Optimal Efficient Satisfaction Eq \(OESE\)) s
+5 370 M
+(--- best ESE that pointwise minimum cost) s
+5 363 M
+(-- Optimal Satisfaction Eq \(OSE\)) s
+5 356 M
+(--- best SE pointwise/pairwise ) s
+5 349 M
+(-- Common Pool Resource Games \(CPR\)) s
+5 342 M
+(--- each player in the system has an initial endowment that is contributed to the common pool of ) s
+5 335 M
+(work) s
+5 328 M
+(--- Tragedy of the Commons) s
+5 321 M
+(lec_13.txt) s
+5 314 M
+(18 Apri 2023) s
+5 307 M
+(-- NonCooperative Games) s
+5 300 M
+(--- ) s
+5 293 M
+(lec_1.txt) s
+5 286 M
+(Tradgegy of the Commons) s
+5 279 M
+(-- Common pool of resources but shared in a way that most get zero resources) s
+5 272 M
+(Why Network Economics?) s
+5 265 M
+(-- provide intro to micro-econ ) s
+5 258 M
+(-- how pricing mechanisms influence the modern wireless industry) s
+5 251 M
+(-- basic wireless comm tech and micro econ) s
+5 244 M
+(-- social optimal pricing, monotpoly pricing, price differentiation, oligopoly pricing, network e) s
+5 237 M
+(xternalities) s
+5 230 M
+(-- intro to convex optimation/game theory) s
+5 223 M
+(Wireless Utopia) s
+5 216 M
+(-- Ulimited spectyrum) s
+5 209 M
+(-- wireless speed == hardline speed) s
+5 202 M
+(-- heterogenious tech coxist together without interference) s
+5 195 M
+(-- wireless users are reasonable) s
+5 188 M
+(-- wireless providers maximize social welfare over profit) s
+5 181 M
+(-- all of this is unrealistic) s
+5 174 M
+(Wireless Reality) s
+5 167 M
+(-- specturum is very limited and crowded) s
+5 160 M
+(-- Comm speed is not as fast as hadline speed) s
+5 153 M
+(-- heterogeneous networks interfere with each other and conflict) s
+5 146 M
+(-- users interfere with earch other) s
+5 139 M
+(-- growth of wireless use is huge) s
+5 132 M
+(-- wireless providers maximize profit over social welfare) s
+5 125 M
+(How will we address the wireless reality) s
+5 118 M
+(-- advance of weireless tech) s
+5 111 M
+(-- econ innovations) s
+5 104 M
+(-- policy reforms) s
+5 97 M
+(-- ecnomics can help to improve) s
+5 90 M
+(--- the overally perf of the wireless net) s
+5 83 M
+(--- the satisfaction levels for both users and service providers) s
+5 76 M
+(Regulating the Spectrum) s
+5 69 M
+(-- key reason for sutdying wireless network econ is to resolve tension between supply of wireless) s
+5 62 M
+( resouces and demand) s
+5 55 M
+(-- radio spectrum is limited) s
+5 48 M
+(-- wireless spectrum is tightly regulated/controlled everywhere) s
+5 41 M
+(-- The traditional way of regulating the spectrum is static. Assign frequencies to a location/pro) s
+5 34 M
+(vider.) s
+5 27 M
+(-- all spectrum licenses belong to govt identities and commercial entities) s
+5 20 M
+(-- frequency allocation map of every country or region is public) s
+5 13 M
+(-- new wireless tech and service are rapidly emerging) s
+5 6 M
+(-- every new wireless commercial service competes for licenses ) s
+365 552 M
+(Dynamic Spectrum Management) s
+365 545 M
+(-- enable ulicensed wireless users to share spectrum ) s
+365 538 M
+(-- many bands are not efficiently used) s
+365 531 M
+(-- FCC is opening up TV spectrum as lond as users' communications are protected) s
+365 524 M
+(-- Microsoft has built a test install in Redmond) s
+365 517 M
+(-- Problems related to Dynamic Spectrum Management) s
+365 510 M
+(--- regulators must provide enough incentive for licensees to share their bandwidth) s
+365 503 M
+(--- business services must adapt to new model for spectrum managment) s
+365 496 M
+(lec_2.txt) s
+365 489 M
+(Wireless Tech and Users' Needs) s
+365 482 M
+(-- wi-fi good speed, limited range) s
+365 475 M
+(-- cell network wider range, lower speeds) s
+365 468 M
+(-- 4g cell higher peak, but realistically lower user throughput) s
+365 461 M
+(-- smartphone/tablets are hungrier for bandwidth and servicfes) s
+365 454 M
+(-- streaming vide is very hard to get smooth playback) s
+365 447 M
+(--- stresses the cellular network) s
+365 440 M
+(-- at&t in the us have heavy congenstion in large cities) s
+365 433 M
+(-- at&t iphone rollout sucked because of huge demand) s
+365 426 M
+(-- tech is not enough to fix supply/demand problems) s
+365 419 M
+(-- economics use helps guide decisions to work in a market) s
+365 412 M
+(Econmics and Wireless Technologies) s
+365 405 M
+(-- Econ of wireless network are very different from other industries due to uniqueness of tech an) s
+365 398 M
+(d apps) s
+365 391 M
+(-- Econ stronlgy coupled with the wireless tech) s
+365 384 M
+(--- wi-fi tech can profide hig data rate in a short distance) s
+365 377 M
+(--- cell tech provides much better coverage with a much lower data rate) s
+365 370 M
+(--- econ models for wi-fi vs wireless are very different) s
+365 363 M
+(--- Commercial wi-fi providers charge users based on connection time ) s
+365 356 M
+(--- Cellular provider charge users for actual data usage) s
+365 349 M
+(Wireless applications) s
+365 342 M
+(-- QoS req) s
+365 335 M
+(-- resource user/implicaitno on the network) s
+365 328 M
+(-- price sensitivity) s
+365 321 M
+(-- video stream needs high data rate and low delayr.  This is expensive) s
+365 314 M
+(-- http/ftp fiel xfer doesn't have any latency, but needs reliable delivery with low error rate.) s
+365 307 M
+(Deregulation of Telecom MArkets) s
+365 300 M
+(-- dereg of telecom made the one public/private monopoloy break up ) s
+365 293 M
+(-- multiple players in each market) s
+365 286 M
+(-- wireless provider profit maximizes with tech and pricing to compete with alternatives and comp) s
+365 279 M
+(etitors) s
+365 272 M
+(-- industry dereg makes more choice) s
+365 265 M
+(-- user can compare and change provider/plan liberally) s
+365 258 M
+(-- user can chose different providers for different services) s
+365 251 M
+(-- service provider may no longer have complete control of subscribers.) s
+365 244 M
+(Wireless Network Econ vs Internet Econ ) s
+365 237 M
+(-- characterization of reources in wireless networks is harder than hardline networks) s
+365 230 M
+(-- wireless specturm is measured in Hz.) s
+365 223 M
+(-- network resources corresponding to each Hz of spectrum isn't easy to characterize) s
+365 216 M
+(--- wireless data rate is stochastic over time due to shadowing, fading mobility) s
+365 209 M
+(--- wireless rersources are spatially heterogenous, same spectrum used by same users who may be f) s
+365 202 M
+(ar apart) s
+365 195 M
+(--- wireless data rates are affected by mutual interferences from each user) s
+365 188 M
+(-- wireless users may have different attributes, utility function, energy constraints, efficientc) s
+365 181 M
+(y, channel condition) s
+365 174 M
+(-- users' perf is high coupled to mutual interference) s
+365 167 M
+(-- The interactions\(noise floors, power & interference\) depend on the wireless tech) s
+365 160 M
+(--- random access protocols \(aloha\) couple users via their channel access probabilities \(collisio) s
+365 153 M
+(ns\)) s
+365 146 M
+(--- CDMA via mutual inteference ) s
+365 139 M
+(--- spectrum overlay in cognitive radio networks ) s
+365 132 M
+(Introduction to wireless comm and network technologies) s
+365 125 M
+(-- radio Propagations charactereists) s
+365 118 M
+(--- Transmission of point to point) s
+365 111 M
+(---- straight and direct \(LOS\)) s
+365 104 M
+(---- reflection, refraction, diffraction, absorption, polarization and scattering loss paths) s
+365 97 M
+(--- LOS propagation) s
+365 90 M
+(---- sattelite to ground station, tv, fm/am radio) s
+365 83 M
+(---- inverse square law power propagation and reception) s
+365 76 M
+(--- Reflection) s
+365 69 M
+(---- wave hits a boundary of a dissimlar media, causeing all or part of the wave to change direct) s
+365 62 M
+(ion back to the origin) s
+365 55 M
+(---- attenuatin of the wave is a factor of freq, angle of incidence of the boundary and the natur) s
+365 48 M
+(e of the wave medium ) s
+365 41 M
+(---- its what happens inside a building \(wi-fi\)) s
+365 34 M
+(--- Diffraction) s
+365 27 M
+(---- partial bending of wave around a corner or edge causing loss of power in wave form) s
+365 20 M
+(---- its what happens outdoors \(cellular\)) s
+365 13 M
+(--- Scattering) s
+365 6 M
+(---- radio waves breaking apart into multiple directions hitting an irregular surface) s
+_R
+S
+%%Page: (3) 3
+%%BeginPageSetup
+_S
+90 rotate
+36 -594 translate
+/pagenum 3 def
+/fname (final_notes.txt) def
+/fdir (.) def
+/ftail (final_notes.txt) def
+% User defined strings:
+/fmodstr (Tue May 09 14:26:23 2023) def
+/pagenumstr (3) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 552 M
+(---- very reduced power level) s
+5 538 M
+(lec_3.txt) s
+5 531 M
+(-- 24 Jan 2023) s
+5 524 M
+(-- Choose a paper that applies to network economics) s
+5 517 M
+(--- game theory, contract theory, network graphs, ) s
+5 510 M
+(--- each person does 7-8 minutes summary per paper and preso) s
+5 496 M
+(-- elastic vs ineslastic) s
+5 489 M
+(-- wireless \(close high bandwidth\)) s
+5 482 M
+(-- cellular \(longer range\)) s
+5 468 M
+(-- lecture:) s
+5 461 M
+(-- distance based path loss, slow log-normal shadowing, multi-path propagation) s
+5 454 M
+(-- large-scale propagartion \(distance, log-normal shadowing\)) s
+5 447 M
+(-- small-scale propagation \( fast multi-path fading\)) s
+5 440 M
+(-- rx signal profile) s
+5 433 M
+(--- radio wave progation - power density diminished gradually) s
+5 426 M
+(--- noise awgn \(additive white Gaussian noise\)) s
+5 419 M
+(--- power profile tx ) s
+5 405 M
+(-- path loss) s
+5 398 M
+(--- higher freq w/smaller wavelen yeilds smaller gain) s
+5 391 M
+(---- higher freq used in smaller distance) s
+5 384 M
+(---- gain is unit less) s
+5 377 M
+(---- channel gain is affected by what frequency you choose for what distance your communication p) s
+5 370 M
+(ath) s
+5 356 M
+(-- shadowing) s
+5 349 M
+(--- reflections, diffraction, scattering -> Shadowing or Shadow Fading) s
+5 342 M
+(--- large obstical causing non-line of sight communications) s
+5 335 M
+(--- PathLoss = Normalized PathLoss + zero mean Gaussian rando number = 20log\(d\) - 20log\(frequency) s
+5 328 M
+(\) + 10log\(Antenna gain/loss/characterized data specific to equipment\)) s
+5 321 M
+(--- log-normal shadowing captures the impact of reflection/diffraction/scattering interference fo) s
+5 314 M
+(r calculations via a random variable.) s
+5 300 M
+(-- multi-path) s
+5 293 M
+(--- signals bounce and diffract causing multiple reception events) s
+5 286 M
+(---- Extra copies can interfere if they arrive out of phase or enhance if in phase) s
+5 279 M
+(--- timing of signals may lead to inter-symbol interferrence) s
+5 265 M
+(-- Wireless Multiple Access Technicque) s
+5 258 M
+(--- FDMA, OFDMA, TDMA, CDMA, CSMA) s
+5 251 M
+(---- FDMA, TDMA, CDMA allocates a resource) s
+5 244 M
+(---- FDMA -- chop up frequency bands and give them to the users) s
+5 237 M
+(----- allows multiple user access via xmission on different frequencies) s
+5 230 M
+(---- OFDMA -- partial overlap of frequencies to allow better utilization of bandwidth) s
+5 223 M
+(----- each user can xmit on multiple channel \(sub-carriers\)) s
+5 216 M
+(---- TDMA -- each user gets a time slot to xmit) s
+5 209 M
+(---- CDMA -- each user encodes signal with a specific user code.) s
+5 202 M
+(---- CSMA types, collision avoidance and resource allocation is on the handset/user) s
+5 195 M
+(----- ALOHA random access -- if collisiion occurs, backoff for random interval and try again) s
+5 188 M
+(----- CSMA users check for other signals before transmission \(listen before talk\)) s
+5 174 M
+(-- Wireless Networks) s
+5 167 M
+(--- 802.11 - wireless lan) s
+5 160 M
+(--- bluetooth \(wireless personal area network\)) s
+5 153 M
+(--- wimax) s
+5 146 M
+(--- wan \(cellular\)) s
+5 139 M
+(--- wireless RAN) s
+5 125 M
+(-- Wireless Cellular Networks) s
+5 118 M
+(--- large geographic area covered by radio, deviced into regular regions called "cells".) s
+5 111 M
+(--- each cell is associated with a fixed location tx/rx base station.  ) s
+5 104 M
+(--- users can move between cells via handoff and mobility management) s
+5 97 M
+(--- neighboring cells are operated at different freq bands to avoid interference) s
+5 90 M
+(--- multiple cells will use the same freq band as long as the cells are far enough apart to avoid) s
+5 83 M
+( interference) s
+5 76 M
+(--- most cell systems are 3gpp ) s
+5 62 M
+(-- Wireless LAN Network) s
+5 55 M
+(--- small area, high speed radio) s
+5 48 M
+(--- AP vs AdHoc ) s
+5 41 M
+(---- AP has central node for access to  all network resources) s
+5 34 M
+(---- AdHoc allows users to xmit/rx to each other without utilizing central node) s
+5 27 M
+(--- 802.11) s
+5 13 M
+(-- Wireless Ad-hoc Network) s
+5 6 M
+(--- ad-hoc needs to be able to deal with broken nodes and nodes that aren't there) s
+365 552 M
+(--- 802.11 based) s
+365 545 M
+(--- no infra to start with, nodes self-assemble network) s
+365 538 M
+(--- limited range, might need multi-hop support to talk with all nodes in a network) s
+365 531 M
+(--- every node is a router) s
+365 524 M
+(--- first responders, battlefield applications for quick setup and tear down) s
+365 510 M
+(-- Wireless Ssensor Network) s
+365 503 M
+(--- No central access of base station) s
+365 496 M
+(--- uses a sync node for data/control of data collection nodes) s
+365 489 M
+(--- nodes can fail at any time and there is no fixed topology) s
+365 475 M
+(-- Wireless Mesh Network) s
+365 468 M
+(--- Everyone talks to everyone all the time) s
+365 461 M
+(--- No central node) s
+365 454 M
+(--- mesh clients vs mesh routers) s
+365 447 M
+(--- type of AdHoc network where any node could be a router to the larger network) s
+365 440 M
+(--- mesh networks grow as more nodes are added, unlimited resources can be added) s
+365 426 M
+(-- Cognitive Radio Network) s
+365 419 M
+(--- Enables access to unlicensed frequencies when such access does not generate harmful interfere) s
+365 412 M
+(nce) s
+365 405 M
+(--- senses available spectrum and frequencies via SDR techniques) s
+365 398 M
+(--- can use a geolocation database to know where spectrum is actively used by licensees to avoid ) s
+365 391 M
+(interferences.) s
+365 377 M
+(lec_4.txt) s
+365 370 M
+(-- 26 Jan 2023) s
+365 356 M
+(-- Radio Resource Managerment) s
+365 349 M
+(--- system to control reources maximize efficiency, minimize jitter, minimize interferences) s
+365 342 M
+(--- centralized vs decentralized  management) s
+365 335 M
+(--- utilize the lmiited radio specturm, frequency, interference) s
+365 328 M
+(--- Power Control) s
+365 321 M
+(---- most power is managed at the handset) s
+365 314 M
+(---- CDMA differentiates users based on unique codes, power control was a huge problem with multi) s
+365 307 M
+(ple units) s
+365 300 M
+(---- prolong battery life of end devices) s
+365 293 M
+(---- cell networks based on FDMA tech ) s
+365 286 M
+(--- Channel Allocation) s
+365 279 M
+(---- Chop of Freq into parts is either centralized\(towers/base stations\) or distributed\(handesets) s
+365 272 M
+(\)) s
+365 265 M
+(---- Fixed channel allocation is easiest but wastes unused resources if not enough users) s
+365 258 M
+(----- Easiest to allocate and its always available) s
+365 251 M
+(---- Dynamic Channel Allocation requires more overhead to let more or less bandwidth be allocated) s
+365 244 M
+(----- Orthognal Frequency Dynamic Multiple Access lets subchannels be managed and then moved arou) s
+365 237 M
+(nd) s
+365 230 M
+(----- Get the channel gain formula and commit it to memory) s
+365 223 M
+(---- Admission Control Management) s
+365 216 M
+(----- Moving users to different cell towers based on utilization ) s
+365 209 M
+(----- Algos for these mechanism are much more advanced and they are pushed down to the clients to) s
+365 202 M
+( decide) s
+365 195 M
+(----- Service and service class determines QoS \(elastic vs inelastic\)) s
+365 188 M
+(----- Real time vs non-realtime) s
+365 174 M
+(-- Supply/Demand) s
+365 167 M
+(--- Market Demand Functions) s
+365 160 M
+(---- Demand for Product: Function of Price of the Product) s
+365 153 M
+(----- Price goes down, demand goes up) s
+365 146 M
+(----- Cap based pricing in the Cellular Market ) s
+365 139 M
+(---- Demand for product can be affected/disrupted by new tech) s
+365 132 M
+(--- Market Supply Functions) s
+365 125 M
+(---- Supply of Product:  Function of Price and ability to physically produce) s
+365 118 M
+(----- Cost of raw material impacts end cost and can lower supply) s
+365 111 M
+(--- Market Equilibrium Price) s
+365 104 M
+(---- Intersection of supply/demand and consumer/supplier costs) s
+365 97 M
+(--- Market Basket & Indifference Curve) s
+365 90 M
+(---- Multiple products can be on the same indifference curve because they have the same utility) s
+365 83 M
+(---- You can get higher utility if the customer budget is higher) s
+365 76 M
+(--- Consumer Consumption Problem) s
+365 69 M
+(---- Consumer wants more "Utility" for budget) s
+365 62 M
+(---- Producer wants more money for "Utility") s
+365 55 M
+(---- Derivitive of the indifference curve will capture the ) s
+365 48 M
+(-- Oligopoloy/Monopoloy Scenario) s
+365 41 M
+(-- distributed contracts game theory) s
+365 34 M
+(lec_5.txt) s
+365 27 M
+(31 Jan 2023) s
+365 13 M
+(-- Consumer Demand Function) s
+365 6 M
+(--- Measurements of the most desireable features for the least energy) s
+_R
+S
+%%Page: (4) 4
+%%BeginPageSetup
+_S
+90 rotate
+36 -594 translate
+/pagenum 4 def
+/fname (final_notes.txt) def
+/fdir (.) def
+/ftail (final_notes.txt) def
+% User defined strings:
+/fmodstr (Tue May 09 14:26:23 2023) def
+/pagenumstr (4) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 552 M
+(--- Allows a method to merge different bundle features into a single function or balance) s
+5 538 M
+(-- Demand and Price) s
+5 531 M
+(--- price elasticity is synonym for consumer price sensitivity.) s
+5 524 M
+(--- negative price changes will cause significant changes to sensitivity) s
+5 510 M
+(-- Price Elasticity) s
+5 503 M
+(-- is captured by negative demand curve) s
+5 496 M
+(-- if the price elasticity is tending to 0 then you buying everything and aren't sensitive to cos) s
+5 489 M
+(t) s
+5 475 M
+(--- Total Production Cost) s
+5 468 M
+(---- explict cost \(network equipment, salary of people\)) s
+5 461 M
+(----- building, generators) s
+5 454 M
+(---- opportunity cost \(not utilizing a resource, bandwidth, spectrum\)) s
+5 447 M
+(-----) s
+5 440 M
+(---- long term point view of costs) s
+5 433 M
+(----- cost of phd candidates over the research time) s
+5 426 M
+(---- short term point view of costs) s
+5 419 M
+(----- immiediate spend of resources \(losing a student immediately at the beginning of research\)) s
+5 412 M
+(---- marginal cost captures change to cost of production) s
+5 398 M
+(--- Competitive Firms) s
+5 391 M
+(---- price taking firm trying to make all the money) s
+5 384 M
+(---- profit is less costs and fixed costs) s
+5 370 M
+(--- Outline ) s
+5 363 M
+(---- Social optimal pricing: a service provider chooses prices to maximize the social welfare) s
+5 356 M
+(---- optimaztion problems, convex or not) s
+5 349 M
+(---- ) s
+5 335 M
+(lec_6.txt) s
+5 328 M
+(02 Feb 2023) s
+5 321 M
+(-- 1st and 2nd order conditions for convex function) s
+5 314 M
+(--- Derivative/gradietn of fucntion ) s
+5 300 M
+(--- 2nd order function) s
+5 293 M
+(---- strictly concave > 0) s
+5 286 M
+(--- Operations Perserving Convexity of Functions) s
+5 279 M
+(---- non-negative weighter sums --> convext) s
+5 272 M
+(---- composition with an offine mapping) s
+5 265 M
+(---- point-wise maximum) s
+5 258 M
+(--- Covex Optimization) s
+5 251 M
+(---- Mathematical Optimaztion Problems) s
+5 237 M
+(--- Unconsgtrined convex Optimation) s
+5 230 M
+(---- feasible point is globa iff iterative methods always return 0 diff from previous) s
+5 223 M
+(--- Two widely used methods for gradient-based) s
+5 216 M
+(---- Gradient based) s
+5 209 M
+(---- Newtons' method) s
+5 195 M
+(--- Constrained Convex Optimization) s
+5 188 M
+(---- feasible point x is global minimizer iff ) s
+5 174 M
+(--- Langrangian Duality) s
+5 167 M
+(---- optimzation problem can be coverted) s
+5 160 M
+(---- yeilds a lower bound to original problme) s
+5 153 M
+(---- if original problem is convex & ) s
+5 146 M
+(--- estimates how far off you could be) s
+5 132 M
+(--- Dual fucntion) s
+5 125 M
+(---- minimum value of the langrangian over x) s
+5 118 M
+(---- dual fucntion is always concave) s
+5 111 M
+(---- tuning langrange multiplier) s
+5 97 M
+(--- Langrange Dual Problem) s
+5 90 M
+(---- minimize dual problem solution) s
+5 83 M
+(---- duality gap will show how distance between objective function and dual fucntion) s
+5 76 M
+(---- strong duality) s
+5 62 M
+(--- Complementary Slackness) s
+5 55 M
+(---- strong duality KKT conditions) s
+5 41 M
+(--- KKT Optimality Conditions) s
+5 27 M
+(--- Perturbing Parameter) s
+5 20 M
+(---- Langrange multipleirs:  prices \(for example\)) s
+5 13 M
+(---- min f\(x\) -- subject to something changing ) s
+365 552 M
+(--- ) s
+365 545 M
+(lec_7.txt) s
+365 538 M
+(07Feb2023) s
+365 531 M
+(-- Shadown Price) s
+365 524 M
+(--- Interpretation in terms of economics:) s
+365 517 M
+(---- investments on n different resources: x) s
+365 510 M
+(----- -p^2\(x\) will demonstrate profit) s
+365 503 M
+(---- When n is close to 0, max profit, when it moves away from 0, max cost) s
+365 496 M
+(--- The dual prblem may have less dimension or simpler constraints that the original\(primal\)) s
+365 489 M
+(--- The Dual func may not be differentiable \(non continuous/discrete\)) s
+365 482 M
+(-- How yto solve a Dual Problem) s
+365 475 M
+(--- subgradient method) s
+365 468 M
+(---- given a convex fucntion ) s
+365 461 M
+(----- a subgradient d of the dual func g\(\) at a dual feasible pnt satisfies ) s
+365 454 M
+(-- Resource alloc for Wireless Video Streaming) s
+365 447 M
+(--- The voice caller performance \(SINR\) can be used for perturbing parameter in solving optimizat) s
+365 440 M
+(ion) s
+365 433 M
+(--- Solution Framework) s
+365 426 M
+(---- avg resource allocation:  constrained network opimation problem, which explotins the multius) s
+365 419 M
+(er content diversity to efficiently utilize the network resoruces.) s
+365 412 M
+(---- video source adaptation: each video slows down/speeds up by solving a localized op) s
+365 405 M
+(lec_8.txt) s
+365 398 M
+(09 Feb 2023) s
+365 391 M
+(-- Wireless Downlink Streaming) s
+365 384 M
+(-- prospect theory) s
+365 377 M
+(-- social welfare optimation problems) s
+365 370 M
+(-- back to shadow price, hidden profit/cost) s
+365 363 M
+(-- stackleberg game) s
+365 349 M
+(lec_9.txt) s
+365 342 M
+(16 Feb 2023) s
+365 335 M
+(-- contract theory) s
+365 328 M
+(--- hidden infor or assymetric info) s
+365 321 M
+(--- ) s
+365 314 M
+(-- game theory) s
+365 307 M
+(--- ) s
+365 300 M
+(-- prospect theory) s
+365 293 M
+(mid-term.txt) s
+365 286 M
+(Sean Bruno - sbruno1@unm.edu) s
+365 279 M
+(28 March 2023 -- ECE 524 Spring Term -- MidTerm Exam) s
+365 265 M
+(1. \(9 %\) Consider a cloud computing environment that can provide VMs \(virtual machines\) and serve) s
+365 258 M
+(rless) s
+365 251 M
+(computing functionalities to the end-users. Each computing functionality comes with a correspondi) s
+365 244 M
+(ng) s
+365 237 M
+(unit cost. Based on the end-user\342\\200\\231s budget availability, will there be a unique combinatio) s
+365 230 M
+(n of computing) s
+365 223 M
+(services \(i.e., a combination of VMs and serverless computing functionalities\) that satisfy its c) s
+365 216 M
+(omputing) s
+365 209 M
+(needs? If yes, please explain. If not, please explain. Provide the appropriate network economics) s
+365 202 M
+(terminology in your answer. \(Note: Consider that the end-user\342\\200\\231s budget can support the pu) s
+365 195 M
+(rchase of) s
+365 188 M
+(multiple product units\).) s
+365 174 M
+(-------------------------------------------------------------------------------------------------) s
+365 167 M
+(-------) s
+365 160 M
+(In most cases, end-user computing requirements are varied and have a mix of time constraints and ) s
+365 153 M
+(data) s
+365 146 M
+(sizes.  When an end-user considers the computing functionality provided by a service, how quickly) s
+365 139 M
+( they) s
+365 132 M
+(need results from their provider and how much data they wish to have processed will cause them to) s
+365 125 M
+(optimize their choices governing which type or style of compute they purchase.) s
+365 111 M
+(Users who are not time sensitive but are very cost sensitive, will choose the cheaper, serverless) s
+365 104 M
+( option) s
+365 97 M
+(to maximize their utility from the provider at the cost of slower time to generate a result.  The) s
+365 90 M
+(se) s
+365 83 M
+(users are not going to take advantage of the higher priced, full VM solutions.  Billing departmen) s
+365 76 M
+(ts, ) s
+365 69 M
+(non-live stream video conversion and large scale genomic analysis do not have a real-time compone) s
+365 62 M
+(nt) s
+365 55 M
+(needing high speed turn around.  Therefore they can use a much lower cost service.) s
+365 41 M
+(Users who are very time sensitive will normally need to use services that require higher costs to) s
+365 34 M
+( meet) s
+365 27 M
+(their scheduling criteria.  These users need to minimize their latency during computation to quic) s
+365 20 M
+(kly) s
+365 13 M
+(return results which providers will charge a much higher cost per unit of CPU.  Full VM providers) s
+365 6 M
+( who) s
+_R
+S
+%%Page: (5) 5
+%%BeginPageSetup
+_S
+90 rotate
+36 -594 translate
+/pagenum 5 def
+/fname (final_notes.txt) def
+/fdir (.) def
+/ftail (final_notes.txt) def
+% User defined strings:
+/fmodstr (Tue May 09 14:26:23 2023) def
+/pagenumstr (5) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 552 M
+(service these requests will have a much higher, dedicated infrastructure to garauntee the latency) s
+5 545 M
+(requirements from customers whose budgets and workloads demand it.  Live streaming providers who ) s
+5 538 M
+(convert) s
+5 531 M
+(video to multiple codecs in real-time, high-frequency trading analytics engines and voice over IP) s
+5 524 M
+( calling) s
+5 517 M
+(tend to need low latency providers in order to meet their service level constraints.  These provi) s
+5 510 M
+(ders) s
+5 503 M
+(will normally charge a much higher cost to service these types of customers.) s
+5 489 M
+(-------------------------------------------------------------------------------------------------) s
+5 482 M
+(-------) s
+5 475 M
+(2. \(9 %\) If a frequency band is used in one cell, it cannot be reused in any other cell within a ) s
+5 468 M
+(wireless) s
+5 461 M
+(cellular communication environment. True or False and Why?) s
+5 454 M
+(-------------------------------------------------------------------------------------------------) s
+5 447 M
+(-------) s
+5 433 M
+(False: A wireless cell most definitely can use a frequency band that is in use by another cell in) s
+5 426 M
+( multiple types) s
+5 419 M
+(of wireless communication environment.) s
+5 405 M
+(Depending on the technique used, frequency bands can be reused in mutiple cells if they are separ) s
+5 398 M
+(ated by ) s
+5 391 M
+(large distances such that they don't interfere with each other.  The distance between the cell co) s
+5 384 M
+(verage) s
+5 377 M
+(can be managed such that individual customers, while using the same frequency bands, won't be abl) s
+5 370 M
+(e to) s
+5 363 M
+(interfere with each other.) s
+5 349 M
+(The same frequency bands are used in CDMA networks where each user is assigned their own modulati) s
+5 342 M
+(on ) s
+5 335 M
+(psuedocode such that the interference of the same frequency is somewhat additive.) s
+5 321 M
+(It is even possible and desireable to allow the same frequencies to be used across multiple cells) s
+5 314 M
+( in FDMA) s
+5 307 M
+(networks if the relative use \(user population\) is low enough that the same bands can be used to s) s
+5 300 M
+(ervice) s
+5 293 M
+(the area.) s
+5 279 M
+(Finally, in a network with a random style access protocol \(ALOHA\), the backoff due to frequency c) s
+5 272 M
+(ollision) s
+5 265 M
+(is built into the network.  This would allow the network to utilize the same frequency bands acro) s
+5 258 M
+(ss the) s
+5 251 M
+(cell network.) s
+5 244 M
+(-------------------------------------------------------------------------------------------------) s
+5 237 M
+(-------) s
+5 230 M
+(3. \(9 %\) Consider a power company within a smart grid system. The energy production cost is fixed) s
+5 223 M
+(.) s
+5 216 M
+(Yes/No and Why?) s
+5 209 M
+(-------------------------------------------------------------------------------------------------) s
+5 202 M
+(-------) s
+5 188 M
+(False:  The cost of energy in a smart grid system is NOT fixed.) s
+5 174 M
+(Typical smart grid systems have multiple inputs that allow the grid controllers to purchase power) s
+5 167 M
+( at a) s
+5 160 M
+(variable, market rate depending on consumption and generation.  In a modern smart grid, end users) s
+5 153 M
+( become) s
+5 146 M
+(power resellers and affect market prices for that power.) s
+5 132 M
+(During a sunny day, power production via end user electro voltaics become plentiful and cheap.  E) s
+5 125 M
+(nd user) s
+5 118 M
+(demand for power is handled via self-generation.  End users will then offload excess power genera) s
+5 111 M
+(tion to) s
+5 104 M
+(the grid at whatever market price the power company is paying, causing a downward pressure on the) s
+5 97 M
+( price) s
+5 90 M
+(per unit of power and making other sources with higher cost become less profitable.) s
+5 83 M
+(-------------------------------------------------------------------------------------------------) s
+5 76 M
+(-------) s
+5 69 M
+(4. \(9 %\) Consider a convex maximization problem. What are the necessary conditions in order for t) s
+5 62 M
+(he) s
+5 55 M
+(problem to have a unique global maximum point?) s
+5 41 M
+(-------------------------------------------------------------------------------------------------) s
+5 34 M
+(-------) s
+5 27 M
+(Out of time on this one.  :-\)) s
+5 13 M
+(-------------------------------------------------------------------------------------------------) s
+5 6 M
+(-------) s
+365 552 M
+(5. \(9 %\) What are the two main contract-theoretic models that exist? What is the main characteris) s
+365 545 M
+(tic of) s
+365 538 M
+(each one of those \(and at the same time the one that differentiates them\)? If you were developing) s
+365 531 M
+( and) s
+365 524 M
+(owning an online social platform to support crowdsourcing \(collect data from the crowd/users\), wh) s
+365 517 M
+(ich) s
+365 510 M
+(model would you choose to reward the users that provide information, e.g., photos, text, video, a) s
+365 503 M
+(nd why?) s
+365 496 M
+(-------------------------------------------------------------------------------------------------) s
+365 489 M
+(-------) s
+365 482 M
+(We studied two contract theory models, namely Adverse Selection and Moral Hazard style solutions.) s
+365 468 M
+(In Adverse Selection, the principal who needs some work done, has determined via statistical and ) s
+365 461 M
+(behavioral) s
+365 454 M
+(data collection, what types of agents exist to service this work.  Those types can vary, but typi) s
+365 447 M
+(cally) s
+365 440 M
+(cover the reliability of the agent and what cost the agent will charge for that work.  The princi) s
+365 433 M
+(pal can) s
+365 426 M
+(then use that knowledge to minimize its cost and maximize its utility by designing a contract lis) s
+365 419 M
+(t that) s
+365 412 M
+(the agents can select from.  Upon completion of the work, the agent is rewarded with its payout.) s
+365 398 M
+(In Moral Hazard, the principal really has no idea what types of hidden actions that agents will t) s
+365 391 M
+(ake) s
+365 384 M
+(to accomplish its work, so it starts with a down payment to the agents accepting their task.  The) s
+365 377 M
+(principal attempts to evaulate the performance of the work through the interference of a noisy si) s
+365 370 M
+(gnal) s
+365 363 M
+(in the network, but adjusts its payout on completion of the work to mirror the performance of the) s
+365 356 M
+( agent.) s
+365 342 M
+(If I were to generate a crowdsourcing service/platform, I would most likely chose the Moral Hazar) s
+365 335 M
+(d style) s
+365 328 M
+(as users in the network will most likely be very transient in the social platform.  Gathering beh) s
+365 321 M
+(aviorial) s
+365 314 M
+(data will be unlikely as you will only be able to measure a small number of transactions to gener) s
+365 307 M
+(ate) s
+365 300 M
+(a type to assign to the user.  It is much more cost efficient for the provider in this style of u) s
+365 293 M
+(nreliable) s
+365 286 M
+(agents to moderate their final payout.) s
+365 279 M
+(-------------------------------------------------------------------------------------------------) s
+365 272 M
+(-------) s
+365 265 M
+(6. \(9 %\) Consider an adhoc relay-assisted wireless communication system. Following a contract-the) s
+365 258 M
+(oretic) s
+365 251 M
+(modeling approach, who is the employer and the employee at each communication hop? Which contract) s
+365 244 M
+(-) s
+365 237 M
+(theoretic model can jointly capture the phenomenon of information transmission and relay function) s
+365 230 M
+(ality?) s
+365 223 M
+(What can be the effort and what can be the reward in this model?) s
+365 216 M
+(-------------------------------------------------------------------------------------------------) s
+365 209 M
+(-------) s
+365 202 M
+(In an Ad-Hoc network, each node when attempting to transmit to a destination is assuming the role) s
+365 195 M
+( of an ) s
+365 188 M
+(employer asking its neighboring nodes withing range to act as an employee and do some amount of w) s
+365 181 M
+(ork.) s
+365 167 M
+(This network model is most easily be modeled using a combination of adverse selection and moral h) s
+365 160 M
+(azard.) s
+365 153 M
+(Each node will be able to track the performance of its neighboring nodes, and keep their types in) s
+365 146 M
+( a list) s
+365 139 M
+(so that they are able to generate a menu of contracts for them.  In addition, since the battery l) s
+365 132 M
+(ife) s
+365 125 M
+(is a hidden data element, the action of actually transmitting can be thought of as a hidden actio) s
+365 118 M
+(n in this) s
+365 111 M
+(scenario, so you can begin your transaction by rewarding a down payment to the nodes.  When the t) s
+365 104 M
+(ransmitted) s
+365 97 M
+(data is acknowledged at the far end, you can reward nodes who participated with a performance eva) s
+365 90 M
+(ulation ) s
+365 83 M
+(and use that data to update the neighboring node types.) s
+365 69 M
+(As a reward in this network, the employer node can accept more packets and relay them for its wel) s
+365 62 M
+(l behaved) s
+365 55 M
+(neighbors.) s
+365 48 M
+(-------------------------------------------------------------------------------------------------) s
+365 41 M
+(-------) s
+365 27 M
+(7. \(9 %\) How spectrum allocation is performed nowadays by FCC? Is it true that a wireless provide) s
+365 20 M
+(r with) s
+365 13 M
+(high budget availability and limited wireless infrastructure and/or services will be always alloc) s
+365 6 M
+(ated the) s
+_R
+S
+%%Page: (6) 6
+%%BeginPageSetup
+_S
+90 rotate
+36 -594 translate
+/pagenum 6 def
+/fname (final_notes.txt) def
+/fdir (.) def
+/ftail (final_notes.txt) def
+% User defined strings:
+/fmodstr (Tue May 09 14:26:23 2023) def
+/pagenumstr (6) def
+/user_header_p false def
+/user_footer_p false def
+%%EndPageSetup
+do_header
+5 552 M
+(largest portion of the spectrum? Yes/No and Why?) s
+5 545 M
+(-------------------------------------------------------------------------------------------------) s
+5 538 M
+(-------) s
+5 531 M
+(The FCC will dsitribute spectrum via auctions open to the public.  Normally, the bidding process ) s
+5 524 M
+(looks ) s
+5 517 M
+(at the bidder's ability to utilize the spectrum being offered.  Part of the process of acquiring ) s
+5 510 M
+(the) s
+5 503 M
+(rights to utilize spectrum, requires presentation of the bidder's infrastructure and current util) s
+5 496 M
+(ization) s
+5 489 M
+(of already allocated frequencies.  If it can be shown that a bidder is not in a position to take ) s
+5 482 M
+(advantage) s
+5 475 M
+(of the spectrum, the FCC will choose a different bidder to win the auction grant.) s
+5 461 M
+(Competition and maintaining a competitive environment is also a consideration during the auction ) s
+5 454 M
+(process.) s
+5 447 M
+(The FCC will try and distribute auctions grants evenly so as to not prefer one provider over anot) s
+5 440 M
+(her, nor) s
+5 433 M
+(give any one provider an advantage in a market based on the spectrum granted.) s
+5 426 M
+(-------------------------------------------------------------------------------------------------) s
+5 419 M
+(-------) s
+5 405 M
+(8. \(10 %\) What is the main difference between a game in satisfaction form and a normal form game?) s
+5 398 M
+(-------------------------------------------------------------------------------------------------) s
+5 391 M
+(-------) s
+5 384 M
+(A game in satisfaction form calculates sets of results/strategies for the players based on allowi) s
+5 377 M
+(ng the) s
+5 370 M
+(players' utility functions to meet a minimum threshold.  A normal form game does not allow for th) s
+5 363 M
+(is ) s
+5 356 M
+(kind of solution, nor does it mandate that one even exist.) s
+5 342 M
+(A satisfaction form game ensures that a solution allows for all players to accomplish a minimum o) s
+5 335 M
+(f results) s
+5 328 M
+(for their given set of strategies.  It is not required that all players in a normal form game rec) s
+5 321 M
+(eive) s
+5 314 M
+(any payout regardless of the strategy.) s
+5 300 M
+(-------------------------------------------------------------------------------------------------) s
+5 293 M
+(-------) s
+5 286 M
+(9. \(9 %\) Consider a public safety scenario after an earthquake, where the citizens of a city try ) s
+5 279 M
+(to communicate) s
+5 272 M
+(over the wireless cellular network to reach out to their families and check if everyone is ok. Wh) s
+5 265 M
+(at network) s
+5 258 M
+(economics phenomenon will be observed and why?) s
+5 251 M
+(-------------------------------------------------------------------------------------------------) s
+5 244 M
+(-------) s
+5 237 M
+(If a very large percentage of users of a wireless network attempt to utilize the same network res) s
+5 230 M
+(ources) s
+5 223 M
+(at the same time, they can overwhelm the limited network resources availble to them in a phenmonm) s
+5 216 M
+(enon known) s
+5 209 M
+(as the Tragedy of the Commons.  Networks are normally scaled to a peak usage value that is calcul) s
+5 202 M
+(ated) s
+5 195 M
+(from the population of users of that network.  It is not an infinite network pool, and can only s) s
+5 188 M
+(upport) s
+5 181 M
+(so many users before it runs out of power, frequency or data bandwidth for users.  In an emergenc) s
+5 174 M
+(y situation,) s
+5 167 M
+(it is quite trivial for a network that isn't scaled for a disaster to be overwhelmed by a peak va) s
+5 160 M
+(lue) s
+5 153 M
+(never before seen on a network, leading to the common pool of resources being denided to the majo) s
+5 146 M
+(rity) s
+5 139 M
+(of users.) s
+5 132 M
+(-------------------------------------------------------------------------------------------------) s
+5 125 M
+(-------) s
+5 111 M
+(10. \(9 %\) Consider a cellular communications environment with 5 users within the cell. We formula) s
+5 104 M
+(te the) s
+5 97 M
+(optimization problem of maximizing the sum uplink transmission data rate \(social welfare function) s
+5 90 M
+(\),) s
+5 83 M
+(under the constraints that the transmission power of each user should not exceed its battery avai) s
+5 76 M
+(lability.) s
+5 69 M
+(The goal of the optimization problem is to determine the uplink transmission power of each user. ) s
+5 62 M
+(How) s
+5 55 M
+(many free variables do you have and which are those? How many Lagrange multipliers do you have an) s
+5 48 M
+(d) s
+5 41 M
+(why?) s
+5 34 M
+(-------------------------------------------------------------------------------------------------) s
+5 27 M
+(-------) s
+5 20 M
+(In this scenario you have 5 users each with their own variables, yeilding 5 multipliers.) s
+5 6 M
+(-------------------------------------------------------------------------------------------------) s
+365 552 M
+(-------) s
+365 538 M
+(11. \(9 %\) The WiFi providers and the cellular providers use the same economic models to charge th) s
+365 531 M
+(e users.) s
+365 524 M
+(True or False and Why?) s
+365 517 M
+(-------------------------------------------------------------------------------------------------) s
+365 510 M
+(-------) s
+365 503 M
+(False.  These two network providers have very different usage patterns, based on the data rates u) s
+365 496 M
+(sed, ) s
+365 489 M
+(distance the radios need to transmit and the coverage area provided by each network type.) s
+365 475 M
+(WiFi providers are normally able to charge their end users via an access time charge.  If a user ) s
+365 468 M
+(wants) s
+365 461 M
+(an hour of access, they pay a fee for that hour regardless of the data they consume.  These much ) s
+365 454 M
+(higher) s
+365 447 M
+(data rates are very useful for airport or hotel access who service users at a short range.) s
+365 433 M
+(Cellular network providers are normally able to charge their end users via a data amount charge. ) s
+365 426 M
+( If a ) s
+365 419 M
+(users wants to download one gigabyte of data, they can buy that much data regardless of how much ) s
+365 412 M
+(time it) s
+365 405 M
+(takes to download that data.  Normally, these users require their data access to be much more mob) s
+365 398 M
+(ile so) s
+365 391 M
+(providers have chosed the price per data downloaded model to offset the much larger infrastructur) s
+365 384 M
+(e ) s
+365 377 M
+(required to service this network.) s
+365 370 M
+(-------------------------------------------------------------------------------------------------) s
+365 363 M
+(-------) s
+365 356 M
+(midterm.txt) s
+365 349 M
+(30 March 2023) s
+365 342 M
+(-- Incetive Mechanism and Resouce Allocation for EdgeFog Networks Drive by MutliDimesional Game T) s
+365 335 M
+(heory) s
+365 328 M
+(--- Increase Populatiry of Edge Computing) s
+365 321 M
+(---- Adoption of a multi dimensional soltuion) s
+365 314 M
+(-- Introduce Edge-fog model system) s
+365 307 M
+(-- System Model) s
+365 300 M
+(--- users, edge and fog server) s
+365 293 M
+(-- Multi Dim Contract Base incentive design) s
+365 286 M
+(--- capture user types across mutlipel dimensions) s
+365 279 M
+(--- Ability to forward tasks categorizes the users) s
+365 272 M
+(---- size, vs intesity, sensitivity) s
+365 265 M
+(--- Uses characterization to generate contract bundles) s
+365 258 M
+(-- IR vs IC) s
+365 251 M
+(--- contract type will influence reward and utility) s
+365 244 M
+(---- chose the right contact bundle, get the most reward) s
+365 237 M
+(--- generate a virtual user type to characterize the user better) s
+365 230 M
+(---- allows a slope variable to define the users unwillingness to participate) s
+365 223 M
+(--- How does the system measure willingness\(s\) or characterize it?) s
+365 216 M
+(-- Stackleberg game commences) s
+365 209 M
+(--- edge server performs as a leader) s
+365 202 M
+(---- given input tx power, how many bytes should be sent) s
+365 195 M
+(--- Follower optimization based on number bytes on input) s
+365 188 M
+(--- Garauntees one Nash EQ ) s
+365 181 M
+(--- ) s
+_R
+S
+%%Trailer
+%%Pages: 6
+%%DocumentNeededResources: font Courier-Bold Courier 
+%%EOF

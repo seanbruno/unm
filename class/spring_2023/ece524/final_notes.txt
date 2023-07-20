@@ -1,0 +1,744 @@
+ece524_paper_section_3.txt
+Basis for Proposed Research
+Describe the observations/discoveries/achievements (by yourself or others) make you believe that your approach will be successful.
+
+We hypothosize that the research from reference 1 can be made to show immediate results from its simplicity and advances in modern computational resources.  The required additional bidding/auction cycles in the proposed algorythmic changes are achievable with negligible increases to the load and time requirments to the aunctioneer in this model.
+
+In real networks, it will be shown that the losses incurred due to user connectivty issues are minimized.  The multi-round nature of the auction can recover users that may have missed out on a previous round of the auction.  This will have a measurable increase to the number of successful bids during the auction as compared to a single round bid in a standard auction format.
+
+The errors communicating with end users can also be immediately used to track the type and quality of the user during future auctions.  This allows the network to maintain a much more accurate description of each bidder and more accurately award payments to maximize profits for the providers.  The awards and payouts will be directly compared to standard auctions in similar networks to show the expected accuracy gains and efficiencies in payouts.
+
+
+
+ece524_paper_section_4.txt
+\section{Research Plan}
+\subsection{What methods will be used and why are these most appropriate?}
+Initial testing of scenarios will be done internally at the University.  Development of the testing scenarios will require construction of a bid submission agent that will host the auction.  This server will exist on a single machine running the PMMRA example defined in the pseudo code of the paper.  Job submission agents will be developed to submit jobs to the auctioneer server.  These jobs, for initial testing will be requests for some number of digits of PI from some arbitrary positions in the matissa.  User agents that wish to submit themselves for the auction rounds, will submit their bids to the auctioneer.  Results of the auction will proceed via the PMMRA algorithm.  Jobs results will be sent from user agents to the job submission agents which will measure the latency of the job results and issue the payment in the form of arbitrary currency.  To mimic errors and latency during the auction, some amount of errors will be induced via a centralized router in this synthetic test.
+
+Once the initial testing phase is complete, the experimental setup for our scenario will be built out across multiple virtual machine providers (Azure Cloud, Amazon EC2 and Google Compute).  In order to ensure the most thorough testing environment, multiple test instances will be spun up in multiple geographic regious to ensure that some amount of network latency will be randomly injected into the testing scenarious during the auction process.  The auctioneer will still be hosted at the University.  The same criteria will be used to measure the success of the PMMRA.
+
+\subsection{Specific activites (brief descriptions)}
+Resource Providers will be utilzing the algorythm in reference 2 in order to generate the arbitrary digits of PI and an arbitary location in the matissa.  This provides an easily portable work function that can easily be verified for accuracy if needed.  This should be written in C and utilize standard libraries available for all systems.
+
+Job Submissions Agents will be written in a similar fashion to the RP.  Additional code will be written to provide an evaluation and feedback on the RP used in each auction result after the work is submitted and returned from the winning RP instances.
+
+The auctioneer will be responsible for implementing the PMMRA from the paper in reference 1 and will be the holder of the payment for the jobs.  Most of the code for this project will be developed for this server application.   The auctioneer will need to be written to
+
+
+\subsection{Breakthroughs needed/expected in order to achieve the objectives}
+:
+
+\subsection{Why are you or your team/facility the best or uniquely qualified to pursue the proposed research?}
+ece524_paper_section_8.txt
+11 Apr 2023
+-- Dynamic Pricing for Resource-Quota Sharing in Multi-Access Edge Computing
+--- Multi-Access Edge Computing -- Resource Allocation Management
+---- Varied needs cause waste
+---- Allwing users to sell unutilized portions of their plan
+--- Owner & Renter Roles
+--- Socially optimal 
+---- Distributed REntal Pricing - Social Welfare (DRP-SW) Algo
+--- Convergence and Optimality of DRP-SW
+--- PRofit Maximizing Dynamic Pricing Mechanism
+---- DRP-P
+----- Missing Social Welfare comparison to Profit Maximizing
+---- When designing a decision making model (two models are defined here)
+----- does the paper discuss real-time excution of the model
+----- 
+ece524_paper_section_9.txt
+11 Apr 
+-- ISAC 
+-- Information Theory Tradeoff
+--- why is fully unified waveform design really any different from a carrier with multiple PSK/FM/AM modulations on it?
+--- SIC-type Successive Interference Cancellation
+group1.txt
+21 March 2023
+-- Game theoretic Framework for Bandwidth Allocation Framework
+--- BW alloc
+--- Elastic Traffic
+--- Game Theory 
+--- NAsh Bargaining Solution
+-- Intro
+--- 
+
+
+-- User Penalty ??
+-- What is being recursed?
+-- Tracking performance from network management packets?
+
+group2.txt
+21 March 2023
+-- A game theory Based strategic approach using MANET
+--- Mobile ad-hoc network
+--- 
+group4.txt
+06 Apr 2023
+-- UAV VECN Deployment Trajectory and Hovering Optimization
+--- Internet of Vehicles
+---- UAV hub for comms as they can LOS from better positions
+---- Pathing is hard
+---- Pre-planning algorithm
+----Deployment timing and traffic model
+----- UAC VECN system
+------ Command and Control station is also chargin station
+------ What are they using for predictive taffic modeling
+------ Did authors address different varieties of "data cleaning"
+----Fligth trajectory 
+----- Why road pathing and not free flight networking
+----- UAV FT-GA
+----- Genetic/Fitness style algorithm
+----Hovering optimizat in the mission area
+----- Minimize comms to UAV and ground station
+----- UAV Hovering Algo 
+----- Designed on OpenAI treasure hunter
+----- 
+group5.txt
+04 Apr 2023
+-- Common Pool of Resources
+--- Exhaustion leads to Tragedy of the Commons
+-- standard CPR game
+--- Rubenstein Stahle game
+--- will converge "eventually" after some arbitrary time
+-- Prospect Theory
+--- reference dependance: each player values the significance of loss/gain differently
+--- Loss aversion: Kahneman/Taversky, losses impact more than the equivalent gain
+--- Diminishing Sensitivty: losses causes risk seeking more often, gains causes conservatism
+--- Probability Weighting:  people underestimate risk in common events and overestimate risk in rare events
+--  
+group6.txt
+06 Apr
+-- Deep Reinforment Learning based Recruitment Schemes for Massive Data Collections in 6G iot nets
+--- Long distance data collection problems
+--- costs, flight path, battery/power
+--- Basic DRL
+---- focus on data collection
+---- Genetic algorithm again
+---- 
+group7.txt
+-- DRBF 
+--- BAA (bottleneck aware allocation)
+---- 
+--- DRF (Dominant Resource Fairness)
+-- 
+lec_10.txt
+21 Feb 2023
+-- Adverse Selection Problem
+--- Feedback loop of agents work provides recalculation of principal's contracts
+-- Moral Hazard Problem
+--- Feedback loop of work outcome changes final payment to agent
+--- no starting contracts
+-- 
+
+lec_11.txt
+02 Mar 2023
+-- Ad-Hoc
+--- type could be channel gain
+--- effort is transmission/relay and latency
+--- reward is prioritization/trust score
+-- 
+
+lec_12.txt
+07 Mar 2023
+-- Satisfaction EQ -- goto approximately 45 minutes into the class
+--- games can have multiple, single or no EQ
+---- strict constraints will tend to restrict solutions
+-- Effcicient Satsifscation EQ (ESE)
+--- solution for the individual that satisfies each individual cost
+-- Optimal Efficient Satisfaction Eq (OESE)
+--- best ESE that pointwise minimum cost
+-- Optimal Satisfaction Eq (OSE)
+--- best SE pointwise/pairwise 
+-- Common Pool Resource Games (CPR)
+--- each player in the system has an initial endowment that is contributed to the common pool of work
+--- Tragedy of the Commons
+lec_13.txt
+18 Apri 2023
+-- NonCooperative Games
+--- 
+lec_1.txt
+Tradgegy of the Commons
+-- Common pool of resources but shared in a way that most get zero resources
+Why Network Economics?
+-- provide intro to micro-econ 
+-- how pricing mechanisms influence the modern wireless industry
+-- basic wireless comm tech and micro econ
+-- social optimal pricing, monotpoly pricing, price differentiation, oligopoly pricing, network externalities
+-- intro to convex optimation/game theory
+Wireless Utopia
+-- Ulimited spectyrum
+-- wireless speed == hardline speed
+-- heterogenious tech coxist together without interference
+-- wireless users are reasonable
+-- wireless providers maximize social welfare over profit
+-- all of this is unrealistic
+Wireless Reality
+-- specturum is very limited and crowded
+-- Comm speed is not as fast as hadline speed
+-- heterogeneous networks interfere with each other and conflict
+-- users interfere with earch other
+-- growth of wireless use is huge
+-- wireless providers maximize profit over social welfare
+How will we address the wireless reality
+-- advance of weireless tech
+-- econ innovations
+-- policy reforms
+-- ecnomics can help to improve
+--- the overally perf of the wireless net
+--- the satisfaction levels for both users and service providers
+Regulating the Spectrum
+-- key reason for sutdying wireless network econ is to resolve tension between supply of wireless resouces and demand
+-- radio spectrum is limited
+-- wireless spectrum is tightly regulated/controlled everywhere
+-- The traditional way of regulating the spectrum is static. Assign frequencies to a location/provider.
+-- all spectrum licenses belong to govt identities and commercial entities
+-- frequency allocation map of every country or region is public
+-- new wireless tech and service are rapidly emerging
+-- every new wireless commercial service competes for licenses 
+Dynamic Spectrum Management
+-- enable ulicensed wireless users to share spectrum 
+-- many bands are not efficiently used
+-- FCC is opening up TV spectrum as lond as users' communications are protected
+-- Microsoft has built a test install in Redmond
+-- Problems related to Dynamic Spectrum Management
+--- regulators must provide enough incentive for licensees to share their bandwidth
+--- business services must adapt to new model for spectrum managment
+lec_2.txt
+Wireless Tech and Users' Needs
+-- wi-fi good speed, limited range
+-- cell network wider range, lower speeds
+-- 4g cell higher peak, but realistically lower user throughput
+-- smartphone/tablets are hungrier for bandwidth and servicfes
+-- streaming vide is very hard to get smooth playback
+--- stresses the cellular network
+-- at&t in the us have heavy congenstion in large cities
+-- at&t iphone rollout sucked because of huge demand
+-- tech is not enough to fix supply/demand problems
+-- economics use helps guide decisions to work in a market
+Econmics and Wireless Technologies
+-- Econ of wireless network are very different from other industries due to uniqueness of tech and apps
+-- Econ stronlgy coupled with the wireless tech
+--- wi-fi tech can profide hig data rate in a short distance
+--- cell tech provides much better coverage with a much lower data rate
+--- econ models for wi-fi vs wireless are very different
+--- Commercial wi-fi providers charge users based on connection time 
+--- Cellular provider charge users for actual data usage
+Wireless applications
+-- QoS req
+-- resource user/implicaitno on the network
+-- price sensitivity
+-- video stream needs high data rate and low delayr.  This is expensive
+-- http/ftp fiel xfer doesn't have any latency, but needs reliable delivery with low error rate.
+Deregulation of Telecom MArkets
+-- dereg of telecom made the one public/private monopoloy break up 
+-- multiple players in each market
+-- wireless provider profit maximizes with tech and pricing to compete with alternatives and competitors
+-- industry dereg makes more choice
+-- user can compare and change provider/plan liberally
+-- user can chose different providers for different services
+-- service provider may no longer have complete control of subscribers.
+Wireless Network Econ vs Internet Econ 
+-- characterization of reources in wireless networks is harder than hardline networks
+-- wireless specturm is measured in Hz.
+-- network resources corresponding to each Hz of spectrum isn't easy to characterize
+--- wireless data rate is stochastic over time due to shadowing, fading mobility
+--- wireless rersources are spatially heterogenous, same spectrum used by same users who may be far apart
+--- wireless data rates are affected by mutual interferences from each user
+-- wireless users may have different attributes, utility function, energy constraints, efficientcy, channel condition
+-- users' perf is high coupled to mutual interference
+-- The interactions(noise floors, power & interference) depend on the wireless tech
+--- random access protocols (aloha) couple users via their channel access probabilities (collisions)
+--- CDMA via mutual inteference 
+--- spectrum overlay in cognitive radio networks 
+Introduction to wireless comm and network technologies
+-- radio Propagations charactereists
+--- Transmission of point to point
+---- straight and direct (LOS)
+---- reflection, refraction, diffraction, absorption, polarization and scattering loss paths
+--- LOS propagation
+---- sattelite to ground station, tv, fm/am radio
+---- inverse square law power propagation and reception
+--- Reflection
+---- wave hits a boundary of a dissimlar media, causeing all or part of the wave to change direction back to the origin
+---- attenuatin of the wave is a factor of freq, angle of incidence of the boundary and the nature of the wave medium 
+---- its what happens inside a building (wi-fi)
+--- Diffraction
+---- partial bending of wave around a corner or edge causing loss of power in wave form
+---- its what happens outdoors (cellular)
+--- Scattering
+---- radio waves breaking apart into multiple directions hitting an irregular surface
+---- very reduced power level
+
+lec_3.txt
+-- 24 Jan 2023
+-- Choose a paper that applies to network economics
+--- game theory, contract theory, network graphs, 
+--- each person does 7-8 minutes summary per paper and preso
+
+-- elastic vs ineslastic
+-- wireless (close high bandwidth)
+-- cellular (longer range)
+
+-- lecture:
+-- distance based path loss, slow log-normal shadowing, multi-path propagation
+-- large-scale propagartion (distance, log-normal shadowing)
+-- small-scale propagation ( fast multi-path fading)
+-- rx signal profile
+--- radio wave progation - power density diminished gradually
+--- noise awgn (additive white Gaussian noise)
+--- power profile tx 
+
+-- path loss
+--- higher freq w/smaller wavelen yeilds smaller gain
+---- higher freq used in smaller distance
+---- gain is unit less
+---- channel gain is affected by what frequency you choose for what distance your communication path
+
+-- shadowing
+--- reflections, diffraction, scattering -> Shadowing or Shadow Fading
+--- large obstical causing non-line of sight communications
+--- PathLoss = Normalized PathLoss + zero mean Gaussian rando number = 20log(d) - 20log(frequency) + 10log(Antenna gain/loss/characterized data specific to equipment)
+--- log-normal shadowing captures the impact of reflection/diffraction/scattering interference for calculations via a random variable.
+
+-- multi-path
+--- signals bounce and diffract causing multiple reception events
+---- Extra copies can interfere if they arrive out of phase or enhance if in phase
+--- timing of signals may lead to inter-symbol interferrence
+
+-- Wireless Multiple Access Technicque
+--- FDMA, OFDMA, TDMA, CDMA, CSMA
+---- FDMA, TDMA, CDMA allocates a resource
+---- FDMA -- chop up frequency bands and give them to the users
+----- allows multiple user access via xmission on different frequencies
+---- OFDMA -- partial overlap of frequencies to allow better utilization of bandwidth
+----- each user can xmit on multiple channel (sub-carriers)
+---- TDMA -- each user gets a time slot to xmit
+---- CDMA -- each user encodes signal with a specific user code.
+---- CSMA types, collision avoidance and resource allocation is on the handset/user
+----- ALOHA random access -- if collisiion occurs, backoff for random interval and try again
+----- CSMA users check for other signals before transmission (listen before talk)
+
+-- Wireless Networks
+--- 802.11 - wireless lan
+--- bluetooth (wireless personal area network)
+--- wimax
+--- wan (cellular)
+--- wireless RAN
+
+-- Wireless Cellular Networks
+--- large geographic area covered by radio, deviced into regular regions called "cells".
+--- each cell is associated with a fixed location tx/rx base station.  
+--- users can move between cells via handoff and mobility management
+--- neighboring cells are operated at different freq bands to avoid interference
+--- multiple cells will use the same freq band as long as the cells are far enough apart to avoid interference
+--- most cell systems are 3gpp 
+
+-- Wireless LAN Network
+--- small area, high speed radio
+--- AP vs AdHoc 
+---- AP has central node for access to  all network resources
+---- AdHoc allows users to xmit/rx to each other without utilizing central node
+--- 802.11
+
+-- Wireless Ad-hoc Network
+--- ad-hoc needs to be able to deal with broken nodes and nodes that aren't there
+--- 802.11 based
+--- no infra to start with, nodes self-assemble network
+--- limited range, might need multi-hop support to talk with all nodes in a network
+--- every node is a router
+--- first responders, battlefield applications for quick setup and tear down
+
+-- Wireless Ssensor Network
+--- No central access of base station
+--- uses a sync node for data/control of data collection nodes
+--- nodes can fail at any time and there is no fixed topology
+
+-- Wireless Mesh Network
+--- Everyone talks to everyone all the time
+--- No central node
+--- mesh clients vs mesh routers
+--- type of AdHoc network where any node could be a router to the larger network
+--- mesh networks grow as more nodes are added, unlimited resources can be added
+
+-- Cognitive Radio Network
+--- Enables access to unlicensed frequencies when such access does not generate harmful interference
+--- senses available spectrum and frequencies via SDR techniques
+--- can use a geolocation database to know where spectrum is actively used by licensees to avoid interferences.
+
+lec_4.txt
+-- 26 Jan 2023
+
+-- Radio Resource Managerment
+--- system to control reources maximize efficiency, minimize jitter, minimize interferences
+--- centralized vs decentralized  management
+--- utilize the lmiited radio specturm, frequency, interference
+--- Power Control
+---- most power is managed at the handset
+---- CDMA differentiates users based on unique codes, power control was a huge problem with multiple units
+---- prolong battery life of end devices
+---- cell networks based on FDMA tech 
+--- Channel Allocation
+---- Chop of Freq into parts is either centralized(towers/base stations) or distributed(handesets)
+---- Fixed channel allocation is easiest but wastes unused resources if not enough users
+----- Easiest to allocate and its always available
+---- Dynamic Channel Allocation requires more overhead to let more or less bandwidth be allocated
+----- Orthognal Frequency Dynamic Multiple Access lets subchannels be managed and then moved around
+----- Get the channel gain formula and commit it to memory
+---- Admission Control Management
+----- Moving users to different cell towers based on utilization 
+----- Algos for these mechanism are much more advanced and they are pushed down to the clients to decide
+----- Service and service class determines QoS (elastic vs inelastic)
+----- Real time vs non-realtime
+
+-- Supply/Demand
+--- Market Demand Functions
+---- Demand for Product: Function of Price of the Product
+----- Price goes down, demand goes up
+----- Cap based pricing in the Cellular Market 
+---- Demand for product can be affected/disrupted by new tech
+--- Market Supply Functions
+---- Supply of Product:  Function of Price and ability to physically produce
+----- Cost of raw material impacts end cost and can lower supply
+--- Market Equilibrium Price
+---- Intersection of supply/demand and consumer/supplier costs
+--- Market Basket & Indifference Curve
+---- Multiple products can be on the same indifference curve because they have the same utility
+---- You can get higher utility if the customer budget is higher
+--- Consumer Consumption Problem
+---- Consumer wants more "Utility" for budget
+---- Producer wants more money for "Utility"
+---- Derivitive of the indifference curve will capture the 
+-- Oligopoloy/Monopoloy Scenario
+-- distributed contracts game theory
+lec_5.txt
+31 Jan 2023
+
+-- Consumer Demand Function
+--- Measurements of the most desireable features for the least energy
+--- Allows a method to merge different bundle features into a single function or balance
+
+-- Demand and Price
+--- price elasticity is synonym for consumer price sensitivity.
+--- negative price changes will cause significant changes to sensitivity
+
+-- Price Elasticity
+-- is captured by negative demand curve
+-- if the price elasticity is tending to 0 then you buying everything and aren't sensitive to cost
+
+--- Total Production Cost
+---- explict cost (network equipment, salary of people)
+----- building, generators
+---- opportunity cost (not utilizing a resource, bandwidth, spectrum)
+-----
+---- long term point view of costs
+----- cost of phd candidates over the research time
+---- short term point view of costs
+----- immiediate spend of resources (losing a student immediately at the beginning of research)
+---- marginal cost captures change to cost of production
+
+--- Competitive Firms
+---- price taking firm trying to make all the money
+---- profit is less costs and fixed costs
+
+--- Outline 
+---- Social optimal pricing: a service provider chooses prices to maximize the social welfare
+---- optimaztion problems, convex or not
+---- 
+
+lec_6.txt
+02 Feb 2023
+-- 1st and 2nd order conditions for convex function
+--- Derivative/gradietn of fucntion 
+
+--- 2nd order function
+---- strictly concave > 0
+--- Operations Perserving Convexity of Functions
+---- non-negative weighter sums --> convext
+---- composition with an offine mapping
+---- point-wise maximum
+--- Covex Optimization
+---- Mathematical Optimaztion Problems
+
+--- Unconsgtrined convex Optimation
+---- feasible point is globa iff iterative methods always return 0 diff from previous
+--- Two widely used methods for gradient-based
+---- Gradient based
+---- Newtons' method
+
+--- Constrained Convex Optimization
+---- feasible point x is global minimizer iff 
+
+--- Langrangian Duality
+---- optimzation problem can be coverted
+---- yeilds a lower bound to original problme
+---- if original problem is convex & 
+--- estimates how far off you could be
+
+--- Dual fucntion
+---- minimum value of the langrangian over x
+---- dual fucntion is always concave
+---- tuning langrange multiplier
+
+--- Langrange Dual Problem
+---- minimize dual problem solution
+---- duality gap will show how distance between objective function and dual fucntion
+---- strong duality
+
+--- Complementary Slackness
+---- strong duality KKT conditions
+
+--- KKT Optimality Conditions
+
+--- Perturbing Parameter
+---- Langrange multipleirs:  prices (for example)
+---- min f(x) -- subject to something changing 
+
+--- 
+lec_7.txt
+07Feb2023
+-- Shadown Price
+--- Interpretation in terms of economics:
+---- investments on n different resources: x
+----- -p^2(x) will demonstrate profit
+---- When n is close to 0, max profit, when it moves away from 0, max cost
+--- The dual prblem may have less dimension or simpler constraints that the original(primal)
+--- The Dual func may not be differentiable (non continuous/discrete)
+-- How yto solve a Dual Problem
+--- subgradient method
+---- given a convex fucntion 
+----- a subgradient d of the dual func g() at a dual feasible pnt satisfies 
+-- Resource alloc for Wireless Video Streaming
+--- The voice caller performance (SINR) can be used for perturbing parameter in solving optimization
+--- Solution Framework
+---- avg resource allocation:  constrained network opimation problem, which explotins the multiuser content diversity to efficiently utilize the network resoruces.
+---- video source adaptation: each video slows down/speeds up by solving a localized op
+lec_8.txt
+09 Feb 2023
+-- Wireless Downlink Streaming
+-- prospect theory
+-- social welfare optimation problems
+-- back to shadow price, hidden profit/cost
+-- stackleberg game
+
+lec_9.txt
+16 Feb 2023
+-- contract theory
+--- hidden infor or assymetric info
+--- 
+-- game theory
+--- 
+-- prospect theory
+mid-term.txt
+Sean Bruno - sbruno1@unm.edu
+28 March 2023 -- ECE 524 Spring Term -- MidTerm Exam
+
+1. (9 %) Consider a cloud computing environment that can provide VMs (virtual machines) and serverless
+computing functionalities to the end-users. Each computing functionality comes with a corresponding
+unit cost. Based on the end-user’s budget availability, will there be a unique combination of computing
+services (i.e., a combination of VMs and serverless computing functionalities) that satisfy its computing
+needs? If yes, please explain. If not, please explain. Provide the appropriate network economics
+terminology in your answer. (Note: Consider that the end-user’s budget can support the purchase of
+multiple product units).
+
+--------------------------------------------------------------------------------------------------------
+In most cases, end-user computing requirements are varied and have a mix of time constraints and data
+sizes.  When an end-user considers the computing functionality provided by a service, how quickly they
+need results from their provider and how much data they wish to have processed will cause them to
+optimize their choices governing which type or style of compute they purchase.
+
+Users who are not time sensitive but are very cost sensitive, will choose the cheaper, serverless option
+to maximize their utility from the provider at the cost of slower time to generate a result.  These
+users are not going to take advantage of the higher priced, full VM solutions.  Billing departments, 
+non-live stream video conversion and large scale genomic analysis do not have a real-time component
+needing high speed turn around.  Therefore they can use a much lower cost service.
+
+Users who are very time sensitive will normally need to use services that require higher costs to meet
+their scheduling criteria.  These users need to minimize their latency during computation to quickly
+return results which providers will charge a much higher cost per unit of CPU.  Full VM providers who
+service these requests will have a much higher, dedicated infrastructure to garauntee the latency
+requirements from customers whose budgets and workloads demand it.  Live streaming providers who convert
+video to multiple codecs in real-time, high-frequency trading analytics engines and voice over IP calling
+tend to need low latency providers in order to meet their service level constraints.  These providers
+will normally charge a much higher cost to service these types of customers.
+
+--------------------------------------------------------------------------------------------------------
+2. (9 %) If a frequency band is used in one cell, it cannot be reused in any other cell within a wireless
+cellular communication environment. True or False and Why?
+--------------------------------------------------------------------------------------------------------
+
+False: A wireless cell most definitely can use a frequency band that is in use by another cell in multiple types
+of wireless communication environment.
+
+Depending on the technique used, frequency bands can be reused in mutiple cells if they are separated by 
+large distances such that they don't interfere with each other.  The distance between the cell coverage
+can be managed such that individual customers, while using the same frequency bands, won't be able to
+interfere with each other.
+
+The same frequency bands are used in CDMA networks where each user is assigned their own modulation 
+psuedocode such that the interference of the same frequency is somewhat additive.
+
+It is even possible and desireable to allow the same frequencies to be used across multiple cells in FDMA
+networks if the relative use (user population) is low enough that the same bands can be used to service
+the area.
+
+Finally, in a network with a random style access protocol (ALOHA), the backoff due to frequency collision
+is built into the network.  This would allow the network to utilize the same frequency bands across the
+cell network.
+--------------------------------------------------------------------------------------------------------
+3. (9 %) Consider a power company within a smart grid system. The energy production cost is fixed.
+Yes/No and Why?
+--------------------------------------------------------------------------------------------------------
+
+False:  The cost of energy in a smart grid system is NOT fixed.
+
+Typical smart grid systems have multiple inputs that allow the grid controllers to purchase power at a
+variable, market rate depending on consumption and generation.  In a modern smart grid, end users become
+power resellers and affect market prices for that power.
+
+During a sunny day, power production via end user electro voltaics become plentiful and cheap.  End user
+demand for power is handled via self-generation.  End users will then offload excess power generation to
+the grid at whatever market price the power company is paying, causing a downward pressure on the price
+per unit of power and making other sources with higher cost become less profitable.
+--------------------------------------------------------------------------------------------------------
+4. (9 %) Consider a convex maximization problem. What are the necessary conditions in order for the
+problem to have a unique global maximum point?
+
+--------------------------------------------------------------------------------------------------------
+Out of time on this one.  :-)
+
+--------------------------------------------------------------------------------------------------------
+5. (9 %) What are the two main contract-theoretic models that exist? What is the main characteristic of
+each one of those (and at the same time the one that differentiates them)? If you were developing and
+owning an online social platform to support crowdsourcing (collect data from the crowd/users), which
+model would you choose to reward the users that provide information, e.g., photos, text, video, and why?
+--------------------------------------------------------------------------------------------------------
+We studied two contract theory models, namely Adverse Selection and Moral Hazard style solutions.
+
+In Adverse Selection, the principal who needs some work done, has determined via statistical and behavioral
+data collection, what types of agents exist to service this work.  Those types can vary, but typically
+cover the reliability of the agent and what cost the agent will charge for that work.  The principal can
+then use that knowledge to minimize its cost and maximize its utility by designing a contract list that
+the agents can select from.  Upon completion of the work, the agent is rewarded with its payout.
+
+In Moral Hazard, the principal really has no idea what types of hidden actions that agents will take
+to accomplish its work, so it starts with a down payment to the agents accepting their task.  The
+principal attempts to evaulate the performance of the work through the interference of a noisy signal
+in the network, but adjusts its payout on completion of the work to mirror the performance of the agent.
+
+If I were to generate a crowdsourcing service/platform, I would most likely chose the Moral Hazard style
+as users in the network will most likely be very transient in the social platform.  Gathering behaviorial
+data will be unlikely as you will only be able to measure a small number of transactions to generate
+a type to assign to the user.  It is much more cost efficient for the provider in this style of unreliable
+agents to moderate their final payout.
+--------------------------------------------------------------------------------------------------------
+6. (9 %) Consider an adhoc relay-assisted wireless communication system. Following a contract-theoretic
+modeling approach, who is the employer and the employee at each communication hop? Which contract-
+theoretic model can jointly capture the phenomenon of information transmission and relay functionality?
+What can be the effort and what can be the reward in this model?
+--------------------------------------------------------------------------------------------------------
+In an Ad-Hoc network, each node when attempting to transmit to a destination is assuming the role of an 
+employer asking its neighboring nodes withing range to act as an employee and do some amount of work.
+
+This network model is most easily be modeled using a combination of adverse selection and moral hazard.
+Each node will be able to track the performance of its neighboring nodes, and keep their types in a list
+so that they are able to generate a menu of contracts for them.  In addition, since the battery life
+is a hidden data element, the action of actually transmitting can be thought of as a hidden action in this
+scenario, so you can begin your transaction by rewarding a down payment to the nodes.  When the transmitted
+data is acknowledged at the far end, you can reward nodes who participated with a performance evaulation 
+and use that data to update the neighboring node types.
+
+As a reward in this network, the employer node can accept more packets and relay them for its well behaved
+neighbors.
+--------------------------------------------------------------------------------------------------------
+
+7. (9 %) How spectrum allocation is performed nowadays by FCC? Is it true that a wireless provider with
+high budget availability and limited wireless infrastructure and/or services will be always allocated the
+largest portion of the spectrum? Yes/No and Why?
+--------------------------------------------------------------------------------------------------------
+The FCC will dsitribute spectrum via auctions open to the public.  Normally, the bidding process looks 
+at the bidder's ability to utilize the spectrum being offered.  Part of the process of acquiring the
+rights to utilize spectrum, requires presentation of the bidder's infrastructure and current utilization
+of already allocated frequencies.  If it can be shown that a bidder is not in a position to take advantage
+of the spectrum, the FCC will choose a different bidder to win the auction grant.
+
+Competition and maintaining a competitive environment is also a consideration during the auction process.
+The FCC will try and distribute auctions grants evenly so as to not prefer one provider over another, nor
+give any one provider an advantage in a market based on the spectrum granted.
+--------------------------------------------------------------------------------------------------------
+
+8. (10 %) What is the main difference between a game in satisfaction form and a normal form game?
+--------------------------------------------------------------------------------------------------------
+A game in satisfaction form calculates sets of results/strategies for the players based on allowing the
+players' utility functions to meet a minimum threshold.  A normal form game does not allow for this 
+kind of solution, nor does it mandate that one even exist.
+
+A satisfaction form game ensures that a solution allows for all players to accomplish a minimum of results
+for their given set of strategies.  It is not required that all players in a normal form game receive
+any payout regardless of the strategy.
+
+--------------------------------------------------------------------------------------------------------
+9. (9 %) Consider a public safety scenario after an earthquake, where the citizens of a city try to communicate
+over the wireless cellular network to reach out to their families and check if everyone is ok. What network
+economics phenomenon will be observed and why?
+--------------------------------------------------------------------------------------------------------
+If a very large percentage of users of a wireless network attempt to utilize the same network resources
+at the same time, they can overwhelm the limited network resources availble to them in a phenmonmenon known
+as the Tragedy of the Commons.  Networks are normally scaled to a peak usage value that is calculated
+from the population of users of that network.  It is not an infinite network pool, and can only support
+so many users before it runs out of power, frequency or data bandwidth for users.  In an emergency situation,
+it is quite trivial for a network that isn't scaled for a disaster to be overwhelmed by a peak value
+never before seen on a network, leading to the common pool of resources being denided to the majority
+of users.
+--------------------------------------------------------------------------------------------------------
+
+10. (9 %) Consider a cellular communications environment with 5 users within the cell. We formulate the
+optimization problem of maximizing the sum uplink transmission data rate (social welfare function),
+under the constraints that the transmission power of each user should not exceed its battery availability.
+The goal of the optimization problem is to determine the uplink transmission power of each user. How
+many free variables do you have and which are those? How many Lagrange multipliers do you have and
+why?
+--------------------------------------------------------------------------------------------------------
+In this scenario you have 5 users each with their own variables, yeilding 5 multipliers.
+
+--------------------------------------------------------------------------------------------------------
+
+11. (9 %) The WiFi providers and the cellular providers use the same economic models to charge the users.
+True or False and Why?
+--------------------------------------------------------------------------------------------------------
+False.  These two network providers have very different usage patterns, based on the data rates used, 
+distance the radios need to transmit and the coverage area provided by each network type.
+
+WiFi providers are normally able to charge their end users via an access time charge.  If a user wants
+an hour of access, they pay a fee for that hour regardless of the data they consume.  These much higher
+data rates are very useful for airport or hotel access who service users at a short range.
+
+Cellular network providers are normally able to charge their end users via a data amount charge.  If a 
+users wants to download one gigabyte of data, they can buy that much data regardless of how much time it
+takes to download that data.  Normally, these users require their data access to be much more mobile so
+providers have chosed the price per data downloaded model to offset the much larger infrastructure 
+required to service this network.
+--------------------------------------------------------------------------------------------------------
+midterm.txt
+30 March 2023
+-- Incetive Mechanism and Resouce Allocation for EdgeFog Networks Drive by MutliDimesional Game Theory
+--- Increase Populatiry of Edge Computing
+---- Adoption of a multi dimensional soltuion
+-- Introduce Edge-fog model system
+-- System Model
+--- users, edge and fog server
+-- Multi Dim Contract Base incentive design
+--- capture user types across mutlipel dimensions
+--- Ability to forward tasks categorizes the users
+---- size, vs intesity, sensitivity
+--- Uses characterization to generate contract bundles
+-- IR vs IC
+--- contract type will influence reward and utility
+---- chose the right contact bundle, get the most reward
+--- generate a virtual user type to characterize the user better
+---- allows a slope variable to define the users unwillingness to participate
+--- How does the system measure willingness(s) or characterize it?
+-- Stackleberg game commences
+--- edge server performs as a leader
+---- given input tx power, how many bytes should be sent
+--- Follower optimization based on number bytes on input
+--- Garauntees one Nash EQ 
+--- 
