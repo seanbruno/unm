@@ -1,0 +1,5 @@
+21 August 2023
+-- no need to order for me
+-- Mostly VHDL class, but Verilog is fine.
+-- Writing a game using HDMI output modules.
+

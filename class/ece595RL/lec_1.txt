@@ -1,0 +1,114 @@
+21 Aug 2023
+-- syllabus, lec 1
+-- intro
+-- how do we learn
+--- environmental feedback based on actions taken
+--- Change behvavior based on feedback loop
+--- stochastic/unpredictable results
+-- RL goal-directed learning from interactions.
+--- example of a router to minimize latency
+--- example of trading algos to maximize profit
+-- RL
+--- trial and error discovery
+--- delayed reward, short term decision reward may not be optimal for the long term evolution of the system
+-- Components of RL
+--- Define the problem clearly and precisely
+--- Class of solution methods that have been idenitified to work well on the problem.
+-- Formalize the problem of RL
+--- Dynamical Systems Theory
+--- Optimal control of icompletely-know Markove decision processes
+---- Learning Agent
+----- sens the state of the env
+----- take an action that affects the state
+----- have goal relating to the state of the env
+---- Markov decsion processes
+----- sensation, action, goal
+-- Categories of ML
+--- Supervised ML
+---- classification of data based on labels (google capcha)
+--- Unsupervised ML
+---- learn the strucuture without labels ()
+--- Reinforcement ML
+---- Maximize long term reward of decision making.
+
+-- Supervised ML vs RL
+--- Learn from training set.
+--- all examples are labled.
+--- ID a category to which the situation belongs to.
+--- generalize responses to act correclty in situations not present in the training set
+--- Drawbacks
+---- Not adequate for learning from interaction
+---- Only knows examples from actual situations.
+---- when untested scenario appears, unpredicatable results
+
+-- Unsupervised ML vs RL
+--- Find the sturcutre hidden in collections of unlabeled data
+--- Difference to RL
+---- Not a supervised ML model
+---- Maximized reward signal instead of trying to find hidden structure
+
+-- Exploration and Exploitations
+--- Trade-off between exploration and exploitation
+--- RL agent prefers actions that has tried and result in high reward (use experience to determine decisions) --> exploits
+--- RL agent tries actions that has not beefore selected to discover better actions --> explores
+---- trial and error 
+---- Stochastic and random environment changes mean no algo is good forever
+
+-- Features of RL
+--- consider the whole problem and not steps in the problem
+--- Goal-directed agent interaccting with an uncertain env
+--- Real-time decision-making
+--- Complete interactive goal-seeing agent
+---- explicit goals
+---- senses aspects of the environment 
+---- chooses actions to influence the env
+---- can be part of larget system and indirectly interating with its environment
+
+-- RL in eng and Sci Disciplines
+--- Core component of AI
+--- Stats and Opimization
+--- Operations Research
+--- Control Theory
+--- Physchology, Neuroscience
+--- Biology inspiration
+
+Chess game can be definited by a VALUE functions (to be discussed later).
+Petroleum Refineries Operations -- Maximize profit (minimize cost)
+Roomba -- cover the whole floor in the lowest amount of time
+
+-- Lessons
+--- Action of decision-making agent and its environment (stocastic environment)
+--- agent seeks to acheive a goal despite the stochastic environment
+--- agent's action may affect the future state of the env, actions and opportunities available.
+--- Planning may be needed
+
+-- Elements of RL
+--- Agent and Environment
+--- Policy, Reward signal, Value function, model of environment
+
+-- Policy
+--- definies learning agent's way of behaving at a given time
+--- mapping from perceived states of the environment to action to be taken when in those states
+--- simple function, lookup table, or computationally intensive
+--- by itself, policy is suffient to determine the RL agent's behavior
+--- stochastic:  spefies probabilities for each action to weight decisions
+
+-- Reward Signal
+--- defines goal of an RL problem
+--- env sends a single number (reward) to RL agent
+--- RL agent's ovjective: max(long run reward)
+--- defines "good" in an immedate sense
+---- not the long term reward / value function
+---- low reward for a decision, should cause a different decision in the future
+
+-- Value Function
+--- Long run "good" or reward
+--- Total amount of reward an agent can expect over the future state
+--- Values indicate long-term desirability of states (chain of events lead to high value)
+--- Action choices are made based on the value judgements not the reward
+--- Values are estimated
+
+-- Model of the Environment
+--- Allows inferences to be made about how the env will behave
+--- The model predicts the resultant next state and next reward, five a current state and action.
+--- Models are used for planning --> 
