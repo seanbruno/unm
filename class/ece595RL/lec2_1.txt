@@ -1,0 +1,21 @@
+23 August 2023
+- Tabular Solution Methods
+-- single state (special) bandit problems
+-- Finite Markov decision processes.  Bellman equation
+-- Dynamic programming
+-- Monte Carlo
+-- Temporal difference learning
+-- some combination of these
+
+- Evaluative vs Purley Instructive Feedback
+-- Evaluative:  how good was the action taken, absolute value not comparitive
+-- Purely instructive:  how good was the action in terms of knowledge of the environment
+
+- k-armed bandits
+-- multiple independant slot machine like things
+-- each action for each machine is independant
+-- how to balance exploration/exploitation
+
+- Action-value Method
+-- can't read this slide well
+

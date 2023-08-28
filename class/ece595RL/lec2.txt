@@ -1,0 +1,78 @@
+23 August 2023
+- Model of environment (continued)
+-- Model is not needed and may not be possible
+
+- Evolutionary Methods
+-- highest reward policies will be carried to next generation (iterative method)
+-- each policy does not learn from the environment
+--- restarting iterations "learn"
+--- always greedy(exploit)
+
+- tic-tac-toe example
+-- Game-Theory (min-max):  maximize utility(self) minimize utility(opponent)
+-- classical optimization: requires complete knowledge of opponent, dymanic programming.
+-- evolutionary method:  fixed policy, identifies every move for every game state
+
+- RL method to solve tic-tac-toe
+-- establish a value for each end state of the game
+-- 3x in a row == 1
+-- 3o in a row == 0
+-- all other states == .5
+
+- Play games with opp to build the table of all states/values
+
+- Temporal diff learning method solving tic-tac-toe
+-- remember/backup the previous move to assess greedy move 
+-- St --> state before greedy move
+-- St+1 -> state after greedy move
+-- Est value of St: V(St) <-- V(St) + alpha[V(St+1) - V(St)]
+--- can be negative, this is not an abs value. 
+--- alpha is a weight/step-size parameter influencing the learning rate
+--- [V(St+1) - V(St)]: temporal differnce
+--- alpha emphasizes exploration
+
+- Seq of tic-tac-toe
+
+- Key features of RL
+-- Learning while interacting
+-- RL applies in the case there is no exernal adversary
+-- RL is not restricted to problemsawhich behavrio breaks down into seperate episodes
+-- RL applies to problems that do not break down into dsicrete time steps (continuous)
+-- Applies to very large space of decisisons
+-- RL Can use prior information of learning
+-- Can appliy when part of state is hidden from the RP agent or the RL agent perveives different states as the same
+--- not all env variables are known
+-- RL methods
+--- Model based: model used in planning
+--- Model-free: used when no model of env is possible
+
+- RL is computational, no optimization
+- RL learns by interacting with env (no agent)
+- Uses formal framework
+- Value function: key component in desigh of RL
+-- Captures 
+
+- RL started as optimal control
+- RL become trai and error
+- Modernized with temporal-difference methods
+
+- Optimal Control
+-- slide is way to small to read
+-- Markov Decision Process (MDP)
+-- Dynamic Programming suffers from dimensionality
+-- Extensions of Dynamic Programming
+-- DP goes backward vs RL goes forward
+
+- Trial and Error
+-- Turing (pain/pleasure)
+-- Law of Effect (thorndike)
+-- REverse Engineering is akin to RL
+-- RL in Econ and RL in AI
+
+- Temporal-difference Leanring
+-- driven by diff between successive estimates of the same quantity
+-- TD(lamda) used in large space of choices
+
+------
+
+
