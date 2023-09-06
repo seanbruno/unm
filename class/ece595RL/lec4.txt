@@ -1,0 +1,11 @@
+30 August 2023
+- gradient bandit algo (cont)
+-- soft-max dist to determine action prob
+- Bandit gradietn ascent
+-- sum (mean)
+-- reslecting a choice that gives a higher reward will increase preference 
+--- lower reward decrease preference
+-- deciding to select another action
+--- Selecting the same action and getting a reward will lower preference for ANY OTHER action
+-- Larger alpha will explore faster, but can miss changes between steps
+

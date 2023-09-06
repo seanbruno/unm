@@ -1,0 +1,27 @@
+28 August 2023
+- k-armed bandits continued
+-- ex 10-armed testbed
+--- greedy improved faster
+--- greedy avg always gets stuck without exploration
+--- too much exploration can tank your long term return value
+--- not optimizing in the context of math
+-- incremental implementation
+--- avg computation efficient manner
+--- doesn't scale as one has to remember each and every value
+--- step size 1/n
+-- tracking nonstationary problem
+--- env is non-static
+--- recursive solution for n items
+--- older actions have less weight, newer actions have more weight
+-- Convergence Conditions
+--- Sample-average methods, step-size parameter a_n(a)=1/n
+--- Convergence is not guaranteed infinite
+-- Optimistic Initial Values
+-- Uncertainty in Action Selection
+--- Exp is needed to deal with uncertaintty
+--- freedy look good early, may fail in the long run
+--- better to select among the non-greedy actions 
+-- Upper-Confidence-Bound Action Selection
+--- I knew 'e' was going to show up here
+-- Gradient Bandit Algorithms
+
