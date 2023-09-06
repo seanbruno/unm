@@ -1,0 +1,14 @@
+28 August 2023
+- PS vs PL side
+-- PS can use 1GB of ram for linux
+-- LUTs are 6 inputs
+--- LUTS, flipflops, switchboxes for the most part of the game.
+--- configuration memory will not be showing in Vivado
+--- static for the duration of the implementation (power reset or reprogram)
+--- MUX is N+1 inputs (each input and a select line)
+-- SwitchBox
+--- black box
+-- Configurable Logic Box (CLB)
+--- slice
+-- Chip Level
+--- Eventually you go out to "PADs"
