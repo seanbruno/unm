@@ -14,16 +14,16 @@ end FA_ED;
 
 architecture rtl of FA_ED is
 begin
-      process (a, b, c, ctrl)
-      begin
-         Cout <= ’0’;
-         sum <= ’0’;
-         if (ctrl = ’0’) then
+    process (a, b, c, ctrl)
+    begin
+        Cout <= '0';
+        sum <= '0';
+        if (ctrl = '0') then
             Cout <= ((a and b) or (a and c) or (b and c)) and (not a and not b and not c);
-            sum <= ’0’;
-         else
+            sum <= '0';
+        else
             Cout <= (a and b) or (a and c) or (b and c);
             sum <= a xor b xor c;
-         end if;
-      end process;
+        end if;
+    end process;
 end rtl;
