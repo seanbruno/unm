@@ -1,0 +1,4 @@
+06 Sep 2023
+- everything is paralell
+- force seqentiality, state machine
+- 

@@ -1,0 +1,3 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+$finish called at time : 300 ns : File "/home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/VHDL/BRAM_simulation_tb.v" Line 65

@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec  7 03:15:28 2022
+# Process ID: 4213
+# Current directory: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim
+# Command line: vivado
+# Log file: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/vivado.log
+# Journal file: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/BRAM_sim/BRAM_sim.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source PNL_BRAM_instance_tb.tcl
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source PNL_BRAM_instance_tb.tcl
+relaunch_sim
+close_sim
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_simulation -mode post-implementation -type timing
+source PNL_BRAM_instance_tb.tcl

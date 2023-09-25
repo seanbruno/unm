@@ -1,0 +1,20 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /home/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 8564938a05ed4310802f37ff1497709c --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot PNL_BRAM_instance_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.PNL_BRAM_instance_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "PNL_BRAM_instance_tb_time_impl.sdf", for root module "PNL_BRAM_instance_tb/uut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "PNL_BRAM_instance_tb_time_impl.sdf", for root module "PNL_BRAM_instance_tb/uut".
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.RB36_INTERNAL_VLOG(RDADDR_COLLIS...
+Compiling module simprims_ver.RAMB36E1(RDADDR_COLLISION_HWCONF...
+Compiling module xil_defaultlib.xilinx_one_port_ram_sync
+Compiling module xil_defaultlib.PNL_BRAM_instance_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot PNL_BRAM_instance_tb_time_impl

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec  7 05:08:07 2022
+# Process ID: 7134
+# Current directory: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/BRAM_sim/BRAM_sim.runs/impl_1
+# Command line: vivado -log xilinx_one_port_ram_sync.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source xilinx_one_port_ram_sync.tcl -notrace
+# Log file: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/BRAM_sim/BRAM_sim.runs/impl_1/xilinx_one_port_ram_sync.vdi
+# Journal file: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/BRAM_sim/BRAM_sim.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source xilinx_one_port_ram_sync.tcl -notrace

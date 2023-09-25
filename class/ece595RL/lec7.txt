@@ -1,0 +1,8 @@
+18 Sept 2023
+- State-Value Function 
+-- value func of states 
+-- how good will be defined in term of expected furure rewards
+-- when in a state, prob of each action, each will move to a new state
+--- for each action, the sum of all probabilities will determine a policy
+-- Action value Function
+--- characterizes 

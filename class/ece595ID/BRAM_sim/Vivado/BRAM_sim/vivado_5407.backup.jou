@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Nov 30 03:53:23 2022
+# Process ID: 5407
+# Current directory: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim
+# Command line: vivado
+# Log file: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/vivado.log
+# Journal file: /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project BRAM_sim /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/Vivado/BRAM_sim/BRAM_sim -part xc7z010clg400-1
+set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/VHDL/BRAM_simulation.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/jimp/class/vhdl_fpgas/labs/2022/BRAM_sim/VHDL/BRAM_simulation_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source PNL_BRAM_instance_tb.tcl
+close_sim
+launch_simulation
+source PNL_BRAM_instance_tb.tcl
+close_sim

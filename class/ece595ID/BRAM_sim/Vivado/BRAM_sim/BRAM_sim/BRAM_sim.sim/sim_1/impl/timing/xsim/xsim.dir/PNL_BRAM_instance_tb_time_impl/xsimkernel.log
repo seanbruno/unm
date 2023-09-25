@@ -1,0 +1,4 @@
+Running: xsim.dir/PNL_BRAM_instance_tb_time_impl/xsimk -simmode gui -wdb PNL_BRAM_instance_tb_time_impl.wdb -simrunnum 0 -socket 60519
+Design successfully loaded
+Design Loading Memory Usage: 93248 KB (Peak: 93248 KB)
+Design Loading CPU Usage: 20 ms

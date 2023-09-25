@@ -1,0 +1,628 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "xilinx_one_port_ram_sync")
+(DATE "Wed Dec  7 05:11:56 2022")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2018.2")
+(DIVIDER /)
+(TIMESCALE 1ps)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[0\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (849.6:983.3:983.3) (849.6:983.3:983.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[10\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (881.1:1015.1:1015.1) (881.1:1015.1:1015.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[11\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (907.8:1042.2:1042.2) (907.8:1042.2:1042.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[1\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (843.2:976.8:976.8) (843.2:976.8:976.8))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[2\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (841.2:974.8:974.8) (841.2:974.8:974.8))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[3\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (830.1:963.7:963.7) (830.1:963.7:963.7))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[4\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (833.9:967.5:967.5) (833.9:967.5:967.5))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[5\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (845.4:979.1:979.1) (845.4:979.1:979.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[6\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (845.3:979.0:979.0) (845.3:979.0:979.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[7\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (845.6:979.3:979.3) (845.6:979.3:979.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[8\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (843.4:977.1:977.1) (843.4:977.1:977.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE addr_IBUF\[9\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (879.2:1013.2:1013.2) (879.2:1013.2:1013.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "BUFG")
+  (INSTANCE clk_IBUF_BUFG_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (91.0:101.0:101.0) (91.0:101.0:101.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE clk_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (911.6:1046.0:1046.0) (911.6:1046.0:1046.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[0\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (816.4:949.8:949.8) (816.4:949.8:949.8))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[10\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (809.3:942.7:942.7) (809.3:942.7:942.7))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[11\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (798.6:931.9:931.9) (798.6:931.9:931.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[12\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (802.7:936.0:936.0) (802.7:936.0:936.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[13\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (827.5:961.1:961.1) (827.5:961.1:961.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[14\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (822.6:956.1:956.1) (822.6:956.1:956.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[15\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (842.9:976.5:976.5) (842.9:976.5:976.5))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[1\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (805.1:938.4:938.4) (805.1:938.4:938.4))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[2\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (802.5:935.7:935.7) (802.5:935.7:935.7))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[3\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (838.5:972.1:972.1) (838.5:972.1:972.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[4\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (847.0:980.7:980.7) (847.0:980.7:980.7))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[5\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (822.9:956.4:956.4) (822.9:956.4:956.4))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[6\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (824.4:957.9:957.9) (824.4:957.9:957.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[7\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (823.8:957.3:957.3) (823.8:957.3:957.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[8\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (827.2:960.7:960.7) (827.2:960.7:960.7))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE din_IBUF\[9\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (810.5:943.9:943.9) (810.5:943.9:943.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[0\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2558.7:2715.9:2715.9) (2558.7:2715.9:2715.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[10\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2498.7:2655.3:2655.3) (2498.7:2655.3:2655.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[11\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2529.1:2685.9:2685.9) (2529.1:2685.9:2685.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[12\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2522.7:2679.5:2679.5) (2522.7:2679.5:2679.5))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[13\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2509.2:2665.9:2665.9) (2509.2:2665.9:2665.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[14\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2509.8:2666.5:2666.5) (2509.8:2666.5:2666.5))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[15\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2540.9:2697.9:2697.9) (2540.9:2697.9:2697.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[1\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2515.0:2671.7:2671.7) (2515.0:2671.7:2671.7))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[2\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2518.2:2675.0:2675.0) (2518.2:2675.0:2675.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[3\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2574.9:2732.2:2732.2) (2574.9:2732.2:2732.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[4\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2572.3:2729.6:2729.6) (2572.3:2729.6:2729.6))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[5\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2549.9:2706.9:2706.9) (2549.9:2706.9:2706.9))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[6\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2556.6:2713.8:2713.8) (2556.6:2713.8:2713.8))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[7\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2502.7:2659.2:2659.2) (2502.7:2659.2:2659.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[8\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2507.6:2664.2:2664.2) (2507.6:2664.2:2664.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE dout_OBUF\[9\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2501.6:2658.2:2658.2) (2501.6:2658.2:2658.2))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "RAMB36E1")
+  (INSTANCE ram_reg_0)
+  (DELAY 
+    (ABSOLUTE 
+      (IOPATH CLKARDCLK DOPADOP[3:0] (1353.0:2454.0:2454.0) (1353.0:2454.0:2454.0))
+      (IOPATH CLKARDCLK DOADO[31:0] (1353.0:2454.0:2454.0) (1353.0:2454.0:2454.0))
+    )
+  )
+    (TIMINGCHECK
+      (SETUPHOLD (posedge ENARDEN) (posedge CLKARDCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (negedge ENARDEN) (posedge CLKARDCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (posedge ENBWREN) (posedge CLKBWRCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (negedge ENBWREN) (posedge CLKBWRCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (posedge RSTRAMARSTRAM) (posedge CLKARDCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (SETUPHOLD (negedge RSTRAMARSTRAM) (posedge CLKARDCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (SETUPHOLD (posedge RSTRAMB) (posedge CLKBWRCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (SETUPHOLD (negedge RSTRAMB) (posedge CLKBWRCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (PERIOD (posedge CLKARDCLK) (2576.0:2576.0:2576.0))
+      (PERIOD (posedge CLKARDCLK) (2576.0:2576.0:2576.0))
+      (PERIOD (posedge CLKBWRCLK) (2576.0:2576.0:2576.0))
+      (PERIOD (posedge CLKBWRCLK) (2576.0:2576.0:2576.0))
+      (SETUPHOLD (posedge WEBWE[7:0]) (posedge CLKBWRCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+      (SETUPHOLD (negedge WEBWE[7:0]) (posedge CLKBWRCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+      (SETUPHOLD (posedge DIPBDIP[3:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIPBDIP[3:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge ADDRBWRADDR[15:0]) (posedge CLKBWRCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (negedge ADDRBWRADDR[15:0]) (posedge CLKBWRCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (posedge DIBDI[31:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIBDI[31:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge ADDRARDADDR[15:0]) (posedge CLKARDCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (negedge ADDRARDADDR[15:0]) (posedge CLKARDCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (posedge DIADI[31:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIADI[31:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge DIPADIP[3:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIPADIP[3:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge WEA[3:0]) (posedge CLKARDCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+      (SETUPHOLD (negedge WEA[3:0]) (posedge CLKARDCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+    )
+)
+(CELL 
+  (CELLTYPE "RAMB36E1")
+  (INSTANCE ram_reg_1)
+  (DELAY 
+    (ABSOLUTE 
+      (IOPATH CLKARDCLK DOADO[31:0] (1353.0:2454.0:2454.0) (1353.0:2454.0:2454.0))
+    )
+  )
+    (TIMINGCHECK
+      (SETUPHOLD (posedge ENARDEN) (posedge CLKARDCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (negedge ENARDEN) (posedge CLKARDCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (posedge ENBWREN) (posedge CLKBWRCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (negedge ENBWREN) (posedge CLKBWRCLK) (-227.0:443.0:443.0) (227.0:227.0:227.0))
+      (SETUPHOLD (posedge RSTRAMARSTRAM) (posedge CLKARDCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (SETUPHOLD (negedge RSTRAMARSTRAM) (posedge CLKARDCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (SETUPHOLD (posedge RSTRAMB) (posedge CLKBWRCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (SETUPHOLD (negedge RSTRAMB) (posedge CLKBWRCLK) (-453.0:359.0:359.0) (453.0:453.0:453.0))
+      (PERIOD (posedge CLKARDCLK) (2576.0:2576.0:2576.0))
+      (PERIOD (posedge CLKARDCLK) (2576.0:2576.0:2576.0))
+      (PERIOD (posedge CLKBWRCLK) (2576.0:2576.0:2576.0))
+      (PERIOD (posedge CLKBWRCLK) (2576.0:2576.0:2576.0))
+      (SETUPHOLD (posedge DIBDI[31:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIBDI[31:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge ADDRBWRADDR[15:0]) (posedge CLKBWRCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (negedge ADDRBWRADDR[15:0]) (posedge CLKBWRCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (posedge DIPBDIP[3:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIPBDIP[3:0]) (posedge CLKBWRCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge WEBWE[7:0]) (posedge CLKBWRCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+      (SETUPHOLD (negedge WEBWE[7:0]) (posedge CLKBWRCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+      (SETUPHOLD (posedge ADDRARDADDR[15:0]) (posedge CLKARDCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (negedge ADDRARDADDR[15:0]) (posedge CLKARDCLK) (-360.0:566.0:566.0) (360.0:360.0:360.0))
+      (SETUPHOLD (posedge DIPADIP[3:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIPADIP[3:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge DIADI[31:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (negedge DIADI[31:0]) (posedge CLKARDCLK) (-667.0:737.0:737.0) (667.0:667.0:667.0))
+      (SETUPHOLD (posedge WEA[3:0]) (posedge CLKARDCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+      (SETUPHOLD (negedge WEA[3:0]) (posedge CLKARDCLK) (-197.0:532.0:532.0) (197.0:197.0:197.0))
+    )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE we_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (913.3:1047.7:1047.7) (913.3:1047.7:1047.7))
+    )
+  )
+)
+(CELL 
+    (CELLTYPE "xilinx_one_port_ram_sync")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+      (INTERCONNECT addr_IBUF\[0\]_inst/O ram_reg_0/ADDRARDADDR[3] (1542.9:1806.4:1806.4) (1542.9:1806.4:1806.4))
+      (INTERCONNECT addr_IBUF\[0\]_inst/O ram_reg_1/ADDRARDADDR[3] (1262.9:1468.4:1468.4) (1262.9:1468.4:1468.4))
+      (INTERCONNECT addr_IBUF\[10\]_inst/O ram_reg_0/ADDRARDADDR[13] (1100.7:1276.7:1276.7) (1100.7:1276.7:1276.7))
+      (INTERCONNECT addr_IBUF\[10\]_inst/O ram_reg_1/ADDRARDADDR[13] (1380.7:1614.7:1614.7) (1380.7:1614.7:1614.7))
+      (INTERCONNECT addr_IBUF\[11\]_inst/O ram_reg_0/ADDRARDADDR[14] (1218.6:1419.2:1419.2) (1218.6:1419.2:1419.2))
+      (INTERCONNECT addr_IBUF\[11\]_inst/O ram_reg_1/ADDRARDADDR[14] (1498.6:1757.2:1757.2) (1498.6:1757.2:1757.2))
+      (INTERCONNECT addr_IBUF\[1\]_inst/O ram_reg_0/ADDRARDADDR[4] (1416.9:1658.5:1658.5) (1416.9:1658.5:1658.5))
+      (INTERCONNECT addr_IBUF\[1\]_inst/O ram_reg_1/ADDRARDADDR[4] (1136.9:1320.5:1320.5) (1136.9:1320.5:1320.5))
+      (INTERCONNECT addr_IBUF\[2\]_inst/O ram_reg_0/ADDRARDADDR[5] (1527.8:1787.4:1787.4) (1527.8:1787.4:1787.4))
+      (INTERCONNECT addr_IBUF\[2\]_inst/O ram_reg_1/ADDRARDADDR[5] (1247.8:1449.4:1449.4) (1247.8:1449.4:1449.4))
+      (INTERCONNECT addr_IBUF\[3\]_inst/O ram_reg_0/ADDRARDADDR[6] (1408.6:1644.6:1644.6) (1408.6:1644.6:1644.6))
+      (INTERCONNECT addr_IBUF\[3\]_inst/O ram_reg_1/ADDRARDADDR[6] (1128.6:1306.6:1306.6) (1128.6:1306.6:1306.6))
+      (INTERCONNECT addr_IBUF\[4\]_inst/O ram_reg_0/ADDRARDADDR[7] (1417.9:1659.5:1659.5) (1417.9:1659.5:1659.5))
+      (INTERCONNECT addr_IBUF\[4\]_inst/O ram_reg_1/ADDRARDADDR[7] (1137.9:1321.5:1321.5) (1137.9:1321.5:1321.5))
+      (INTERCONNECT addr_IBUF\[5\]_inst/O ram_reg_0/ADDRARDADDR[8] (1276.4:1478.0:1478.0) (1276.4:1478.0:1478.0))
+      (INTERCONNECT addr_IBUF\[5\]_inst/O ram_reg_1/ADDRARDADDR[8] (1556.4:1816.0:1816.0) (1556.4:1816.0:1816.0))
+      (INTERCONNECT addr_IBUF\[6\]_inst/O ram_reg_0/ADDRARDADDR[9] (1272.0:1476.6:1476.6) (1272.0:1476.6:1476.6))
+      (INTERCONNECT addr_IBUF\[6\]_inst/O ram_reg_1/ADDRARDADDR[9] (1552.0:1814.6:1814.6) (1552.0:1814.6:1814.6))
+      (INTERCONNECT addr_IBUF\[7\]_inst/O ram_reg_0/ADDRARDADDR[10] (1274.3:1470.3:1470.3) (1274.3:1470.3:1470.3))
+      (INTERCONNECT addr_IBUF\[7\]_inst/O ram_reg_1/ADDRARDADDR[10] (1554.3:1808.3:1808.3) (1554.3:1808.3:1808.3))
+      (INTERCONNECT addr_IBUF\[8\]_inst/O ram_reg_0/ADDRARDADDR[11] (1284.1:1483.1:1483.1) (1284.1:1483.1:1483.1))
+      (INTERCONNECT addr_IBUF\[8\]_inst/O ram_reg_1/ADDRARDADDR[11] (1564.1:1821.1:1821.1) (1564.1:1821.1:1821.1))
+      (INTERCONNECT addr_IBUF\[9\]_inst/O ram_reg_0/ADDRARDADDR[12] (1145.2:1326.8:1326.8) (1145.2:1326.8:1326.8))
+      (INTERCONNECT addr_IBUF\[9\]_inst/O ram_reg_1/ADDRARDADDR[12] (1425.2:1664.8:1664.8) (1425.2:1664.8:1664.8))
+      (INTERCONNECT clk_IBUF_BUFG_inst/O ram_reg_0/CLKARDCLK (1530.9:1702.5:1702.5) (1530.9:1702.5:1702.5))
+      (INTERCONNECT clk_IBUF_BUFG_inst/O ram_reg_1/CLKARDCLK (1527.9:1698.5:1698.5) (1527.9:1698.5:1698.5))
+      (INTERCONNECT clk_IBUF_inst/O clk_IBUF_BUFG_inst/I (1880.0:2076.0:2076.0) (1880.0:2076.0:2076.0))
+      (INTERCONNECT din_IBUF\[0\]_inst/O ram_reg_0/DIADI[0] (1601.8:1855.8:1855.8) (1601.8:1855.8:1855.8))
+      (INTERCONNECT din_IBUF\[10\]_inst/O ram_reg_1/DIADI[1] (1224.8:1414.8:1414.8) (1224.8:1414.8:1414.8))
+      (INTERCONNECT din_IBUF\[11\]_inst/O ram_reg_1/DIADI[2] (1159.4:1342.4:1342.4) (1159.4:1342.4:1342.4))
+      (INTERCONNECT din_IBUF\[12\]_inst/O ram_reg_1/DIADI[3] (1186.9:1376.9:1376.9) (1186.9:1376.9:1376.9))
+      (INTERCONNECT din_IBUF\[13\]_inst/O ram_reg_1/DIADI[4] (1158.1:1341.1:1341.1) (1158.1:1341.1:1341.1))
+      (INTERCONNECT din_IBUF\[14\]_inst/O ram_reg_1/DIADI[5] (1159.4:1342.4:1342.4) (1159.4:1342.4:1342.4))
+      (INTERCONNECT din_IBUF\[15\]_inst/O ram_reg_1/DIADI[6] (1131.9:1313.9:1313.9) (1131.9:1313.9:1313.9))
+      (INTERCONNECT din_IBUF\[1\]_inst/O ram_reg_0/DIADI[1] (1629.0:1883.0:1883.0) (1629.0:1883.0:1883.0))
+      (INTERCONNECT din_IBUF\[2\]_inst/O ram_reg_0/DIADI[2] (1569.4:1823.4:1823.4) (1569.4:1823.4:1823.4))
+      (INTERCONNECT din_IBUF\[3\]_inst/O ram_reg_0/DIADI[3] (1562.9:1816.9:1816.9) (1562.9:1816.9:1816.9))
+      (INTERCONNECT din_IBUF\[4\]_inst/O ram_reg_0/DIADI[4] (1624.3:1889.3:1889.3) (1624.3:1889.3:1889.3))
+      (INTERCONNECT din_IBUF\[5\]_inst/O ram_reg_0/DIADI[5] (1591.0:1845.0:1845.0) (1591.0:1845.0:1845.0))
+      (INTERCONNECT din_IBUF\[6\]_inst/O ram_reg_0/DIADI[6] (1506.3:1748.3:1748.3) (1506.3:1748.3:1748.3))
+      (INTERCONNECT din_IBUF\[7\]_inst/O ram_reg_0/DIADI[7] (1625.5:1890.5:1890.5) (1625.5:1890.5:1890.5))
+      (INTERCONNECT din_IBUF\[8\]_inst/O ram_reg_0/DIPADIP[0] (1572.2:2008.6:2008.6) (1572.2:2008.6:2008.6))
+      (INTERCONNECT din_IBUF\[9\]_inst/O ram_reg_1/DIADI[0] (1224.7:1414.7:1414.7) (1224.7:1414.7:1414.7))
+      (INTERCONNECT ram_reg_0/DOADO[7] dout_OBUF\[7\]_inst/I (2049.9:2368.9:2368.9) (2049.9:2368.9:2368.9))
+      (INTERCONNECT ram_reg_0/DOADO[6] dout_OBUF\[6\]_inst/I (2202.4:2554.4:2554.4) (2202.4:2554.4:2554.4))
+      (INTERCONNECT ram_reg_0/DOADO[5] dout_OBUF\[5\]_inst/I (2013.1:2333.1:2333.1) (2013.1:2333.1:2333.1))
+      (INTERCONNECT ram_reg_0/DOADO[4] dout_OBUF\[4\]_inst/I (2049.9:2368.9:2368.9) (2049.9:2368.9:2368.9))
+      (INTERCONNECT ram_reg_0/DOADO[3] dout_OBUF\[3\]_inst/I (2014.6:2326.6:2326.6) (2014.6:2326.6:2326.6))
+      (INTERCONNECT ram_reg_0/DOADO[2] dout_OBUF\[2\]_inst/I (2013.1:2333.1:2333.1) (2013.1:2333.1:2333.1))
+      (INTERCONNECT ram_reg_0/DOADO[1] dout_OBUF\[1\]_inst/I (1982.8:2291.8:2291.8) (1982.8:2291.8:2291.8))
+      (INTERCONNECT ram_reg_0/DOADO[0] dout_OBUF\[0\]_inst/I (2014.6:2326.6:2326.6) (2014.6:2326.6:2326.6))
+      (INTERCONNECT ram_reg_0/DOPADOP[0] dout_OBUF\[8\]_inst/I (2206.4:2557.4:2557.4) (2206.4:2557.4:2557.4))
+      (INTERCONNECT ram_reg_1/DOADO[6] dout_OBUF\[15\]_inst/I (2609.2:3033.2:3033.2) (2609.2:3033.2:3033.2))
+      (INTERCONNECT ram_reg_1/DOADO[5] dout_OBUF\[14\]_inst/I (2388.0:2772.0:2772.0) (2388.0:2772.0:2772.0))
+      (INTERCONNECT ram_reg_1/DOADO[4] dout_OBUF\[13\]_inst/I (2424.6:2816.6:2816.6) (2424.6:2816.6:2816.6))
+      (INTERCONNECT ram_reg_1/DOADO[3] dout_OBUF\[12\]_inst/I (2399.5:2782.5:2782.5) (2399.5:2782.5:2782.5))
+      (INTERCONNECT ram_reg_1/DOADO[2] dout_OBUF\[11\]_inst/I (2396.2:2780.2:2780.2) (2396.2:2780.2:2780.2))
+      (INTERCONNECT ram_reg_1/DOADO[1] dout_OBUF\[10\]_inst/I (2382.0:2762.0:2762.0) (2382.0:2762.0:2762.0))
+      (INTERCONNECT ram_reg_1/DOADO[0] dout_OBUF\[9\]_inst/I (2395.1:2778.1:2778.1) (2395.1:2778.1:2778.1))
+      (INTERCONNECT we_IBUF_inst/O ram_reg_0/WEA[0] (1065.2:1442.1:1442.1) (1065.2:1442.1:1442.1))
+      (INTERCONNECT we_IBUF_inst/O ram_reg_1/WEA[0] (1444.6:1653.6:1653.6) (1444.6:1653.6:1653.6))
+      )
+    )
+)
+)

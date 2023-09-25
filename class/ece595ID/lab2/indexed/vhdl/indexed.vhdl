@@ -14,8 +14,8 @@ signal au: unsigned(3 downto 0);
 begin
    process (au, ctrl)
       begin
-            au <= (others=>’0’);
-            au(to_integer(unsigned(ctrl))) <= ’1’;
+            au <= (others=>'0');
+            au(to_integer(unsigned(ctrl))) <= '1';
             a <= std_logic_vector(au);
       end process;
 end rtl;

@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"PNL_BRAM_instance_tb_time_impl.v" \
+"../../../../../../../../VHDL/BRAM_simulation_tb.v" \
+
+# Do not sort compile order
+nosort

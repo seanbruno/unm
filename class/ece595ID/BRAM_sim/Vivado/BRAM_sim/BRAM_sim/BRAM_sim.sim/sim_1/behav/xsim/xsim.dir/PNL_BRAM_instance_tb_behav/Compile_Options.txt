@@ -1,0 +1,1 @@
+-wto "8564938a05ed4310802f37ff1497709c" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "PNL_BRAM_instance_tb_behav" "xil_defaultlib.PNL_BRAM_instance_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
