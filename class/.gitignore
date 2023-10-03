@@ -1,2 +1,13 @@
 ece595_rl_paper
 ece525
+vivado.cache
+vivado.hw
+vivado.ip_user_files/
+vivado.sim/
+vivado.xpr
+vivado
+Vivado
+priomux.cache
+priomux.hw
+priomux.xpr
+
