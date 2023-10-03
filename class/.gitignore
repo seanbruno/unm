@@ -5,6 +5,8 @@ vivado.hw
 vivado.ip_user_files/
 vivado.sim/
 vivado.xpr
+vivado.runs/
+vivado.srcs/
 vivado
 Vivado
 priomux.cache
