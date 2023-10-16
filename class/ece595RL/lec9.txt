@@ -1,0 +1,6 @@
+25 Sep 2023
+s -> 10G in pocket
+2 servers
+policy( 8g, 6g, 4g)
+policy_1( %60, %20, %20)
+states (s 10g, s' 2g, s'' 4g, s''' 6g)
