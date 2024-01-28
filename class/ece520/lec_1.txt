@@ -1,2 +1,9 @@
 16 Jan 2023
 - introcution and history
+- S G D
+   - -
+- lookup NMOS, CMOS, PMOS
+- R = rho * l / width(Area)
+
+
+

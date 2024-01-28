@@ -1,0 +1,32 @@
+25 Jan 2024
+- Ideal Mosfet
+-- Cut off (V_gs < V_t) I_ds = 0
+-- Linear ( V_ds < V_gs - V_t) I_ds = K`n (W/L) [V_ds - V_t)V_ds - V_ds^2/2]
+-- Saturation (V_ds > V_gs - V_t) i_ds = K`n (W/L) [V_gs - V_t)^2
+
+-- Body Effect (Bulk is not tied to source/ground)
+
+-- Threshold Voltage (slide 3/4 of slide deck 3)
+-- Trapped holes/electrons will affect the treshold voltage such that it can be easier/harder to meet the threshold.
+
+-- Consult pictures.  You are in big trouble.
+
+-- If too much implant of Ntype to a NMOS, it can end up with negative V_t and the gate will always be on, and you have to increase the gate voltage.  "Can V_t < 0?" yes.  This is a depletion mode device.
+
+-- For PMOS/Ptype this is an enhancement mode device.
+
+-- The symbol will be the same as a normal transitor except it shows the depletion region below the gate/bulk.
+
+-- V_t0 is shown in Spice tools as when the V_sb = 0
+
+-- See slide 4/17
+-- In NMOS - the bulk potential has to be lower than source
+           - the body effect increases threshold voltage
+
+-- In PMOS - the bulk potential has to be higher than source
+           - the body effect increases V_t (abs val )
+
+
+
+
+

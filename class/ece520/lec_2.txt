@@ -1,0 +1,81 @@
+18 Jan
+https://en.wikipedia.org/wiki/MOSFET
+- MOSFET
+-- SiO is super cheap, super easy to use
+-- N_type vs P_type
+--- Adding electrons vs comsuming electrons
+--- N_d = Phosphorus (N_Type, depetion, extra electrons)
+--- N_D = atoms/cm^3
+--- n_i = 10^10
+--- n_i = 10^15 -> 10^19
+-- N_A = Boron (acceptor, holes)
+--- N_A = 10^15 -> 10^19
+
+-- PN Junction
+-- [N] | [P]
+--- diffusion will cause electron flow from N to P
+---- "holes" will flow from P to N
+-- [N] |-|-| [P]
+--- Junction will begin to cause flow to slow as negative and positve charge balance.
+--- depletion region in the center acts as an insulator and no longer has free electrons or holes.
+--- Applying a negative voltage to N side causes flow
+--- Applying a postive voltage to P side causes something or other.
+
+-- [[[[]]]]] -- metal
+--------------- insulator
+\-------------\ depletion region expands with more positve voltage
+eeeeeeeeeeeeeee layer of electrons form as pulled from ground at certain point
+
+
+
+--------------- P-type connected to ground
+       |
+     -----
+      ---
+       -
+
+FIG --> MOS Capacitor
+
+As Voltage increases positive voltage repels holes and increase depletion region
+At a certain point the bottom layer of the metal will become an N-type and insulator region will stop growning.
+
+n_i will fluctuate with temperatur in pure Si.  Doped Si will fluctuate much less.
+
+-- Now we talk about "Threshold Voltage" -- the voltage at which starts the formation of inversion layer. V_t
+
+
+     -- [[[[]]]]] -- metal
+     --------------- insulator
+N+[]\-------------\[]N+ highly doped side areas in the junction
+-----              ------ insulator region
+
+
+     --------------- P-type connected to ground
+            |
+          -----
+           ---
+            -
+--  At threshold voltage, N-type forms and allows the current to flow from the two sides.  It becomes a switch. A MOSFET.
+
+-- Because the channel is N-type (p-type substrate) its an NMOS
+-- If the channel is P-Type (n-type substrate) its an PMOS
+
+NMOS
+    __|
+--| |
+    __
+      |
+
+PMOS
+    __|
+-o| |
+    __
+      |
+
+
+If both are used, its a CMOS.  
+
+NMOS drain is always higher potential than source.
+PMOS source is always higher potetntial than drain.
+
+

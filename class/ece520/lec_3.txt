@@ -1,0 +1,38 @@
+23 Jan
+- Current example:
+
+K'_n = 100uF
+(w/L) = 10
+V_t = 1
+
+Identify S, D and G
+
+Reverse bias on drain will lead to larger depletion region on the Drain.
+
+Pinch off happens at VG_S - V_T
+
+Current levels off at pinch off
+
+Channel lenght modulation slide 43
+
+Transistor in 3 conditions:
+- V_GS < V_t yeilds I_DS = 0
+- V_GS > V_t and V_DS < V_GS - V_t yeilds I_DS = K`(W/L)()
+- V_DS < V_GS - V_t yelds I_DS = (K`/2)(W/L)(V_GS-V_t)^2(linear adjustment)
+-- saturation
+
+
+In PMOS, all parameters are input negative.  Same formulas/eq as NMOS but the values start negative when they are put in.
+
+In NMOS, Drain is always higher potentional than Source
+In NMOS, When Gate is tied to Ground, NMOS is off.
+In NMOS, When Gate is tied to VDD, NMOS is on.
+
+In PMOS, Source is always higher potentional than Drain
+In PMOS, When Gate is tied to VDD, PMOS is off.
+In PMOs, when Gate is tied to Ground, PMOS is on.
+
+Pinchoff point for both will start from the same voltage point.
+
+
+
