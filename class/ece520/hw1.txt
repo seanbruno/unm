@@ -1,0 +1,22 @@
+
+1. In order to estimate the fabrication cost, we need to determine the number of dies
+in a wafer. Prove the equations in slide 61 of Lecture 1. Then, use the equations in
+the slide to determine the percentage of wasted silicon (due to the edge of the
+wafer), as a function of die size. Plot the % wasted area as a function of die size for
+die sizes from 1 Cm to 5 Cm in an 8-inch wafer.
+
+2. In this problem, we would like to derive the equation for drain current in saturation
+region considering channel-length modulation. Assume that the change in channel
+length is proportional to VDS (i.e., ∆L/L=λVDS). Show how equation (3.29) in your
+textbook becomes (3.30) when you include channel length modulation.
+
+
+3. Based on the list of previous VLSI projects for ECE520/424 that we discussed in
+Lecture 1, please suggest at least one new project that you will be interested in
+designing and working on during this semester. Please explain how you design
+your suggested project. Feel free to use online resources, for example
+https://www.upwithtech.com/post/best-vlsi-projects-for-final-year.
+
+
+
+http://zx.zigg.net/misc-projects/ZX81_Video_Conditioning.pdf
