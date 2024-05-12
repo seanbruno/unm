@@ -1,0 +1,41 @@
+06Feb2024
+
+- Neuromorphic Computing
+-- Neural Network design and layout
+
+-- homework - even/odd increment and display weights (10 bit input), output 1 bit
+- each neuron is different
+-- even odd
+-- less than a number
+-- binning/value detection
+
+- memristor based adjustments (not permitted in eFabless)
+-- allows adjustment of inputs to comparitor.
+
+- don't use NVRam
+- Weights can be stored via SRAM (preferred).
+
+-
+- digital/analog mix
+
+-- project
+ - phase 1
+ -- concept phase
+ - phase 2
+ -- Schematic drawing
+ -- SPICE sim
+ - phase 3
+ -- Layout
+ -- SPICE again
+
+-- serial input, clock, diag/debug
+
+Project 1:
+- ID lead member for scheduling and submissions
+- each member has a definitive part and participation
+- who is handling what parts
+- each subsequent report has individual write ups
+- due 29th
+
+
+

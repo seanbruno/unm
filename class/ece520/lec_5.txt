@@ -1,0 +1,25 @@
+30 Jan 2023
+-- Review and reset from lecture 4
+
+- Ideal Mosfet
+-- Cut off (V_gs < V_t) I_ds = 0
+-- Linear ( V_ds < V_gs - V_t) I_ds = K`n (W/L) [V_ds - V_t)V_ds - V_ds^2/2]
+-- Saturation (V_ds > V_gs - V_t) i_ds = K`n (W/L) [V_gs - V_t)^2
+
+- Channel len modulation
+- Body effect
+
+-- New Material
+- Subthreshold Swing (slides lecture4 6-10)
+
+- High V_t have low leakage current
+-- low performance (slow switching)
+- Low V_t have high leakage current
+-- high performance (fast switching)
+
+- Velocity Saturation
+
+L = .6 micron
+slide 13
+How does graph change at V saturation.
+ 

@@ -1,0 +1,14 @@
+- 01 Feb
+-- 
+
+ex 1
+- K'n 1
+ - V_t = 1
+ - W/L = 10
+ - VDSat = +5 V
+
+ - V_DS < VDSat -- linear
+
+
+-
+ 
