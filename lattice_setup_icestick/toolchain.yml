@@ -1,0 +1,31 @@
+- hosts: localhost
+  tasks:
+
+  - name: Install base packages to get Lattice IceStick working
+    ansible.builtin.apt:
+      pkg:
+      - yosys
+      - fpga-icestorm
+      - nextpnr-ice40
+      - gtkwave
+      - virtualenv
+      state: present
+
+  - name: Install APIO from PIPX repos
+    become: yes
+    become_user: sbruno
+    community.general.pipx:
+      name: apio
+      state: present
+
+  - name: Install APIO Tools 
+    become: yes
+    become_user: sbruno
+    ansible.builtin.command:
+      cmd: /home/sbruno/.local/bin/apio install --all
+
+  - name: Install APIO Drivers 
+    become: yes
+    become_user: sbruno
+    ansible.builtin.command:
+      cmd: /home/sbruno/.local/bin/apio install drivers
